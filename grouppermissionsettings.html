@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!--  Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>差勤系統</title>
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/page/grouppermissionsettings.css">
+    <!-- CSS -->
+
+</head>
+
+<body>
+    <header class="main-navbar-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+            <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#">
+                    <i class="fas fa-bars"></i></a></div>
+
+            <div class="d-flex">
+                <!-- 頁面標題 -->
+                <a class="navbar-brand" href="./index.html">
+                    <i class="fas fa-users-cog"></i>
+                    群組權限維護
+                </a>
+                <!-- 頁面標題 -->
+                <div class="personalDetail align-items-end py-1">
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/department.svg" width="18px" alt="" srcset="">
+                        <span>單位：螢橋通-收</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/head.svg" width="13px" alt="" srcset="">
+                        <span>姓名：劉一明 </span>
+                        <span>(10001)</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/position.svg" width="18px" alt="" srcset="">
+                        <span>職稱：業務員</span>
+                    </div>
+                    <div class="detailItem">
+                        <span>承辦身份：本人</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar_icon align-items-center">
+                <a class="position-relative" href="./calendar.html">
+                    <div class="calendar-date"></div>
+                    <img src="./img/component/header/emptyC.svg" width="24" alt>
+                </a>
+                <a class="nav-link " href="#">
+                    <img src="./img/component/header/monkey.svg" width="24" alt>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <!--  Sidebar Holder -->
+        <nav class="nav-sidebar" id="sidebar">
+            <ul class="level-1-ul" id="sidemenu_collapse_parent">
+                <li>
+                    <a title="差勤申請" href="#sidemenu_collapse_1" class="nav_collapse" data-toggle="collapse"
+                        aria-expanded="false"><img src="./img/component/slideBar/11_2.svg" width="20px" alt> 差勤申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_1" data-parent="#sidemenu_collapse_parent">
+                        <li>
+                            <a href="./vacation.html">
+                                請假差勤單
+                            </a>
+                        </li>
+                        <li><a href="#">銷假申請單</a></li>
+                        <li><a href="#">加班報備單</a></li>
+                        <li><a href="#">加班申請單</a></li>
+                        <li><a href="./annual_leave.html">預排特休假</a></li>
+                        <li><a href="#">差勤異常通知單</a></li>
+                        <li><a href="#">休息/假日調移報備申請單</a></li>
+                        <li><a href="./vacation_detail.html">個人差勤明細</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_2" class="nav_collapse" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-2.svg" width="20" alt> 人事申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_2" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">人身保險業務員登錄申請</a></li>
+                        <li><a href="#">投資、外幣變更登錄申請書</a></li>
+                        <li><a href="#">基金銷售業務人員證照登記申請表</a></li>
+                        <li><a href="#">薪資轉存入銀行帳戶申請表</a></li>
+                        <li><a href="#">薪資所得受領人免稅額申請表</a></li>
+                        <li><a href="#">變更各項資料申請書</a></li>
+                        <li><a href="./prove_apply.html">各類證明申請書</a></li>
+                        <li><a href="./healthInsurance.html">健保轉入轉出申報表</a></li>
+                        <li><a href="#">通知/補辦單</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_3" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/footer/待簽核-cb271c.svg" width="20px" alt> 電子簽核
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_3" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="./abnormal_replacement.html">異常補辦匣</a></li>
+                        <li><a href="./pending_approval.html">待簽核匣</a></li>
+                        <li><a href="./abnormal.html">通知匣</a></li>
+                        <li><a href="#">簽核完成匣</a></li>
+                        <li><a href="#">工作佇列</a></li>
+                        <li><a href="#">工作待辦匣</a></li>
+                        <li><a href="./agent_settnig.html">代理人設定</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_4" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-4.svg" width="20" alt>
+                        外人承辦人管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_4" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">案件分派</a></li>
+                        <li><a href="#">打卡記錄匯入及維護</a></li>
+                        <li><a href="#">天然災害假設定</a></li>
+                        <li><a href="#">加班單維護</a></li>
+                        <li><a href="#">差勤異常通知設定</a></li>
+                        <li><a href="#">參數設定</a></li>
+                        <li><a href="#">差勤管理文件上傳</a></li>
+                        <li><a href="#">假別規則文字設定維護</a></li>
+                        <li><a href="#">排程設定</a></li>
+                        <li><a href="./leave_maintain.html">假別簽核層級維護</a></li>
+                        <li><a href="#">流程檔維護</a></li>
+                        <li><a href="#">假日維護</a></li>
+                        <li><a href="#">班表維護</a></li>
+                        <li><a href="#">職等班表維護</a></li>
+                        <li><a href="#">異常通知Log查詢</a></li>
+                        <li><a href="#">特殊假匯入</a></li>
+                        <li><a href="#">假別額度維護</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_5" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-5.svg" width="20" alt>
+                        查詢下載與報表管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_5" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">差勤/人事綜合查詢及報表</a></li>
+                        <li><a href="#">月差勤記錄</a></li>
+                        <li><a href="#">調訓查詢及報表</a></li>
+                        <li><a href="#">個人班表查詢</a></li>
+                        <li><a href="#">排休暨輪休查詢及報表</a></li>
+                        <li><a href="#">差勤管理文件查詢及下載</a></li>
+                        <li><a href="#">公傷假名單及統計</a></li>
+                        <li><a href="#">公傷假人員明細表</a></li>
+                        <li><a href="#">產假統計表</a></li>
+                        <li><a href="#">產假人員明細表</a></li>
+                        <li><a href="#">特休假單位統計表</a></li>
+                        <li><a href="#">特休假單位人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員統計表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">人事表單申請查詢</a></li>
+                        <li><a href="#">特殊差勤報表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">差假累計查詢及統計表</a></li>
+                        <li><a href="#">考核預告查詢及報表</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_6" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-cog greenIcon"></i>
+                        系統管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_6" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">員工資料維護</a></li>
+                        <li><a href="./grouppermissionsettings.html">群組權限維護</a></li>
+                        <li><a href="#">公告通知</a></li>
+                        <li><a href="#">通知功能</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-bottom">
+                <div class="d-flex">
+                    <div>
+                        <a class="d-flex" href="#" onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();"
+                            style="padding-left:0;padding-right:0 !important;">
+                            <img src="./img/component/slideBar/1_4.svg" width="25px" height="19px" alt="">
+                            <span>登出</span>
+                            <form id="logout-form" action="" method="POST" style="display: none;">
+                            </form>
+                        </a>
+                    </div>
+                    <div class="ml-5">
+                        <img src="./img/abnormal/i.svg" width="20" alt="">
+                    </div>
+                </div>
+                <div class="Slidebars__list__logo">
+                    <hr>
+                    <img src="./img/component/slideBar/logo-1.svg" width="108px" alt="" srcset="">
+                </div>
+            </div>
+        </nav>
+        <div class="cover d-none"></div>
+
+        <div class="container content-area">
+            <div class="row">
+                <div class="col-12 bread">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">系統管理</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">群組權限維護</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <!-- 內容放此 -->
+
+                    <!-- 查詢區 -->
+                    <form action="">
+                        <div class="group_all">
+                            <div class="group_name">
+                                <div class="row">
+                                    <div class="col-6 ">
+                                        <label for="">群組代號</label>
+                                        <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                    <div class="col-6 ">
+                                        <label for="">群組名稱</label>
+                                        <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row group_bnt">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button class="d-flex justify-content-between">
+                                        <div class="bnt_icon">X</div>
+                                        <div class="bnt_text">清除</div>
+                                    </button>
+                                    <button class="d-flex justify-content-around">
+                                        <img class="bnt_icon" src="./img/pendingApproval/查詢-fff.svg" width="19px" alt=""
+                                            srcset="">
+                                        <div class="bnt_text">查詢</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+                        <!-- 查詢內容區 -->
+                        <div class="group_checklist">
+                            <div class="row checklist_title">
+                                <div class="col d-flex">
+                                    <div class="title_icon d-flex flex-column justify-content-between">
+                                        <div class="icon_line d-flex justify-content-between">
+                                            <span class="dot"></span>
+                                            <span class="bar"></span>
+                                        </div>
+                                        <div class="icon_line d-flex justify-content-between">
+                                            <span class="dot"></span>
+                                            <span class="bar"></span>
+                                        </div>
+                                        <div class="icon_line d-flex justify-content-between">
+                                            <span class="dot"></span>
+                                            <span class="bar"></span>
+                                        </div>
+                                    </div>
+                                    <h2>查詢結果清單</h2>
+                                </div>
+                            </div>
+                            <div class="checklist_add d-flex">
+                                <a href="./addGroup.html">
+                                    <span class="group_add">
+                                        <div class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="add_text">
+                                            新增群組
+                                        </div>
+                                    </span>
+                                </a>
+                                <a href="./groupMember.html">
+                                    <span class="group_people">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="people_text">
+                                            群組人員
+                                        </div>
+                                    </span>
+                                </a>
+                                <a href="./Functional_authority.html">
+                                    <span class="group_purview">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="purview_text">
+                                            功能權限
+                                        </div>
+                                    </span>
+                                </a>
+                                <a href="./anti-Functional_authority.html">
+                                    <span class="group_anti">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="delete_text">
+                                            反查功能權限
+                                        </div>
+                                    </span>
+                                </a>
+                                <a href="">
+                                    <span class="group_delete">
+                                        <div class="icon">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="delete_text">
+                                            刪除勾選群組
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="group_main">
+                                <ul>
+                                    <li>
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </li>
+                                    <li>群組代號</li>
+                                    <li>群組名稱</li>
+                                    <li>修改人員</li>
+                                    <li>修改日期</li>
+                                    <li>修改</li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </li>
+                                    <li>Admin</li>
+                                    <li>系統管理</li>
+                                    <li>梅蘭芳</li>
+                                    <li>108/8/12</li>
+                                    <li>
+                                        <i class="fas fa-edit"></i>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </li>
+                                    <li>Group1</li>
+                                    <li>業務員</li>
+                                    <li>梅蘭芳</li>
+                                    <li>108/8/12</li>
+                                    <li>
+                                        <i class="fas fa-edit"></i>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </li>
+                                    <li>Group1</li>
+                                    <li>外人行政</li>
+                                    <li>孫明正</li>
+                                    <li>108/7/10</li>
+                                    <li>
+                                        <i class="fas fa-edit"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- 頁面選項 -->
+                    <div class="pagination_bnt">
+                        <div class="row">
+                            <div class="col-4 pagination_block">
+                                第1頁 / 共5頁(共3筆)
+                            </div>
+                            <ul class="col-8 d-flex justify-content-end align-items-center">
+                                <li>
+                                    <i class="fas fa-backward"></i>
+                                </li>
+                                <li>
+                                    <i class="fas fa-caret-left"></i>
+                                </li>
+                                <li class="pageItem active">1</li>
+                                <li class="pageItem">2</li>
+                                <li class="pageItem">3</li>
+                                <li class="pageItem">4</li>
+                                <li class="pageItem">5</li>
+                                <li>
+                                    <i class="fas fa-caret-right"></i>
+                                </li>
+                                <li>
+                                    <i class="fas fa-forward"></i>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input class="go_input" type="text">
+                                    頁
+                                    <div class="go_btn">
+                                        Go
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 內容放此 -->
+                </div>
+            </div>
+            <div class="row" id="footer" style="position:fixed;">
+                <div class="col-12">
+                    <hr>
+                    <p class="text-black-50">version. 0.0.1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="app-links">
+        <div class="footer mx-lg-auto">
+            <a href="./index.html" class="footer__btn footer__btn-1">
+                <img src="./img/component/footer/home-b5b5b6.svg" width="34px" alt="" srcset="">
+                <span>回首頁</span>
+            </a>
+            <a class="footer__btn footer__btn-4" href="./vacation.html">
+                <img src="./img/component/footer/請假申請-b5b5b6.svg" width="35px" alt="" srcset="">
+                <img src="./img/component/footer/請假申請-cb271c.svg" width="33px" alt="" srcset="">
+                <span>請假</span>
+                <div class="notice">
+                    <span>1</span>
+                </div>
+            </a>
+            <a class="footer__btn footer__btn-3" href="./abnormal.html">
+                <img src="./img/component/footer/通知-b5b5b6.svg" width="46px" alt="" srcset="">
+                <img src="./img/component/footer/通知-cb271c.svg" width="46px" alt="" srcset="">
+                <span>通知</span>
+                <div class="notice">
+                    <span>2</span>
+                </div>
+            </a>
+            <a href="./abnormal_replacement.html" class="footer__btn footer__btn-2">
+                <img src="./img/component/footer/異常補辦-b5b5b6.svg" width="29px" alt="" srcset="">
+                <img src="./img/component/footer/異常補辦-cb271c.svg" width="33px" alt="" srcset="">
+                <span>異常補辦</span>
+            </a>
+            <a href="./pending_approval.html" class="footer__btn footer__btn-5">
+                <img src="./img/component/footer/待簽核-b5b5b6.svg" width="33px" alt="" srcset="">
+                <img src="./img/component/footer/待簽核-cb271c.svg" width="33px" alt="" srcset="">
+                <span>待簽核</span>
+                <div class="notice">
+                    <span>3</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="./js/nav.js"></script>
+
+    <!-- JS -->
+    <script src="./js/grouppermissionsettings.js"></script>
+    <!-- JS -->
+</body>
+
+</html>

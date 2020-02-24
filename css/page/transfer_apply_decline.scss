@@ -1,0 +1,71 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-brand{
+    @media(max-width: 576px){
+        font-size: 26px;
+    }
+}
+
+.navbar_icon{
+    @media(max-width: 768px){
+        margin-left:auto;
+    }
+}
+
+#transferApplyDecline {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+
+    .declineForm {
+        padding: 0 20px 20px 20px;
+        margin: 20px 0 30px 0;
+        border-radius: 16px;
+        @include shadow();
+        label {
+            margin: 20px 0 10px 0;
+            .require{
+                color: red;
+            }
+        }
+    }
+    .btn {
+        background-color: $green;
+        color: #fff;
+        border-radius: 8px;
+        margin: 15px 10px;
+
+        @media screen and (max-width: 576px) {
+            margin: 0px 10px;
+        }
+
+        @include btn-shadow;
+        cursor: pointer;
+
+        .fas {
+            color: white;
+            margin-right: 5px;
+        }
+    }
+
+    .btn-outline {
+        background-color: #fff;
+        color: $green;
+        border: solid 2px $green;
+
+        .fas {
+            color: $green;
+        }
+    }
+}

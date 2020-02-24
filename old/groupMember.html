@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>請假差勤單</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <link rel="stylesheet" href="./css/groupMember.css">
+</head>
+
+<body>
+    <div class="groupMember">
+        <div class="container groupMemberArea">
+            <form action="">
+                <div class="groupMemberForm col-12">
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center">
+
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div><label for="" class="flex-grow-0">業務別</label>
+
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div><label for="">組織型態</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 textBold"><label for="">業務線別</label></div>
+                        <div class="col-6 textBold"><label for="">職務</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><select class="form-control" type="text">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select></div>
+                        <div class="col-6"><select class="form-control" type="text">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="btn btn-outline m-2"><img class="mr-2 " src="./img/0830/x.svg" width="12px" alt=""
+                            srcset=""><span class="textBold">清除</span></div>
+                    <div class="btn m-2"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt=""
+                            srcset=""><span class="textBold">查詢</span>
+                    </div>
+                    <div class="btn m-2"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt=""
+                            srcset=""><span class="textBold">批次設定</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </th>
+                                <th>職務線別</th>
+                                <th>職務</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </td>
+
+                                <td>二階</td>
+                                <td>專員</td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </td>
+
+                                <td>二階</td>
+                                <td>專員</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container paginationArea">
+                    <div class="row">
+                        <div class="col-4">
+                            第1頁 / 共5頁(共3筆)
+                        </div>
+                        <ul class="pagination col-8 d-flex justify-content-end">
+                            <li><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></li>
+                            <li><i class="fas fa-caret-left"></i></li>
+                            <li class="pageItem active">1</li>
+                            <li class="pageItem">2</li>
+                            <li class="pageItem">3</li>
+                            <li class="pageItem">4</li>
+                            <li class="pageItem">5</li>
+                            <li><i class="fas fa-caret-right"></i></li>
+                            <li><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></li>
+                            <li class="d-flex align-items-center"><input type="text">&nbsp;頁&nbsp;<div
+                                    class="btn go-btn">Go
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="container resultList">
+            <h3><span class="textBold">選取結果清單</span></h3>
+            <div class="selectResultList">
+                <div class="col-12">
+                    <div class="btnArea">
+
+                        <div class="btn control-btn"><i class="fas fa-times"></i> <span class="textBold">刪除勾選項目</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                            id="checkAll">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </th>
+
+                                <th>職務線別</th>
+                                <th>職務</th>
+                                <th>組織型態</th>
+                                <th>單位屬性</th>
+                                <th>單位名稱</th>
+                                <th>姓名</th>
+                                <th>電腦編號</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </td>
+
+                                <td>二階</td>
+                                <td>專員</td>
+                                <td>服務中心</td>
+                                <td>總公司課</td>
+                                <td>業務開發部</td>
+                                <td>張明烽</td>
+                                <td>BZ1039</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="position-relative d-flex justify-content-center align-items-center">
+                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                        <div class="checkBox"></div>
+                                    </div>
+                                </td>
+                                <td>二階</td>
+                                <td>專員</td>
+                                <td>服務中心</td>
+                                <td>總公司課</td>
+                                <td>業務開發部</td>
+                                <td>張明烽</td>
+                                <td>BZ1039</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js"></script>
+    <script>
+        $("#checkAll").click(function () {
+            if ($("#checkAll").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });
+
+
+        $('.datepicker').datepicker({
+            autoclose: 'ture',
+        });
+    </script>
+</body>
+
+</html>

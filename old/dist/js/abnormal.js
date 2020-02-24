@@ -1,0 +1,55 @@
+$('.nl__navbar__btn').click(function () {
+    $('.nav__listWrap').toggleClass("active")
+})
+$('.nav__listWrap').click(function (e) {
+    e.stopPropagation()
+    if (e.target.id === 'nav__listWrap') {
+        $('.nav__listWrap').removeClass("active")
+    }
+    console.log(e.target.id)
+})
+
+$('#tab1').click (function () {
+    $('#tab1').addClass('active')
+    $('#tab2').removeClass('active')
+    $('#tab3').removeClass('active')
+    $('.abnormal').removeClass('d-none')
+    $('.complete').addClass('d-none')
+    $('.announcement').addClass('d-none')
+    $('.dateInfo span').removeClass('invisible')
+})
+$('#tab2').click(function () {
+    $('#tab2').addClass('active')
+    $('#tab1').removeClass('active')
+    $('#tab3').removeClass('active')
+    $('.abnormal').addClass('d-none')
+    $('.complete').removeClass('d-none')
+    $('.announcement').addClass('d-none')
+    $('.dateInfo span').removeClass('invisible')
+    console.log('done')
+})
+$('#tab3').click(function () {
+    $('#tab3').addClass('active')
+    $('#tab2').removeClass('active')
+    $('#tab1').removeClass('active')
+    $('.abnormal').addClass('d-none')
+    $('.complete').addClass('d-none')
+    $('.announcement').removeClass('d-none')
+    $('.dateInfo span').addClass('invisible')
+    console.log('done')
+})
+$('#reissue').click(function () {
+    $('.body').addClass('d-none')
+    $('.noticeBox').removeClass('d-none')
+})
+$('.noticeBox__btnBox__btn').click(function () {
+    $('.body').removeClass('d-none')
+    $('#tab1').addClass('active')
+    $('#tab2').removeClass('active')
+    $('#tab3').removeClass('active')
+    $('.abnormal').removeClass('d-none')
+    $('.complete').addClass('d-none')
+    $('.announcement').addClass('d-none')
+    $('.dateInfo span').removeClass('invisible')
+    $('.noticeBox').addClass('d-none')
+})

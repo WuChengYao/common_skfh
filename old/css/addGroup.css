@@ -1,0 +1,40 @@
+.addGroup .addGroupArea .addGroupForm {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.addGroup .addGroupArea .addGroupForm input,
+.addGroup .addGroupArea .addGroupForm label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.addGroup .addGroupArea .addGroupForm label {
+  margin-bottom: 0;
+}
+
+.addGroup .addGroupArea .addGroupForm .required {
+  color: red;
+}
+
+.addGroup .addGroupArea .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.addGroup .addGroupArea .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.textBold {
+  font-weight: 700;
+}
+/*# sourceMappingURL=addGroup.css.map */

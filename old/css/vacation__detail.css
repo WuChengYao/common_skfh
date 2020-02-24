@@ -1,0 +1,193 @@
+.header {
+  line-height: 1;
+}
+
+.header__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.body {
+  padding-top: 40px;
+  padding-bottom: 28px;
+}
+
+.vacation__detail .body__inputBox {
+  width: 100%;
+}
+
+.vacation__detail .body__inputBox .body__inputBox-select {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__inputBox .body__inputBox-select {
+    width: initial;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.vacation__detail .body__inputBox .body__inputBox-select .select-box {
+  width: 47%;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__inputBox .body__inputBox-select .select-box {
+    width: initial;
+  }
+}
+
+.vacation__detail .body__inputBox .body__inputBox-select .select-box .select {
+  width: 100%;
+  height: 28px;
+}
+
+.vacation__detail .body__inputBox .body__inputBox-text {
+  width: 47%;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__inputBox .body__inputBox-text {
+    width: initial;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.vacation__detail .body__inputBox .body__inputBox-text .input {
+  width: 100%;
+  height: 30px;
+}
+
+.vacation__detail .body__tableBox {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__tableBox .table .tr .th span, .vacation__detail .body__tableBox .table .tr .td span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.vacation__detail .body__tableBox .table .tr .th:first-child, .vacation__detail .body__tableBox .table .tr .td:first-child {
+  width: 14.4%;
+}
+
+.vacation__detail .body__tableBox .table .tr .th:nth-child(2), .vacation__detail .body__tableBox .table .tr .td:nth-child(2) {
+  width: 34%;
+}
+
+.vacation__detail .body__tableBox .table .tr .th:nth-child(3), .vacation__detail .body__tableBox .table .tr .td:nth-child(3) {
+  width: 23.4%;
+}
+
+.vacation__detail .body__tableBox .table .tr .th:last-child, .vacation__detail .body__tableBox .table .tr .td:last-child {
+  width: 23.4%;
+}
+
+.vacation__detail .body__tableBox__info span {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__tableBox__info span {
+    font-size: 14px;
+  }
+}
+
+.vacation__detail .body__tableBox__info input {
+  width: 26px;
+  height: 16px;
+  border-radius: 5px;
+  border: solid 1px #c6c6c5;
+  background-color: #ffffff;
+}
+
+.vacation__detail .body__tableBox__info input:focus {
+  outline: transparent;
+}
+
+.vacation__detail .body__personDetail__title {
+  margin-bottom: 14px;
+}
+
+.vacation__detail .body__personDetail__title span {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__personDetail__title span {
+    font-size: 16px;
+  }
+}
+
+.vacation__detail .body__personDetail .table .tr .th, .vacation__detail .body__personDetail .table .tr .td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vacation__detail .body__personDetail .table .tr .th span, .vacation__detail .body__personDetail .table .tr .td span {
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .vacation__detail .body__personDetail .table .tr .th span, .vacation__detail .body__personDetail .table .tr .td span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.vacation__detail .body__personDetail .table .tr .th:first-child, .vacation__detail .body__personDetail .table .tr .td:first-child {
+  width: 18.6%;
+}
+
+.vacation__detail .body__personDetail .table .tr .th:nth-child(2), .vacation__detail .body__personDetail .table .tr .td:nth-child(2) {
+  width: 17.2%;
+}
+
+.vacation__detail .body__personDetail .table .tr .th:nth-child(3), .vacation__detail .body__personDetail .table .tr .td:nth-child(3) {
+  width: 18.9%;
+}
+
+.vacation__detail .body__personDetail .table .tr .th:nth-child(4), .vacation__detail .body__personDetail .table .tr .td:nth-child(4) {
+  width: 17.2%;
+}
+
+.vacation__detail .body__personDetail .table .tr .th:nth-child(5), .vacation__detail .body__personDetail .table .tr .td:nth-child(5) {
+  width: 8.5%;
+}
+
+.vacation__detail .body__personDetail .table .tr .th:last-child, .vacation__detail .body__personDetail .table .tr .td:last-child {
+  width: 17.2%;
+}
+
+.vacation__detail .btn {
+  margin-top: 30px;
+  width: 77px;
+  height: 40px;
+}
+/*# sourceMappingURL=vacation__detail.css.map */

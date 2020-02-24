@@ -1,0 +1,44 @@
+.SlidebarsAct {
+    min-height: 679px;
+    max-height: 679px;
+    height: 679px;
+    overflow: hidden;
+}
+
+.yBar {
+    width: 1px;
+    height: 27px;
+    background-color: #0D0305;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.unselectable {
+    user-select: none;
+}
+
+.Gbtn {
+    width: 39px;
+    height: 13px;
+    border-radius: 3px;
+    background-color: #88d1cc;
+}
+
+.Rbtn {
+    width: 39px;
+    height: 13px;
+    border-radius: 3px;
+    background-color: #ec6968;
+}
+
+.padLogo {
+    top: 1px;
+    left: -60px;
+    width: 135px;
+}
+
+.clickCircle {
+    background-color: #56beb7;
+}

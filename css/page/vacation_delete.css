@@ -1,0 +1,62 @@
+.dele_reason {
+  padding: 20px 0px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.dele_reason .dele_reason_title p {
+  font-size: 16px;
+  line-height: unset;
+  color: #000;
+  font-weight: bold;
+}
+
+.dele_reason .dele_reason_contain textarea {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1.5px solid #C4C3C3;
+  padding: 5px 10px;
+}
+
+.btns .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 30px 10px 20px 10px;
+  min-width: 82px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.btns .btn .fa-search {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.btns .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+.btns .btn.add-btn {
+  margin: 0;
+}
+
+.btns .btn.go-btn {
+  margin: 0;
+}
+
+.btns .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+  font-weight: bold;
+}
+
+.btns .btn-outline .fas {
+  color: #56bdb7;
+}
+/*# sourceMappingURL=vacation_delete.css.map */

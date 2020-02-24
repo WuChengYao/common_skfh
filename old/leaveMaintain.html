@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <link rel="stylesheet" href="./css/leaveMaintain.css">
+</head>
+
+<body>
+    <div class="container searchArea">
+        <form action="">
+            <div class="searchForm col-12">
+                <div class="row ">
+                    <div class="col-6 textBold"><label for="">業務縣別</label></div>
+                    <div class="col-6 textBold"><label for="">申請人職務</label></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <select class="form-control" type="text">
+                            <option value="">選項一</option>
+                            <option value="">選項二</option>
+                            <option value="">選項三</option>
+                            <option value="">選項四</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-control" type="text">
+                            <option value="">選項一</option>
+                            <option value="">選項二</option>
+                            <option value="">選項三</option>
+                            <option value="">選項四</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="btn btn-outline m-2 "><img class="mr-2" src="./img/0830/x.svg" width="12px" alt=""
+                        srcset=""><span class="textBold">清除</span></div>
+                <div class="btn m-2"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt="" srcset=""><span class="textBold">查詢</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="hr"></div>
+    <div class="container resultList">
+        <h3><i class="fas fa-list-ul"></i> <span class="textBold">查詢結果清單</span></h3>
+        <div class="btnArea">
+            <div class="btn control-btn"><i class="fas fa-plus"></i> <span class="textBold">新增群組</span></div>
+            <div class="btn control-btn"><i class="fas fa-times"></i> <span class="textBold">刪除勾選群組</span></div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div>
+                        </div>
+                    </th>
+                    <th>修改</th>
+                    <th>線別</th>
+                    <th>職務</th>
+                    <th>外人部經辦課別</th>
+                    <th>上呈累積時數</th>
+                    <th>上呈關卡</th>
+                    <th>假別日數簽核層級設定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>31三階</td>
+                    <td>業務員</td>
+                    <td>核給課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>31三階</td>
+                    <td>區經理</td>
+                    <td>外務管理課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>5D電話行銷</td>
+                    <td>電銷專員</td>
+                    <td>外務管理課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>5D電話行銷</td>
+                    <td>電銷住任</td>
+                    <td>外務管理課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>61團意險</td>
+                    <td>團意險業務員</td>
+                    <td>核給課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                            <div class="checkBox"></div>
+                        </div>
+                    </td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>61團意險</td>
+                    <td>團意險業務員</td>
+                    <td>外務管理課</td>
+                    <td>20</td>
+                    <td>副總經理</td>
+                    <td><button type="button" data-toggle="modal" data-target="#contentInfo-1"
+                            class="contentInfo-btn">詳細內容</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container paginationArea">
+        <div class="row">
+            <div class="col-4">
+                第1頁 / 共5頁(共3筆)
+            </div>
+            <ul class="pagination col-8 d-flex justify-content-end">
+                <li><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></li>
+                <li><i class="fas fa-caret-left"></i></li>
+                <li class="pageItem active">1</li>
+                <li class="pageItem">2</li>
+                <li class="pageItem">3</li>
+                <li class="pageItem">4</li>
+                <li class="pageItem">5</li>
+                <li><i class="fas fa-caret-right"></i></li>
+                <li><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></li>
+                <li class="d-flex align-items-center"><input type="text">&nbsp;頁&nbsp;<div class="btn go-btn">Go</div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- modal -->
+    <div class="modal fade modalStyle" id="contentInfo-1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end">
+                    <div class="crossBlock" data-dismiss="modal" aria-label="Close">
+                        <img class="w-100" src="./img/leaveMaintain/cross.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 textBlock">
+                                假別日數簽核層級設定
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td>最小申請日數</td>
+                                        <td>連續日數上限</td>
+                                        <td>最高審核層核</td>
+                                        <td>是否外人經辦簽核</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0.5</td>
+                                        <td>4.5</td>
+                                        <td>處經理</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>7.5</td>
+                                        <td>區部主管</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>-</td>
+                                        <td>部室主管</td>
+                                        <td>是</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#checkAll").click(function () {
+            if ($("#checkAll").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });</script>
+</body>
+
+</html>

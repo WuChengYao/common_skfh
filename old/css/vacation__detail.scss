@@ -1,0 +1,160 @@
+.header {
+    line-height: 1;
+    &__btn {
+        width: fit-content;
+    }
+}
+
+.body {
+    padding-top: 40px;
+    padding-bottom: 28px;
+}
+
+.vacation__detail {
+    .body__inputBox {
+        width: 100%;
+
+        .body__inputBox-select {
+            width: 100%;
+            @media (min-width: 768px) {
+                width: initial;
+                flex: 1;
+            }
+
+            .select-box {
+                width: 47%;
+                @media (min-width: 768px) {
+                    width: initial;
+                }
+                .select {
+                    width: 100%;
+                    height: 28px;
+                }
+            }
+        }
+
+        .body__inputBox-text {
+            width: 47%;
+            @media (min-width: 768px) {
+                width: initial;
+                flex: 1;
+            }
+            .input {
+                width: 100%;
+                height: 30px;
+            }
+        }
+    }
+
+    .body__tableBox {
+        margin-top: 22px;
+        padding: 15px;
+        border-radius: 5px;
+        border: solid 1px #c5c4c4;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px 0 rgba(#000, 0.3);
+
+        .table {
+            .tr {
+                .th,.td {
+                    span {
+                        @media (min-width: 768px) {
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                    }
+                    &:first-child {
+                        width: 14.4%;
+                    }
+                    &:nth-child(2) {
+                        width: 34%;
+                    }
+                    &:nth-child(3) {
+                        width: 23.4%;
+                    }
+                    &:last-child {
+                        width: 23.4%;
+                    }
+                }
+            }
+        }
+    }
+
+    .body__tableBox__info {
+        span {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0;
+            color: #000000;
+            @media (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        input {
+            width: 26px;
+            height: 16px;
+            border-radius: 5px;
+            border: solid 1px #c6c6c5;
+            background-color: #ffffff;
+            &:focus {
+                outline: transparent;
+            }
+        }
+    }
+
+    .body__personDetail__title {
+        margin-bottom: 14px;
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1.8px;
+            color: #000000;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .body__personDetail {
+        .table {
+            .tr {
+                .th,.td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span {
+                        font-size: 13px;
+                        @media (min-width: 768px) {
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                    }
+                    &:first-child {
+                        width: 18.6%;
+                    }
+                    &:nth-child(2) {
+                        width: 17.2%;
+                    }
+                    &:nth-child(3) {
+                        width: 18.9%;
+                    }
+                    &:nth-child(4) {
+                        width: 17.2%;
+                    }
+                    &:nth-child(5) {
+                        width: 8.5%;
+                    }
+                    &:last-child {
+                        width: 17.2%;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 30px;
+        width: 77px;
+        height: 40px;
+    }
+}

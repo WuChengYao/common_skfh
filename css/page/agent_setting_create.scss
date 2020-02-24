@@ -1,0 +1,283 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked+div {
+    background-image: url(../../img/groupMember/checkmark-000.svg),
+        -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 2px $pink;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: contain, 100%;
+}
+
+.selectgroup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectgroup:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    right: 10px;
+    pointer-events: none;
+}
+
+#agentSettingCreate{
+    font-weight: bold;
+    font-size: 16px;
+
+    hr {
+        border-top: 2px solid $pink;
+        margin: 30px 0;
+    }
+
+    .title {
+        color: $pink;
+        font-size: 25px;
+        letter-spacing: .5px;
+        margin-bottom: 20px;
+    }
+    .agentSettingForm{
+        padding: 0 20px 20px 20px;
+        margin: 20px 0 30px 0;
+        border-radius: 16px;
+        @include shadow();
+
+        label {
+            margin: 20px 0 10px 0;
+        }
+
+        .form-control {
+            border: 2px solid #C4C3C3;
+            color: #4D4D4D;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 5px;
+            letter-spacing: 1.8px;
+            height: unset;
+
+            @media screen and (max-width: 576px) {
+                text-align: center;
+            }
+        }
+
+        select {
+            @media screen and (max-width: 576px) {
+                text-align-last: center;
+            }
+        }
+
+        .form-control[readonly] {
+            background-color: #EDEAEA;
+            color: #999999;
+        }
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #55beb7;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: bold;
+        margin: 0 10px;
+        cursor: pointer;
+        width: 84px;
+        height: 40px;
+        margin-top: 30px;
+        @include btn-shadow();
+
+        &.btn-outline {
+            background-color: #fff;
+            color: #55beb7;
+            border: solid 2px #55beb7;
+        }
+        &.add-btn{
+            width: 150px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .fas {
+            margin-right: 5px;
+        }
+
+        .fa-search {
+            transform: scaleX(-1);
+        }
+    }
+    .control-btn{
+        display: inline-block;
+        padding: 7px 8px;
+        border-radius: 3px;
+        color: $pink;
+        background-color: #fff;
+        cursor: pointer;
+        @include btn-shadow();
+        @media screen and (max-width: 576px){
+            padding: 2px 20px;
+        }
+    }
+    table {
+        text-align: center;
+        border-collapse: separate;
+        border-radius: 8px;
+        border-spacing: 0;
+        line-height: 1.2;
+        letter-spacing: 0;
+        table-layout: fixed;
+        font-size:14px;
+
+        @media screen and (max-width: 576px){
+            font-size:16px;
+        }
+
+        th,
+        td {
+            font-weight: bold;
+            padding: 5px 0;
+            vertical-align: inherit;
+            border: solid 1px $pink;
+
+            &:first-child {
+                border-left: solid 2px $pink;
+            }
+
+            &:last-child {
+                border-right: solid 2px $pink;
+            }
+
+            a {
+                text-decoration: none;
+                color: unset;
+                white-space: nowrap;
+            }
+        }
+
+        th {
+            background-color: $pink;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        thead {
+            tr {
+                th {
+                    &:first-child {
+                        border-top-left-radius: 5px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            &:nth-child(odd) {
+                background-color: $lightpink;
+            }
+
+            &:last-child {
+                tr {
+                    td {
+                        border-bottom: solid 2px $pink;
+
+                        &:first-child {
+                            border-bottom-left-radius: 5px;
+                        }
+
+                        &:last-child {
+                            border-bottom-right-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table-mb {
+        font-size: 16px;
+        line-height: 1.4em;
+
+        .card {
+            overflow: hidden;
+            border: solid 2px $pink;
+            border-radius: 8px;
+            @include shadow();
+        }
+
+        .card+.card {
+            margin-top: 20px;
+        }
+
+        .card:nth-child(even) {
+            .tr {
+                background-color: $lightpink;
+                color: $pink;
+
+                &:nth-child(odd) {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+
+        .tr {
+            display: flex;
+            border-bottom: solid 2px $pink;
+
+            .td,
+            .th {
+                text-align: center;
+                width: 100%;
+                padding: 5px;
+            }
+
+            &:nth-child(even) {
+                background-color: $pink;
+                color: #fff;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .td:nth-child(2) {
+                border-left: 2px solid $pink;
+                border-right: 2px solid $pink;
+            }
+
+            .td:last-child {
+                border-right: 0;
+            }
+
+        }
+    }
+}

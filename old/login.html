@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="./css/0830/style.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <title>登入</title>
+</head>
+
+<body>
+    <form action="#">
+        <div class="wrap__login d-flex flex-column align-items-center">
+
+            <img src="./img/0830/logo.png" width="136px" alt="" class="wrap__login__logo">
+            <div class="wrap__login__inputBox position-relative">
+                <img src="./img/0830/1.svg" width="20px" alt="" srcset="" class="position-absolute icon CID">
+                <input type="text" class="form-control" id="CID" placeholder="請輸入電腦編號" required>
+            </div>
+            <div class="wrap__login__inputBox position-relative">
+                <img src="./img/0830/2.svg" width="17px" alt="" srcset="" class="position-absolute icon PWD">
+                <input type="password" class="form-control" id="PWD" placeholder="請輸入登入密碼" required>
+            </div>
+            <div class="wrap__login__inputBox last position-relative">
+                <img src="./img/0830/3.svg" width="25px" alt="" srcset="" class="position-absolute icon code">
+                <input type="text" class="form-control" id="code" placeholder="請輸入驗證碼" required>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="wrap__login__readonlyCode d-flex align-items-center justify-content-around">
+                    <span class="r">4</span>
+                    <span class="g">8</span>
+                    <span class="b">2</span>
+                    <span class="p">4</span>
+                    <span class="y">5</span>
+                </div>
+                <button type="button" class="btn btn-sm wrap__login__readonlyCode-re">
+                    <img src="./img/icon/1-01.svg" width="16px" alt="">
+                </button>
+            </div>
+            <div class="form-check wrap__login__checkBox">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox">
+                <div class="checkStatus position-absolute d-flex justify-content-center align-items-center">
+                    <div class="checked"></div>
+                </div>
+                <label class="form-check-label text-white" for="checkbox">
+                    記住電腦編號
+                </label>
+            </div>
+            <div class="wrap__login__btnBox d-flex justify-content-center align-items-center mx-auto">
+                <div class="wrap__login__btnBox-btn d-flex justify-content-center align-items-center"  id="clear_input">
+                    <span>清除</span>
+                </div>
+
+                <!-- 實際form表單時，須改使用以下按鈕 -->
+                <!-- <button class="wrap__login__btnBox-btn d-flex justify-content-center align-items-center">
+                    <span>登入</span>
+                </button> -->
+
+                <a href="./absence-L1.html"
+                    class="wrap__login__btnBox-btn d-flex justify-content-center align-items-center">
+                    <span>登入</span>
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script>
+        var min = 0;
+        var max = 99999;
+        var code;
+
+        $("#clear_input").click(function () {
+            $("input").val("");
+        });
+
+        $(".wrap__login__readonlyCode-re").click(function () {
+            init_code()
+        });
+
+        //init code
+        init_code();
+
+        //set check code
+        function init_code() {
+
+            code = padLeft(String(Math.floor(Math.random() * (max - min + 1)) + min),5);
+            for (var i = 0; i < code.length; i++) {
+                $(".wrap__login__readonlyCode span:nth-child(" + (i + 1) + ")").text(code.charAt(i));
+            }
+        }
+
+        function padLeft(str, len) {
+            str = '' + str;
+            if (str.length >= len) {
+                return str;
+            } else {
+                return padLeft("0" + str, len);
+            }
+        }
+
+        $("form").submit(function (e) {
+            if (code !== $("#code").val()) {
+                e.preventDefault();
+                console.log("fail");
+            }
+        });
+    </script>
+</body>
+
+</html>

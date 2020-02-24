@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-TW"></html>
+<!--  Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/abnormal.css">
+<!--  font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+<title>差勤系統</title>
+<header class="main-navbar-header">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+    <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#"><i class="fas fa-bars"></i></a></div><a class="navbar-brand" href="#"><img class="d-none d-md-inline position-absolute" src="src/pug/img/icon/884e35ef3be51a6c9566394233421028.svg" alt>差勤系統</a>
+    <div class="navbar_icon"><img src="src/pug/img/icon/fb8097a8a9d7896045853038cddbc55c.svg" width="24" alt><img src="src/pug/img/icon/62b69649791c0da97a0283f3bb7a685f.svg" width="24" alt></div>
+  </nav>
+</header>
+<div class="wrapper">
+  <!--  Sidebar Holder -->
+  <nav class="nav-sidebar" id="sidebar">
+    <ul class="list-unstyled components slimescroll-id">
+      <li><a title="差勤申請" href="#sidemenu_collapse_1" data-toggle="collapse" aria-expanded="false"><img src="src/pug/img/navList/586b320aeda2bcb9ef68ddc79abbb5f3.svg" width="20px" alt> 差勤申請</a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_1" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#"><img src="src/pug/img/navList/586b320aeda2bcb9ef68ddc79abbb5f3.svg" width="15px" alt> 請假差勤單</a></li>
+          <li><a class="disable" href="#">銷假申請單</a></li>
+          <li><a href="#">加班報備單</a></li>
+          <li><a href="#">加班申請單</a></li>
+          <li><a href="#">特別休假排休報備單</a></li>
+          <li><a href="#">差勤異常通知單</a></li>
+          <li><a href="./transfer_apply.html">休息/假日調移報備申請單</a></li>
+          <li><a href="./vacation_detail.html">個人差勤明細</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_2" data-toggle="collapse" aria-expanded="false"><img src="src/pug/img/navList/a9b9c1d8691c97aa47cf6b5e9efdc47d.svg" width="20" alt> 人事申請</a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_2" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">人身保險業務員登錄申請</a></li>
+          <li><a href="#">投資、外幣變更登錄申請書</a></li>
+          <li><a href="#">基金銷售業務人員證照登記申請表</a></li>
+          <li><a href="#">薪資轉存入銀行帳戶申請表</a></li>
+          <li><a href="#">薪資所得受領人免稅額申請表</a></li>
+          <li><a href="#">變更各項資料申請書</a></li>
+          <li><a href="./prove_apply.html">各類證明申請書</a></li>
+          <li><a href="./healthInsurance.html">健保轉入轉出申報表</a></li>
+          <li><a href="#">通知/補辦單</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_3" data-toggle="collapse" aria-expanded="false">
+          電子簽核
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_3" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">異常補辦匣</a></li>
+          <li><a href="#">待簽核匣</a></li>
+          <li><a href="#">通知匣</a></li>
+          <li><a href="./holiday_detail_list_manager.html">簽核完成匣</a></li>
+          <li><a href="#">工作佇列</a></li>
+          <li><a href="#">工作待辦匣</a></li>
+          <li><a href="./agent_settnig.html">代理人設定</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_4" data-toggle="collapse" aria-expanded="false">
+          外人承辦人管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_4" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">案件分派</a></li>
+          <li><a href="#">打卡記錄匯入及維護</a></li>
+          <li><a href="#">天然災害假設定</a></li>
+          <li><a href="#">加班單維護</a></li>
+          <li><a href="#">差勤異常通知設定</a></li>
+          <li><a href="#">參數設定</a></li>
+          <li><a href="#">差勤管理文件上傳</a></li>
+          <li><a href="#">假別規則文字設定維護</a></li>
+          <li><a href="#">排程設定</a></li>
+          <li><a href="./leave_maintain.html">假別簽核層級維護</a></li>
+          <li><a href="#">流程檔維護</a></li>
+          <li><a href="#">假日維護</a></li>
+          <li><a href="#">班表維護</a></li>
+          <li><a href="#">職等班表維護</a></li>
+          <li><a href="#">異常通知Log查詢</a></li>
+          <li><a href="#">特殊假匯入</a></li>
+          <li><a href="#">假別額度維護</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_5" data-toggle="collapse" aria-expanded="false">
+          查詢下載與報表管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_5" data-parent="#sidemenu_collapse_parent">
+          <li><a href="./todo_duty.html">差勤/人事綜合查詢及報表</a></li>
+          <li><a href="#">月差勤記錄</a></li>
+          <li><a href="./todo_training.html">調訓查詢及報表</a></li>
+          <li><a href="#">個人班表查詢</a></li>
+          <li><a href="#">排休暨輪休查詢及報表</a></li>
+          <li><a href="#">差勤管理文件查詢及下載</a></li>
+          <li><a href="#">公傷假名單及統計</a></li>
+          <li><a href="#">公傷假人員明細表</a></li>
+          <li><a href="#">產假統計表</a></li>
+          <li><a href="#">產假人員明細表</a></li>
+          <li><a href="#">特休假單位統計表</a></li>
+          <li><a href="#">特休假單位人員明細表</a></li>
+          <li><a href="#">休息/假日調移人員明細表</a></li>
+          <li><a href="#">休息/假日調移人員統計表</a></li>
+          <li><a href="#">補休逾期名單</a></li>
+          <li><a href="#">人事表單申請查詢</a></li>
+          <li><a href="#">特殊差勤報表</a></li>
+          <li><a href="#">補休逾期名單</a></li>
+          <li><a href="#">差假累計查詢及統計表</a></li>
+          <li><a href="#">考核預告查詢及報表</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_6" data-toggle="collapse" aria-expanded="false">
+          系統管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_6" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">員工資料維護</a></li>
+          <li><a href="./grouppermissionsettings.html">群組權限維護</a></li>
+          <li><a href="#">公告通知</a></li>
+          <li><a href="#">通知功能</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="cover"></div>
+  </nav>
+  <div class="container content-area"><div class="body">
+    <div class="tabWrap">
+        <div class="tabWrap__inner bg-white">
+            <div class="tabBox">
+                <div class="tabBox__tabs d-flex">
+                    <div class="tabBox__tabs__tab active flex-fill d-flex justify-content-center" id="tab1">
+                        異常補辦
+                    </div>
+                    <div class="tabBox__tabs__tab flex-fill d-flex justify-content-center" id="tab2">
+                        完成通知
+                    </div>
+                    <div class="tabBox__tabs__tab flex-fill d-flex justify-content-center" id="tab3">
+                        公告通知
+                    </div>
+                </div>
+                <div class="dateInfo d-flex justify-content-center">
+                    <span>10807工</span>
+                </div>
+            </div>
+            <div class="abnormal">
+                <div class="listBox">
+                    <div class="listBox__row listBox__row-head d-flex">
+                        <div class="listBox__row__title position-relative text-center">
+                            <span class="hr">日期</span>
+                        </div>
+                        <div
+                            class="listBox__row__content position-relative d-flex align-items-center justify-content-center p-0">
+                            <span class="hr">類別/假別</span>
+                        </div>
+                        <div
+                            class="listBox__row__content position-relative d-flex align-items-center justify-content-center p-0">
+                            <span class="hr">異常狀況</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-ec6968 round d-flex align-items-center justify-content-center">
+                                <span>異</span>
+                            </div>
+                            <span>7/21</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span>曠職</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center">
+                            <span>連續曠職三日</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-82cbc6 round d-flex align-items-center justify-content-center">
+                                <span>預</span>
+                            </div>
+                            <span>7/21</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span>考核預告</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center">
+                            <span>考核終止聘約預告</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex read" id="reissue">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-ed9027 round d-flex align-items-center justify-content-center">
+                                <span>補</span>
+                            </div>
+                            <span>7/21</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span>家庭照顧假</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="complete d-none">
+                <div class="listBox d-md-none">
+                    <div class="listBox__row listBox__row-head d-flex">
+                        <div class="listBox__row__title position-relative text-center">
+                            <span>主旨</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-center">
+                            <span>申請人/請假日期</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-82cbc6 d-flex align-items-center justify-content-center">
+                                <span>簽</span>
+                            </div>
+                            <span>事假簽核結果：完成</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-ec6968 d-flex align-items-center justify-content-center">
+                                <span>代</span>
+                            </div>
+                            <span>病假職務代理</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row d-flex listBox__row-body read">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-f8b62b d-flex align-items-center justify-content-center">
+                                <span>排</span>
+                            </div>
+                            <span>特別休假預排</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-28a7e1 d-flex align-items-center justify-content-center">
+                                <span>通</span>
+                            </div>
+                            <span>工時未滿</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-e61874 d-flex align-items-center justify-content-center">
+                                <span>預</span>
+                            </div>
+                            <span>考核預告確認</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listBox listBox-pad d-none d-md-block">
+                    <div class="listBox__row listBox__row-head d-flex">
+                        <div class="listBox__row__title position-relative text-center">
+                            <span>主旨</span>
+                        </div>
+                        <div
+                            class="listBox__row__content  position-relative d-flex align-items-center justify-content-center">
+                            <span>申請人/請假日期</span>
+                        </div>
+                        <div
+                            class="listBox__row__content  position-relative d-flex align-items-center justify-content-center">
+                            <span>說明內容</span>
+                        </div>
+                        <div
+                            class="listBox__row__content  position-relative d-flex align-items-center justify-content-center">
+                            <span>表單編號</span>
+                        </div>
+                        <div
+                            class="listBox__row__content  position-relative d-flex align-items-center justify-content-center">
+                            <span>單位</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-82cbc6 d-flex align-items-center justify-content-center">
+                                <span>簽</span>
+                            </div>
+                            <span>事假簽核結果：完成</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex flex-column justify-content-center">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span
+                                class="ellipsis-2">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!申請的表單狀態已更新，請登入系統確認，謝謝您的配合!申請的表單狀態已更新，請登入系統確認，謝謝您的配合!申請的表單狀態已更新，請登入系統確認，謝謝您的配合!申請的表單狀態已更新，請登入系統確認，謝謝您的配合!申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex align-items-center">
+                            <span></span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex  align-items-center">
+                            <span>仰德通＿收</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-ec6968 d-flex align-items-center justify-content-center">
+                                <span>代</span>
+                            </div>
+                            <span>病假職務代理</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex flex-column justify-content-center">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span class="ellipsis-2">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex align-items-center">
+                            <span></span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex  align-items-center">
+                            <span>仰德通＿收</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex read">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-f8b62b d-flex align-items-center justify-content-center">
+                                <span>排</span>
+                            </div>
+                            <span>特別休假預排</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex flex-column justify-content-center">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span class="ellipsis-2">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex align-items-center">
+                            <span></span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex  align-items-center">
+                            <span>仰德通＿收</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-28a7e1 d-flex align-items-center justify-content-center">
+                                <span>通</span>
+                            </div>
+                            <span>工時未滿</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex flex-column justify-content-center">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span class="ellipsis-2">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex align-items-center">
+                            <span></span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex  align-items-center">
+                            <span>仰德通＿收</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-start">
+                            <div class="type type-e61874 d-flex align-items-center justify-content-center">
+                                <span>預</span>
+                            </div>
+                            <span>考核預告確認</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex flex-column justify-content-center">
+                            <span class="name">王小明 (AB1230)</span>
+                            <span class="time">108/08/23</span>
+                        </div>
+                        <div class="listBox__row__content position-relative d-flex align-items-center">
+                            <span class="ellipsis-2">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex align-items-center">
+                            <span></span>
+                        </div>
+                        <div class="listBox__row__content  position-relative d-flex  align-items-center">
+                            <span>仰德通＿收</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="announcement d-none">
+                <div class="listBox d-md-none">
+                    <div class="listBox__row listBox__row-head d-flex">
+                        <div class="listBox__row__title position-relative text-center">
+                            <span>更新<br>日期</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-between">
+                            <div class="d-flex flex-column">
+                                <span>標題</span>
+                                <span>公告單位</span>
+                            </div>
+                            <div class="d-flex">
+                                <img src="src/pug/img/abnormal/267ff9394d86664e97120cd042406f8a.svg" width="29" alt="" class="mr-2">
+                                <span>參考<br>文件</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div class="listBox__row__content">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                            <span class="d-block">外務人事部</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                            <span class="d-block">外務人事部</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex read">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div class="listBox__row__content d-flex flex-column">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                            <span class="d-block">外務人事部</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="listBox listBox-pad d-none d-md-block">
+                    <div class="listBox__row listBox__row-head d-flex">
+                        <div
+                            class="listBox__row__title d-flex align-items-center position-relative justify-content-center">
+                            <span>更新日期</span>
+                        </div>
+                        <div
+                            class="listBox__row__content align-items-center justify-content-center d-flex position-relative">
+                            <span>公告單位</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-between">
+                            <div class="d-flex position-relative">
+                                <span>標題</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="src/pug/img/abnormal/267ff9394d86664e97120cd042406f8a.svg" width="24" alt="" class="mr-2">
+                                <span>參考文件</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div
+                            class="listBox__row__content position-relative d-flex align-items-center justify-content-center">
+                            <span>外務人事部</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-center">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div
+                            class="listBox__row__content position-relative d-flex align-items-center justify-content-center">
+                            <span>外務人事部</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-center">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                        </div>
+                    </div>
+                    <div class="listBox__row listBox__row-body read d-flex">
+                        <div
+                            class="listBox__row__title position-relative d-flex align-items-center justify-content-center">
+                            <span>2/18</span>
+                        </div>
+                        <div
+                            class="listBox__row__content position-relative d-flex align-items-center justify-content-center">
+                            <span>外務人事部</span>
+                        </div>
+                        <div class="listBox__row__content d-flex align-items-center justify-content-center">
+                            <span class="d-block text-truncate">好消息～Ｉ打卡填問卷抽好禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮禮</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="noticeBox d-none">
+    <div class="noticeBox__title text-center">
+        <span>補辦通知單-家庭照顧假</span>
+    </div>
+    <div class="noticeBox__form">
+        <div class="d-md-flex">
+            <div
+                class="noticeBox__form__item X d-flex flex-md-column flex-md-06 align-items-center align-items-md-stretch mr-md-2">
+                <div class="label mr-3  flex-md-1">
+                    <span class="star">*</span>
+                    <span class="text">通知日期</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start flex-md-1">
+                    <span>108/07/1</span>
+                </div>
+            </div>
+            <div class="noticeBox__form__item-wrap d-flex ml-md-2 mr-md-2">
+                <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mr-2">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">累計通知次數</span>
+                    </div>
+                    <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="noticeBox__form__item Y d-flex flex-column justify-content-center ml-2">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">累計日數</span>
+                    </div>
+                    <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                        <span>5日</span>
+                    </div>
+                </div>
+            </div>
+            <div class="divider r mx-auto d-md-none"></div>
+            <div
+                class="noticeBox__form__item X d-flex flex-md-column flex-md-955 align-items-center align-items-md-stretch mt-4 mt-md-0 ml-md-2">
+                <div class="label mr-3 flex-md-1">
+                    <span class="star">*</span>
+                    <span class="text">表單編號</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span>LM20180601-001</span>
+                </div>
+            </div>
+        </div>
+        <div class="noticeBox__form__item Y d-flex flex-column justify-content-center">
+            <div class="label mr-3">
+                <span class="star">*</span>
+                <span class="text">主旨</span>
+            </div>
+            <div class="readOnlyInfo text-r d-flex align-items-center justify-content-start">
+                <span>請假期間：2018/06/06~2018/06/06,時/天數：1天</span>
+            </div>
+        </div>
+        <div class="d-md-flex">
+            <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mr-md-2 flex-md-2">
+                <div class="label mr-3">
+                    <span class="star">*</span>
+                    <span class="text">申請人/職務</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span>吳新光（K12345）/業務員</span>
+                </div>
+            </div>
+            <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mr-md-2 ml-md-2 flex-md-1">
+                <div class="label mr-3">
+                    <span class="star">*</span>
+                    <span class="text">單位</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span>螢橋通-收</span>
+                </div>
+            </div>
+            <div
+                class="noticeBox__form__item Y d-none d-md-flex flex-column justify-content-center mr-2 mr-md-0 ml-md-2 flex-md-1">
+                <div class="label mr-3">
+                    <span class="star">*</span>
+                    <span class="text">職務代理通知</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span>張金寶</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-md-flex">
+            <div class="noticeBox__form__item-wrap d-flex mr-md-3 flex-md-955">
+                <div class="noticeBox__form__item Y d-flex d-md-none flex-column justify-content-center mr-2">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">職務代理通知</span>
+                    </div>
+                    <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                        <span>張金寶</span>
+                    </div>
+                </div>
+                <div class="noticeBox__form__item Y d-flex flex-column justify-content-center ml-2 ml-md-0">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">代理人</span>
+                    </div>
+                    <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                        <span>林銀寶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="noticeBox__form__item-wrap d-flex flex-md-1">
+                <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mr-2">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">工作年月</span>
+                    </div>
+                    <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                        <span>10808工</span>
+                    </div>
+                </div>
+                <div class="noticeBox__form__item Y d-flex flex-column justify-content-center ml-2">
+                    <div class="label mr-3">
+                        <span class="star">*</span>
+                        <span class="text">限辦日期</span>
+                    </div>
+                    <div class="readOnlyInfo text-r d-flex align-items-center justify-content-start">
+                        <span>108/7/4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="noticeBox__form__item Y d-flex flex-column justify-content-center">
+            <div class="label mr-3">
+                <span class="star">*</span>
+                <span class="text">備註</span>
+            </div>
+            <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                <span class="empty"></span>
+            </div>
+        </div>
+        <div class="divider r mx-auto"></div>
+        <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mt-4">
+            <div class="label mr-3">
+                <span class="star">*</span>
+                <span class="text">補辦內容</span>
+            </div>
+            <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                <span class="empty-l"></span>
+            </div>
+        </div>
+        <div class="noticeBox__form__item-wrap d-flex">
+            <div class="noticeBox__form__item Y d-flex flex-column justify-content-center mr-2">
+                <div class="label mr-3">
+                    <span class="star">*</span>
+                    <span class="text">聯絡人姓名</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span class="empty"></span>
+                </div>
+            </div>
+            <div class="noticeBox__form__item Y d-flex flex-column justify-content-center ml-2">
+                <div class="label mr-3">
+                    <span class="star">*</span>
+                    <span class="text">聯絡人電話</span>
+                </div>
+                <div class="readOnlyInfo d-flex align-items-center justify-content-start">
+                    <span class="empty"></span>
+                </div>
+            </div>
+            <div class="d-none d-md-flex flex-md-2"></div>
+        </div>
+    </div>
+    <div class="noticeBox__btnBox d-flex justify-content-center align-items-center mt-md-3">
+        <div class="noticeBox__btnBox__btn d-flex justify-content-center align-items-center">
+            <span>我要補辦</span>
+        </div>
+    </div>
+</div>
+    <div class="row" id="footer">
+      <div class="col-12">
+        <hr>
+        <p class="text-black-50">version. 0.0.1</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="app-links">
+  <ul>
+    <li class="active"><a href="./absence-L1.html"><img src="src/pug/img/0830/d8101ba59fd2ed4ef6a333fd8063f982.svg" width="34px" alt><span>回首頁</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="#"><img src="src/pug/img/0830/0dbade53958a879d8045637fe39ea02f.svg" width="29px" alt><span>異常補辦</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="#"><img src="src/pug/img/0830/b93293a03d95452dd336207e83c6c71c.svg" width="46px" alt><span>通知</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="vacation.html"><img src="src/pug/img/0830/e05d72752c99a2cca558627436349ac9.svg" width="35px" alt><span>請假</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="./pendingApproval.html"><img src="src/pug/img/0830/bd1894ee904b74bdc399dbcc8910abcf.svg" width="33px" alt><span>待簽核</span>
+        <div class="notice"><span>2</span></div></a></li>
+  </ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+              $('#sidebarCollapse').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+  
+              $('#sidebar > div.cover').on('click',function(){
+                  $('#sidebar').toggleClass('active');
+              });
+          });
+          $(function () {
+              $('.slimescroll-id').slimScroll({
+                  height: '100vh'
+              });
+          });
+</script>
+<script src="js/abnormal.js"></script><script type="text/javascript" src="main.js"></script>

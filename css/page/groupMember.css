@@ -1,0 +1,290 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/groupMember/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: solid 2px #eb6868;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+.fa-users-cog {
+  color: #eb6868;
+}
+
+.groupMember {
+  font-weight: 900;
+}
+
+.groupMember .title {
+  font-size: 20px;
+}
+
+.groupMember .groupMemberArea form {
+  padding: 20px 5px;
+  margin: 20px 0 30px 0;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.groupMember .groupMemberArea form input,
+.groupMember .groupMemberArea form label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.groupMember .groupMemberArea form label {
+  margin-right: 20px;
+}
+
+.groupMember .groupMemberArea form label.checkbox-label {
+  color: #eb6868;
+}
+
+.groupMember .groupMemberArea form table {
+  text-align: center;
+}
+
+.groupMember .groupMemberArea form table th,
+.groupMember .groupMemberArea form table td {
+  padding: 5px 0;
+  vertical-align: inherit;
+}
+
+.groupMember .groupMemberArea form table th .fa-edit,
+.groupMember .groupMemberArea form table td .fa-edit {
+  color: #eb6868;
+}
+
+.groupMember .groupMemberArea form table td:first-child {
+  width: 40px;
+}
+
+.groupMember .groupMemberArea form table th {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+.groupMember .groupMemberArea form table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.groupMember .groupMemberArea form table thead tr th {
+  border-bottom: solid 2px #eb6868;
+}
+
+.groupMember .groupMemberArea form table thead tr th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.groupMember .groupMemberArea form table thead tr th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.groupMember .groupMemberArea form table tbody tr, .groupMember .groupMemberArea form table tbody td {
+  border: solid 2px #eb6868;
+}
+
+.groupMember .groupMemberArea .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 30px 10px 30px 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.groupMember .groupMemberArea .btn .fa-search {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.groupMember .groupMemberArea .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+.groupMember .groupMemberArea .btn.add-btn {
+  margin: 0;
+}
+
+.groupMember .groupMemberArea .btn.go-btn {
+  margin: 0;
+}
+
+.groupMember .groupMemberArea .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+.groupMember .groupMemberArea .btn-outline .fas {
+  color: #56bdb7;
+}
+
+.groupMember .resultList .selectResultList {
+  padding: 20px 5px;
+  margin: 20px 0;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.groupMember .resultList .btnArea .control-btn {
+  padding: 2px 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  color: #eb6868;
+  margin: 0 0 20px 0;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.groupMember .resultList table {
+  text-align: center;
+}
+
+.groupMember .resultList table th,
+.groupMember .resultList table td {
+  padding: 5px 0;
+  vertical-align: inherit;
+}
+
+.groupMember .resultList table th .fa-edit,
+.groupMember .resultList table td .fa-edit {
+  color: #eb6868;
+}
+
+.groupMember .resultList table th {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+.groupMember .resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.groupMember .resultList table thead tr th {
+  border-bottom: solid 2px #eb6868;
+}
+
+.groupMember .resultList table thead tr th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.groupMember .resultList table thead tr th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.groupMember .resultList table tbody tr, .groupMember .resultList table tbody td {
+  border: solid 2px #eb6868;
+}
+
+.groupMember .paginationArea .pagination {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.groupMember .paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+.groupMember .paginationArea .pagination li:nth-child(2) .fas {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.groupMember .paginationArea .pagination .fas.fa-play {
+  font-size: 15px;
+}
+
+.groupMember .paginationArea .pagination .fas {
+  color: #eb6868;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.groupMember .paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.groupMember .paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #eb6868;
+}
+
+.groupMember .paginationArea .pagination input {
+  width: 50px;
+}
+
+.groupMember .paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  background-color: white;
+  border-radius: 0px;
+  color: #eb6868;
+}
+
+.textBold {
+  font-weight: 700;
+}
+
+table {
+  font-weight: 700;
+}
+
+.select-group {
+  position: relative;
+}
+
+.select-group span {
+  height: 100%;
+  width: 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+.select-group span .fas {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 8px;
+}
+/*# sourceMappingURL=groupMember.css.map */

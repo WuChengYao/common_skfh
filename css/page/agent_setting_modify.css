@@ -1,0 +1,208 @@
+.selectgroup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selectgroup select {
+  color: #4D4D4D !important;
+}
+
+.selectgroup:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
+  right: 10px;
+  pointer-events: none;
+}
+
+#agentSettingModify {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#agentSettingModify hr {
+  border-top: 2px solid #eb6868;
+  margin: 30px 0;
+}
+
+#agentSettingModify .title {
+  color: #eb6868;
+  font-size: 25px;
+  letter-spacing: .5px;
+  margin-bottom: 20px;
+}
+
+#agentSettingModify .require {
+  color: red;
+}
+
+#agentSettingModify .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+  width: 85px;
+  height: 40px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#agentSettingModify .btn.btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+#agentSettingModify .btn .fas {
+  margin-right: 5px;
+}
+
+#agentSettingModify .btn .fa-search {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#agentSettingModify .agentSettingForm {
+  padding: 0 20px 20px 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#agentSettingModify .agentSettingForm label {
+  margin: 20px 0 10px 0;
+}
+
+#agentSettingModify .agentSettingForm label .require {
+  color: red;
+}
+
+#agentSettingModify .agentSettingForm .form-control {
+  border: 2px solid #C4C3C3;
+  color: #999999;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px 5px;
+  letter-spacing: 0;
+  height: unset;
+}
+
+@media screen and (max-width: 576px) {
+  #agentSettingModify .agentSettingForm .form-control {
+    text-align: center;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #agentSettingModify .agentSettingForm select {
+    text-align-last: center;
+  }
+}
+
+#agentSettingModify .agentSettingForm .form-control[readonly] {
+  background-color: #EDEAEA;
+  color: #999999;
+}
+
+#agentSettingModify .agentSettingForm .group {
+  position: relative;
+}
+
+#agentSettingModify .agentSettingForm .group .form-control {
+  padding-right: 34px;
+}
+
+#agentSettingModify .agentSettingForm .group .search-icon {
+  position: absolute;
+  border: 1.5px solid #c4c3c3;
+  border-radius: .25rem;
+  height: 34px;
+  width: 38px;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 20;
+}
+
+#agentSettingModify .agentSettingForm .group .search-icon .fas {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#agentSettingModify .agentSettingForm .dateInput {
+  border: 2px solid #C4C3C3;
+  color: #4D4D4D;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  border-radius: .25rem;
+}
+
+#agentSettingModify .agentSettingForm .dateInput input {
+  padding: 5px 10px;
+}
+
+#agentSettingModify .agentSettingForm .dateInput .date-icon {
+  border: 2px solid #C4C3C3;
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -2px;
+  border-radius: .25rem;
+}
+
+#agentSettingModify .agentSettingForm .right + .calendar_modle {
+  right: 0 !important;
+  left: unset !important;
+}
+
+#agentSettingModify .agentSettingForm .calendar_modle {
+  width: 40vw;
+}
+
+@media (max-width: 576px) {
+  #agentSettingModify .agentSettingForm .calendar_modle {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=agent_setting_modify.css.map */

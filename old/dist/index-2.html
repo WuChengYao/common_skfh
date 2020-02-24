@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-TW"></html>
+<!--  Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<!--  Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+<!--  font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+<title>差勤系統</title>
+<header class="main-navbar-header">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+    <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#"><i class="fas fa-bars"></i></a></div><a class="navbar-brand" href="#"><img class="d-none d-md-inline position-absolute" src="src/pug/img/icon/884e35ef3be51a6c9566394233421028.svg" alt>差勤系統</a>
+    <div class="navbar_icon"><img src="src/pug/img/icon/fb8097a8a9d7896045853038cddbc55c.svg" width="24" alt><img src="src/pug/img/icon/62b69649791c0da97a0283f3bb7a685f.svg" width="24" alt></div>
+  </nav>
+</header>
+<div class="wrapper">
+  <!--  Sidebar Holder -->
+  <nav class="nav-sidebar" id="sidebar">
+    <ul class="list-unstyled components slimescroll-id">
+      <li><a title="差勤申請" href="#sidemenu_collapse_1" data-toggle="collapse" aria-expanded="false"><img src="src/pug/img/navList/586b320aeda2bcb9ef68ddc79abbb5f3.svg" width="20px" alt> 差勤申請</a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_1" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#"><img src="src/pug/img/navList/586b320aeda2bcb9ef68ddc79abbb5f3.svg" width="15px" alt> 請假差勤單</a></li>
+          <li><a class="disable" href="#">銷假申請單</a></li>
+          <li><a href="#">加班報備單</a></li>
+          <li><a href="#">加班申請單</a></li>
+          <li><a href="#">特別休假排休報備單</a></li>
+          <li><a href="#">差勤異常通知單</a></li>
+          <li><a href="./transfer_apply.html">休息/假日調移報備申請單</a></li>
+          <li><a href="./vacation_detail.html">個人差勤明細</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_2" data-toggle="collapse" aria-expanded="false"><img src="src/pug/img/navList/a9b9c1d8691c97aa47cf6b5e9efdc47d.svg" width="20" alt> 人事申請</a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_2" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">人身保險業務員登錄申請</a></li>
+          <li><a href="#">投資、外幣變更登錄申請書</a></li>
+          <li><a href="#">基金銷售業務人員證照登記申請表</a></li>
+          <li><a href="#">薪資轉存入銀行帳戶申請表</a></li>
+          <li><a href="#">薪資所得受領人免稅額申請表</a></li>
+          <li><a href="#">變更各項資料申請書</a></li>
+          <li><a href="./prove_apply.html">各類證明申請書</a></li>
+          <li><a href="./healthInsurance.html">健保轉入轉出申報表</a></li>
+          <li><a href="#">通知/補辦單</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_3" data-toggle="collapse" aria-expanded="false">
+          電子簽核
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_3" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">異常補辦匣</a></li>
+          <li><a href="#">待簽核匣</a></li>
+          <li><a href="#">通知匣</a></li>
+          <li><a href="./holiday_detail_list_manager.html">簽核完成匣</a></li>
+          <li><a href="#">工作佇列</a></li>
+          <li><a href="#">工作待辦匣</a></li>
+          <li><a href="./agent_settnig.html">代理人設定</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_4" data-toggle="collapse" aria-expanded="false">
+          外人承辦人管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_4" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">案件分派</a></li>
+          <li><a href="#">打卡記錄匯入及維護</a></li>
+          <li><a href="#">天然災害假設定</a></li>
+          <li><a href="#">加班單維護</a></li>
+          <li><a href="#">差勤異常通知設定</a></li>
+          <li><a href="#">參數設定</a></li>
+          <li><a href="#">差勤管理文件上傳</a></li>
+          <li><a href="#">假別規則文字設定維護</a></li>
+          <li><a href="#">排程設定</a></li>
+          <li><a href="./leave_maintain.html">假別簽核層級維護</a></li>
+          <li><a href="#">流程檔維護</a></li>
+          <li><a href="#">假日維護</a></li>
+          <li><a href="#">班表維護</a></li>
+          <li><a href="#">職等班表維護</a></li>
+          <li><a href="#">異常通知Log查詢</a></li>
+          <li><a href="#">特殊假匯入</a></li>
+          <li><a href="#">假別額度維護</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_5" data-toggle="collapse" aria-expanded="false">
+          查詢下載與報表管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_5" data-parent="#sidemenu_collapse_parent">
+          <li><a href="./todo_duty.html">差勤/人事綜合查詢及報表</a></li>
+          <li><a href="#">月差勤記錄</a></li>
+          <li><a href="./todo_training.html">調訓查詢及報表</a></li>
+          <li><a href="#">個人班表查詢</a></li>
+          <li><a href="#">排休暨輪休查詢及報表</a></li>
+          <li><a href="#">差勤管理文件查詢及下載</a></li>
+          <li><a href="#">公傷假名單及統計</a></li>
+          <li><a href="#">公傷假人員明細表</a></li>
+          <li><a href="#">產假統計表</a></li>
+          <li><a href="#">產假人員明細表</a></li>
+          <li><a href="#">特休假單位統計表</a></li>
+          <li><a href="#">特休假單位人員明細表</a></li>
+          <li><a href="#">休息/假日調移人員明細表</a></li>
+          <li><a href="#">休息/假日調移人員統計表</a></li>
+          <li><a href="#">補休逾期名單</a></li>
+          <li><a href="#">人事表單申請查詢</a></li>
+          <li><a href="#">特殊差勤報表</a></li>
+          <li><a href="#">補休逾期名單</a></li>
+          <li><a href="#">差假累計查詢及統計表</a></li>
+          <li><a href="#">考核預告查詢及報表</a></li>
+        </ul>
+      </li>
+      <li><a href="#sidemenu_collapse_6" data-toggle="collapse" aria-expanded="false">
+          系統管理
+          </a>
+        <ul class="collapse list-unstyled" id="sidemenu_collapse_6" data-parent="#sidemenu_collapse_parent">
+          <li><a href="#">員工資料維護</a></li>
+          <li><a href="./grouppermissionsettings.html">群組權限維護</a></li>
+          <li><a href="#">公告通知</a></li>
+          <li><a href="#">通知功能</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="cover"></div>
+  </nav>
+  <div class="container content-area"><div class="d-none d-md-flex align-items-center padInfo">
+    <img class="padInfo__icon mr-1" src="src/pug/img/icon/55c14fbdd1e546212ee74ad5facdce8f.jpg" width="16" alt="">
+    <span class="padInfo__title mr-2">系統公告</span>
+    <span class="padInfo__content">為配合系統供更新作業，系統將於2019/4/1 下午16:00進行系統維護管理作業，請務必注意工作時間</span>
+</div>
+<div class="body-content">
+    <div class="d-md-flex justify-content-between">
+        <div class="nl__infoBox position-relative">
+            <div class="nl__infoBox__id d-flex justify-content-between align-items-center">
+                <span>吳新光</span>
+                <div class="nl__infoBox__id-select">
+                    <select class="form-control form-control-sm">
+                        <option>
+                            &#xf007 &nbsp;
+                            區經理
+                        </option>
+                        <option>!!!</option>
+                        <option>QQQ</option>
+                    </select>
+                </div>
+                <span>10807工</span>
+            </div>
+            <div class="nl__infoBox__name bg-none text-center d-flex justify-content-between align-items-center"
+                style="padding: 0 10px">
+                <div class="selfActive d-flex justify-content-center align-items-center">
+                    <span>本人</span>
+                </div>
+                <div class="other d-flex justify-content-center align-items-center">
+                    <span>轄下</span>
+                </div>
+            </div>
+            <div class="nl__infoBox__record d-flex justify-content-around align-items-center">
+                <div class="nl__infoBox__record-absence d-flex flex-column align-items-center position-relative">
+                    <span class="">未上班</span>
+                    <span>1</span>
+                    <small class="position-absolute">日</small>
+                </div>
+                <div class="yBar"></div>
+                <div class="nl__infoBox__record-late d-flex flex-column align-items-center position-relative">
+                    <span class="">遲到</span>
+                    <span>2</span>
+                    <small class="position-absolute">次</small>
+                </div>
+                <div class="yBar"></div>
+                <div class="nl__infoBox__record-leave d-flex flex-column align-items-center position-relative">
+                    <span class="">已請假</span>
+                    <span>2.5</span>
+                    <small class="position-absolute">日</small>
+                </div>
+            </div>
+            <div class="nl__infoBox__record d-none d-md-flex justify-content-around align-items-center">
+                <div class="nl__infoBox__record-absence d-flex flex-column align-items-center position-relative">
+                    <span class="">特休</span>
+                    <span>1</span>
+                    <small class="position-absolute">日</small>
+                </div>
+                <div class="yBar"></div>
+                <div class="nl__infoBox__record-late d-flex flex-column align-items-center position-relative">
+                    <span class="">病假</span>
+                    <span>2</span>
+                    <small class="position-absolute">次</small>
+                </div>
+                <div class="yBar"></div>
+                <div class="nl__infoBox__record-leave d-flex flex-column align-items-center position-relative">
+                    <span class="">事假</span>
+                    <span>2.5</span>
+                    <small class="position-absolute">日</small>
+                </div>
+            </div>
+            <div class="nl__infoBox__percent d-flex justify-content-between align-items-center">
+                <div class="nl__infoBox__percent-already d-flex flex-column align-items-center">
+                    <span class="text-nowrap">已休3日</span>
+                    <span>23%</span>
+                </div>
+                <div class="nl__infoBox__percent-chart d-flex justify-content-center align-items-end position-relative">
+                    <div class="nl__infoBox__percent-chart__already d-flex justify-content-center align-items-end">
+                        <div class="nl__infoBox__percent-chart__wrap">
+                            <div class="nl__infoBox__percent-chart__notyet-wraper overflow-hidden position-relative">
+                                <div class="nl__infoBox__percent-chart__notyet position-absolute">
+                                    <div class="nl__infoBox__percent-chart__center position-absolute">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="position-absolute nl__infoBox__percent-chart__text text-nowrap">年度特休假</span>
+                </div>
+                <div class="nl__infoBox__percent-notyet d-flex flex-column align-items-center">
+                    <span class="text-nowrap">未休10日</span>
+                    <span>77%</span>
+                </div>
+            </div>
+            <div class="nl__infoBox__summary text-right">
+                <span>應休13日</span>
+                <span>統計至 108/08/17</span>
+            </div>
+        </div>
+        <div class="calendar d-none d-md-block">
+            <div class="calendar__title d-flex align-items-center justify-content-center">
+                <span></span>
+                <span class="mx-2">10807工</span>
+                <span></span>
+            </div>
+            <div class="calendar__content d-flex flex-column">
+                <div class="calendar__content__week flex-fill d-flex justify-content-around align-items-end">
+                    <span class="text-center">日</span>
+                    <span class="text-center">一</span>
+                    <span class="text-center">二</span>
+                    <span class="text-center">三</span>
+                    <span class="text-center">四</span>
+                    <span class="text-center">五</span>
+                    <span class="text-center">六</span>
+                </div>
+                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                    <span class="R text-center"></span>
+                    <span class="text-center"></span>
+                    <span class="text-center"></span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/12')">6/12</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/13')">13</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/14')">14</span>
+                    <span class="R text-center">15</span>
+                </div>
+                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                    <span class="R text-center">16</span>
+                    <span class="text-center position-relative" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/17')">17<span class="position-absolute H">事特</span></span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/18')">18</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/19')">19</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/20')">20</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/21')">21</span>
+                    <span class="R text-center">22</span>
+                </div>
+                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                    <span class="R text-center">23</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/24')">24</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/25')">25</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/26')">26</span>
+                    <span class="text-center position-relative" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/27')">27<span class="position-absolute H">特1</span></span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('6/28')">28</span>
+                    <span class="R text-center">29</span>
+                </div>
+                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                    <span class="R text-center">30</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send"
+                        onclick="getDate('7/1')">7/1</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send" onclick="getDate('7/2')">2</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send" onclick="getDate('7/3')">3</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send" onclick="getDate('7/4')">4</span>
+                    <span class="text-center position-relative" data-toggle="modal" data-target="#send"
+                        onclick="getDate('7/5')">5<span class="position-absolute H">特1</span></span>
+                    <span class="R text-center">6</span>
+                </div>
+                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                    <span class="R text-center">7</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send" onclick="getDate('7/8')">8</span>
+                    <span class="text-center" data-toggle="modal" data-target="#send" onclick="getDate('7/9')">9</span>
+                    <span class="text-center"></span>
+                    <span class="text-center"></span>
+                    <span class="text-center"></span>
+                    <span class="R text-center"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nl__btn">
+        <div class="nl__btn__top d-flex justify-content-around">
+            <a class="nl__btn__top-btn d-none d-md-flex flex-column align-items-center" href="vacation.html">
+                <div class="imgWrap d-flex align-items-center justify-content-center position-relative">
+                    <div class="imgWrap__iconBox G d-flex align-items-center justify-content-center">
+                        <img src="src/pug/img/icon/e1f6f408ca04094094e574ef7bbcb618.svg" width="38" alt="" srcset="">
+                    </div>
+                    <div class="imgWrap__notice position-absolute d-flex justify-content-center align-items-center">
+                        <span>5</span>
+                    </div>
+                </div>
+                <span class="mt-1">請假</span>
+            </a>
+            <div class="nl__btn__top-btn d-flex flex-column align-items-center">
+                <div class="imgWrap d-flex align-items-center justify-content-center position-relative">
+                    <div class="imgWrap__iconBox O d-flex align-items-center justify-content-center">
+                        <img src="src/pug/img/icon/9a4d0e78183d72b037a26ff67784e734.svg" width="32.6" alt="" srcset="">
+                    </div>
+                    <div class="imgWrap__notice position-absolute d-flex justify-content-center align-items-center">
+                        <span>1</span>
+                    </div>
+                </div>
+                <span class="mt-1">異常補辦</span>
+            </div>
+            <div class="nl__btn__top-btn d-flex flex-column align-items-center">
+                <div class="imgWrap d-flex align-items-center justify-content-center position-relative">
+                    <div class="imgWrap__iconBox B d-flex align-items-center justify-content-center">
+                        <img src="src/pug/img/icon/02f5e9b784e0df8c4e27df7a31719b2c.svg" width="44" alt="" srcset="">
+                    </div>
+                    <div class="imgWrap__notice position-absolute d-flex justify-content-center align-items-center">
+                        <span>5</span>
+                    </div>
+                </div>
+                <span class="mt-1">通知</span>
+            </div>
+            <a href="./pendingApproval.html" class="nl__btn__top-btn d-flex flex-column align-items-center">
+                <div class="imgWrap d-flex align-items-center justify-content-center position-relative">
+                    <div class="imgWrap__iconBox R d-flex align-items-center justify-content-center">
+                        <img src="src/pug/img/icon/db4c897186c12d862f14b6fc54d0ccc3.svg" width="32.6" alt="" srcset="">
+                    </div>
+                    <div class="imgWrap__notice position-absolute d-flex justify-content-center align-items-center">
+                        <span>1</span>
+                    </div>
+                </div>
+                <span class="mt-1">待簽核</span>
+            </a>
+            <div class="nl__btn__top-btn d-none d-md-flex flex-column align-items-center">
+                <div class="imgWrap d-flex align-items-center justify-content-center position-relative">
+                    <div class="imgWrap__iconBox D d-flex align-items-center justify-content-center">
+                        <img src="src/pug/img/icon/a22f615ac6eac2a10f17b74b03134f64.svg" width="32.6" alt="" srcset="">
+                    </div>
+                    <div class="imgWrap__notice position-absolute d-flex justify-content-center align-items-center">
+                        <span>5</span>
+                    </div>
+                </div>
+                <span class="mt-1">代理人設定</span>
+            </div>
+        </div>
+        <div class="nl__btn__function btn__line-t d-flex d-md-none justify-content-around">
+            <a class="nl__btn__function-btn P d-flex flex-column align-items-center justify-content-center"
+                href="vacation.html">
+                <img src="src/pug/img/icon/2bc8669ab704a65fd075692bd8bac41d.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">請假申請</span>
+            </a>
+            <div class="nl__btn__function-btn B d-flex flex-column align-items-center justify-content-center">
+                <img src="src/pug/img/icon/233d686def1037026bb043b9a893a3f6.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">差勤證明</span>
+            </div>
+            <a href="./annualLeave.html"
+                class="nl__btn__function-btn P d-flex flex-column align-items-center justify-content-center">
+                <img src="src/pug/img/icon/7cf2d428c3aff05fc8f0349fa8f8af51.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">預排特休假</span>
+            </a>
+        </div>
+        <div class="nl__btn__function btn__line-b d-flex d-md-none justify-content-around">
+            <div class="nl__btn__function-btn B d-flex flex-column align-items-center justify-content-center">
+                <img src="src/pug/img/icon/c50e69b030fd1b8ac66608f37c6092ef.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">表單申請</span>
+            </div>
+            <div class="nl__btn__function-btn P d-flex flex-column align-items-center justify-content-center">
+                <img src="src/pug/img/icon/b5974c646cb28cd1d25b8f45015d644f.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">查詢</span>
+            </div>
+            <div class="nl__btn__function-btn B d-flex flex-column align-items-center justify-content-center">
+                <img src="src/pug/img/icon/0536de9e69184e606bdf9e9a852bec0e.svg" width="30" alt="" srcset="" class="pt-1">
+                <span class="mt-1">更多服務</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="send" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content send mx-auto">
+            <div class="modal-body">
+                <div class="readOnlyComponent-wrap flex1">
+                    <div class="readOnlyComponent">
+                        <div class="label d-flex align-items-center">
+                            <span class="star">*</span>
+                            <span class="title">日期</span>
+                        </div>
+                        <div class="content d-flex align-items-center" id="dateSelected">
+                            <span>07/02</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="radio-wrap">
+                    <div class="label d-flex align-items-center">
+                        <span class="star">*</span>
+                        <span class="title">排休期間</span>
+                    </div>
+                    <div class="radio d-flex">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <div class="radioBox d-flex justify-content-center align-items-center">
+                                <div class="radioInner"></div>
+                            </div>
+                            <label class="form-check-label" for="exampleRadios1">
+                                上午
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <div class="radioBox d-flex justify-content-center align-items-center">
+                                <div class="radioInner"></div>
+                            </div>
+                            <label class="form-check-label" for="exampleRadios2">
+                                下午
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <div class="radioBox d-flex justify-content-center align-items-center">
+                                <div class="radioInner"></div>
+                            </div>
+                            <label class="form-check-label" for="exampleRadios2">
+                                全天
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <div class="label d-flex align-items-center">
+                        <span class="star">*</span>
+                        <span class="title">是否送出假單</span>
+                    </div>
+                    <div class="d-flex">
+                        <div class="form-check position-relative">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <div class="checkBox"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-btn d-flex justify-content-center align-items-center">
+                    <div class="checkbox-btn-save d-flex justify-content-center align-items-center">
+                        <img src="src/pug/img/annualLeave/d512c8125a7e8011515f7eed570c2598.svg" width="16" alt="" srcset="">
+                        <span>儲存</span>
+                    </div>
+                    <div class="checkbox-btn-cancel d-flex justify-content-center align-items-center"
+                        data-dismiss="modal">
+                        <img src="src/pug/img/annualLeave/a8d4bbefc003c83d65553ed710cd8000.svg" width="12" alt="" srcset="">
+                        <span>取消</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row" id="footer">
+      <div class="col-12">
+        <hr>
+        <p class="text-black-50">version. 0.0.1</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="app-links">
+  <ul>
+    <li class="active"><a href="./absence-L1.html"><img src="src/pug/img/0830/d8101ba59fd2ed4ef6a333fd8063f982.svg" width="34px" alt><span>回首頁</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="#"><img src="src/pug/img/0830/0dbade53958a879d8045637fe39ea02f.svg" width="29px" alt><span>異常補辦</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="#"><img src="src/pug/img/0830/b93293a03d95452dd336207e83c6c71c.svg" width="46px" alt><span>通知</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="vacation.html"><img src="src/pug/img/0830/e05d72752c99a2cca558627436349ac9.svg" width="35px" alt><span>請假</span>
+        <div class="notice"><span>2</span></div></a></li>
+    <li><a href="./pendingApproval.html"><img src="src/pug/img/0830/bd1894ee904b74bdc399dbcc8910abcf.svg" width="33px" alt><span>待簽核</span>
+        <div class="notice"><span>2</span></div></a></li>
+  </ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+              $('#sidebarCollapse').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+  
+              $('#sidebar > div.cover').on('click',function(){
+                  $('#sidebar').toggleClass('active');
+              });
+          });
+          $(function () {
+              $('.slimescroll-id').slimScroll({
+                  height: '100vh'
+              });
+          });
+</script>
+<script src="js/index2.js"></script><script type="text/javascript" src="main.js"></script>

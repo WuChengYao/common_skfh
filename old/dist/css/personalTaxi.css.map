@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,gBAAgB,EAAC,GAAG;CACvB;;AACD,AAAA,QAAQ,CAAC;EACL,KAAK,EAAC,GAAG;CACZ;;AAED,AAAA,cAAc,CAAA;EACV,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;EACX,OAAO,EAAE,QAAQ;EACjB,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,GAAG;CACrB",
+    "sources": [
+        "personalTaxi.scss"
+    ],
+    "names": [],
+    "file": "personalTaxi.css"
+}

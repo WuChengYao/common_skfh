@@ -1,0 +1,192 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/0830/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/0830/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: solid 1px #ec6968;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+@media (min-width: 768px) {
+  .checkBox {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.dropdown-menu {
+  -webkit-transform: translateY(38px);
+          transform: translateY(38px);
+}
+
+.leave .searchArea .searchForm {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.leave .searchArea .searchForm input,
+.leave .searchArea .searchForm label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.leave .searchArea .searchForm label {
+  margin-bottom: 0;
+}
+
+.leave .searchArea .searchForm .panel {
+  width: 45px;
+  height: 38px;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.leave .searchArea .searchForm .panel .panel-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.leave .searchArea .searchForm .dateInput {
+  width: 45%;
+  position: relative;
+}
+
+.leave .searchArea .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.leave .searchArea .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.leave .hr {
+  margin: 30px 40px 30px 40px;
+  height: 2px;
+  background-color: #ec6968;
+}
+
+.leave .resultList h3 {
+  color: #ec6968;
+}
+
+.leave .resultList .btnArea .control-btn {
+  padding: 2px 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  margin: 20px 5px;
+}
+
+.leave .resultList .btnArea .control-btn:first-child {
+  margin-left: 0;
+}
+
+.leave .resultList table {
+  text-align: center;
+}
+
+.leave .resultList table th,
+.leave .resultList table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.leave .resultList table th .fa-edit,
+.leave .resultList table td .fa-edit {
+  color: #ec6968;
+}
+
+.leave .resultList table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.leave .resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.leave .resultList table .search-btn {
+  padding: 1px 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  background-color: #fff;
+}
+
+.leave .paginationArea .pagination {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.leave .paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+.leave .paginationArea .pagination .fas {
+  color: #ec6968;
+  font-size: 22px;
+}
+
+.leave .paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.leave .paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #ec6968;
+}
+
+.leave .paginationArea .pagination input {
+  width: 50px;
+}
+
+.leave .paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  color: #ec6968;
+}
+
+.textBold {
+  font-weight: 700;
+}
+
+table {
+  font-weight: 700;
+}
+/*# sourceMappingURL=leave.css.map */

@@ -1,0 +1,261 @@
+doctype html
+html(lang='zh-TW')
+//  Required meta tags 
+meta(charset='utf-8')
+meta(name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no')
+//  Bootstrap CSS 
+link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous')
+link(rel='stylesheet' href='css/nav.css')
+block css
+//  font-awesome 
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css')
+title 差勤系統
+header.main-navbar-header
+  nav.navbar.navbar-expand-md.navbar-dark.fixed-top.theme-color
+    .menu-toggle-button
+      a.nav-link#sidebarCollapse(href='#')
+        i.fas.fa-bars
+    a.navbar-brand(href='#')
+      img.d-none.d-md-inline.position-absolute(src='img/icon/新光人壽logo_工作區域Pad.svg' alt)
+      | 差勤系統
+
+    .navbar_icon
+      img(src='img/icon/emptyC.svg' width='24' alt)
+      img(src='img/icon/猴子_工作區域 1.svg' width='24' alt)
+.wrapper
+  //  Sidebar Holder 
+  nav#sidebar.nav-sidebar
+    ul.list-unstyled.components.slimescroll-id
+      li
+        a(title='差勤申請' href='#sidemenu_collapse_1' data-toggle='collapse' aria-expanded='false')
+          img(src='img/navList/11_2.svg' width='20px' alt)
+          |  差勤申請
+
+        ul.collapse.list-unstyled#sidemenu_collapse_1
+          li
+            a(href='#')
+              img(src='img/navList/11_2.svg' width='15px' alt)
+              |  請假差勤單
+          li
+            a.disable(href='#') 銷假申請單
+          li
+            a(href='#') 加班報備單
+          li
+            a(href='#') 加班申請單
+          li
+            a(href='#') 特別休假排休報備單
+          li
+            a(href='#') 差勤異常通知單
+          li
+            a(href='#') 休息/假日調移報備申請單
+          li
+            a(href='#') 個人差勤明細
+      li
+        a(href='#sidemenu_collapse_2' data-toggle='collapse' aria-expanded='false')
+          img(src='img/navList/11.svg' width='20' alt)
+          |  人事申請
+
+        ul.collapse.list-unstyled#sidemenu_collapse_2
+          li
+            a(href='#') 人身保險業務員登錄申請
+          li
+            a(href='#') 投資、外幣變更登錄申請書
+          li
+            a(href='#') 基金銷售業務人員證照登記申請表
+          li
+            a(href='#') 薪資轉存入銀行帳戶申請表
+          li
+            a(href='#') 薪資所得受領人免稅額申請表
+          li
+            a(href='#') 變更各項資料申請書
+          li
+            a(href='#') 各類證明申請書
+          li
+            a(href='#') 健保轉入轉出申報表
+          li
+            a(href='#') 通知/補辦單
+      li
+        a(href='#sidemenu_collapse_3' data-toggle='collapse' aria-expanded='false').
+          
+          電子簽核
+          
+        ul.collapse.list-unstyled#sidemenu_collapse_3
+          li
+            a(href='#') 異常補辦匣
+          li
+            a(href='#') 待簽核匣
+          li
+            a(href='#') 通知匣
+          li
+            a(href='#') 簽核完成匣
+          li
+            a(href='#') 工作佇列
+          li
+            a(href='#') 工作待辦匣
+          li
+            a(href='#') 代理人設定
+      li
+        a(href='#sidemenu_collapse_4' data-toggle='collapse' aria-expanded='false').
+          
+          外人承辦人管理
+          
+        ul.collapse.list-unstyled#sidemenu_collapse_4
+          li
+            a(href='#') 案件分派
+          li
+            a(href='#') 打卡記錄匯入及維護
+          li
+            a(href='#') 天然災害假設定
+          li
+            a(href='#') 加班單維護
+          li
+            a(href='#') 差勤異常通知設定
+          li
+            a(href='#') 參數設定
+          li
+            a(href='#') 差勤管理文件上傳
+          li
+            a(href='#') 假別規則文字設定維護
+          li
+            a(href='#') 排程設定
+          li
+            a(href='#') 假別簽核層級維護
+          li
+            a(href='#') 流程檔維護
+          li
+            a(href='#') 假日維護
+          li
+            a(href='#') 班表維護
+          li
+            a(href='#') 職等班表維護
+          li
+            a(href='#') 異常通知Log查詢
+          li
+            a(href='#') 特殊假匯入
+          li
+            a(href='#') 假別額度維護
+      li
+        a(href='#sidemenu_collapse_5' data-toggle='collapse' aria-expanded='false').
+          
+          查詢下載與報表管理
+          
+        ul.collapse.list-unstyled#sidemenu_collapse_5
+          li
+            a(href='#') 差勤/人事綜合查詢及報表
+          li
+            a(href='#') 月差勤記錄
+          li
+            a(href='#') 調訓查詢及報表
+          li
+            a(href='#') 個人班表查詢
+          li
+            a(href='#') 排休暨輪休查詢及報表
+          li
+            a(href='#') 差勤管理文件查詢及下載
+          li
+            a(href='#') 公傷假名單及統計
+          li
+            a(href='#') 公傷假人員明細表
+          li
+            a(href='#') 產假統計表
+          li
+            a(href='#') 產假人員明細表
+          li
+            a(href='#') 特休假單位統計表
+          li
+            a(href='#') 特休假單位人員明細表
+          li
+            a(href='#') 休息/假日調移人員明細表
+          li
+            a(href='#') 休息/假日調移人員統計表
+          li
+            a(href='#') 補休逾期名單
+          li
+            a(href='#') 人事表單申請查詢
+          li
+            a(href='#') 特殊差勤報表
+          li
+            a(href='#') 補休逾期名單
+          li
+            a(href='#') 差假累計查詢及統計表
+          li
+            a(href='#') 考核預告查詢及報表
+      li
+        a(href='#sidemenu_collapse_6' data-toggle='collapse' aria-expanded='false').
+          
+          系統管理
+          
+        ul.collapse.list-unstyled#sidemenu_collapse_6
+          li
+            a(href='#') 員工資料維護
+          li
+            a(href='#') 群組權限維護
+          li
+            a(href='#') 公告通知
+          li
+            a(href='#') 通知功能
+    .cover
+  .container.content-area
+    block content
+    .row#footer
+      .col-12
+        hr
+        p.text-black-50 version. 0.0.1
+nav.app-links
+  ul
+    li.active
+      a(href='./absence-L1.html')
+        img(src='img/0830/invalid-home.svg' width='34px' alt)
+        span 回首頁
+        .notice
+          span 2
+    li
+      a(href='#')
+        img(src='img/0830/異常補辦-b5b5b6.svg' width='29px' alt)
+        span 異常補辦
+        .notice
+          span 2
+    li
+      a(href='#')
+        img(src='img/0830/通知-b5b5b6.svg' width='46px' alt)
+        span 通知
+        .notice
+          span 2
+    li
+      a(href='vacation.html')
+        img(src='img/0830/請假申請-b5b5b6.svg' width='35px' alt)
+        span 請假
+        .notice
+          span 2
+    li
+      a(href='./pendingApproval.html')
+        img(src='img/0830/待簽核-b5b5b6.svg' width='33px' alt)
+        span 待簽核
+        .notice
+          span 2
+script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut' crossorigin='anonymous').
+  
+  
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k' crossorigin='anonymous').
+  
+  
+script(src='/js/jquery.slimscroll.min.js')
+script(type='text/javascript').
+ 
+  $(document).ready(function () {
+              $('#sidebarCollapse').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+  
+              $('#sidebar > div.cover').on('click',function(){
+                  $('#sidebar').toggleClass('active');
+              });
+          });
+          $(function () {
+              $('.slimescroll-id').slimScroll({
+                  height: '100vh'
+              });
+          });
+block script
+  

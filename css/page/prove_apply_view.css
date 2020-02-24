@@ -1,0 +1,253 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/groupMember/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 2px #eb6868;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+.fa-users-cog {
+  color: #eb6868;
+}
+
+#proveApplyView {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView {
+  padding: 10px 20px 20px 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView .form-control {
+  height: unset;
+  padding: .3rem .5rem;
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView .required {
+  color: red;
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView label {
+  margin-top: 8px;
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView input {
+  border-width: 2px;
+  letter-spacing: 1.8px;
+}
+
+@media screen and (max-width: 576px) {
+  #proveApplyView .proveApplyViewArea .proveApplyView input {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #proveApplyView .proveApplyViewArea .proveApplyView .checkboxArea {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView .collapse_btn {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #proveApplyView .proveApplyViewArea .proveApplyView .collapse_btn i {
+    top: 2px;
+  }
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#proveApplyView .proveApplyViewArea .proveApplyView hr {
+  height: 2px;
+  border-color: #eb6868;
+}
+
+#proveApplyView .proveApplyList .title {
+  color: #eb6868;
+  font-size: 25px;
+}
+
+#proveApplyView .proveApplyList .applyList {
+  padding: 20px 5px;
+  margin: 0 0 20px 0;
+  border-radius: 18px;
+}
+
+#proveApplyView .proveApplyList .applyList table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+}
+
+#proveApplyView .proveApplyList .applyList table th,
+#proveApplyView .proveApplyList .applyList table td {
+  padding: 8px 0;
+  vertical-align: inherit;
+  border-bottom: solid 1.5px #eb6868;
+  border-right: solid 1.5px #eb6868;
+}
+
+#proveApplyView .proveApplyList .applyList table th:first-child,
+#proveApplyView .proveApplyList .applyList table td:first-child {
+  border-left: solid 1.5px #eb6868;
+}
+
+#proveApplyView .proveApplyList .applyList table th .fa-edit,
+#proveApplyView .proveApplyList .applyList table td .fa-edit {
+  color: #eb6868;
+}
+
+#proveApplyView .proveApplyList .applyList table th {
+  background-color: #eb6868;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#proveApplyView .proveApplyList .applyList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+#proveApplyView .proveApplyList .applyList table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+#proveApplyView .proveApplyList .applyList table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+#proveApplyView .proveApplyList .applyList table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+#proveApplyView .proveApplyList .applyList table thead tr th:first-child {
+  border-top-left-radius: 8px;
+}
+
+#proveApplyView .proveApplyList .applyList table thead tr th:last-child {
+  border-top-right-radius: 8px;
+}
+
+#proveApplyView .proveApplyList .btn {
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#proveApplyView .proveApplyList .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card {
+  font-weight: 600;
+  border: solid 1px #ec6968;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card:nth-child(even) .th {
+  background-color: #f7e1dc;
+  color: #ec6968;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card:nth-child(even) .th.btnArea {
+  background-color: #fff;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card .btnArea {
+  background-color: #fff;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card .btnArea .btn {
+  padding: 0 40px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .card select {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+  border: none;
+  outline: none;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .label,
+#proveApplyView .proveApplyList .applyList-mb .data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .data:first-child {
+  border-right: 1px solid #ec6968;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .th {
+  color: #fff;
+  background-color: #ec6968;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .td {
+  background-color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApplyView .proveApplyList .applyList-mb .td.last-td {
+  border-bottom: none;
+  margin: 0 10px;
+}
+/*# sourceMappingURL=prove_apply_view.css.map */

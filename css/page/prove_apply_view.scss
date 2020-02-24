@@ -1,0 +1,228 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+    background-image: url(../../img/groupMember/checkmark-000.svg),
+        -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 2px $pink;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: contain, 100%;
+}
+.fa-users-cog {
+    color: $pink;
+}
+#proveApplyView {
+    font-size:16px;
+    font-weight: 900;
+    .proveApplyViewArea {
+        .proveApplyView {
+            padding: 10px 20px 20px 20px;
+            margin: 20px 0 30px 0;
+            border-radius: 16px;
+            @include shadow;
+
+            .form-control{
+                height:unset;
+                padding:.3rem .5rem;
+            }
+
+            .required {
+                color: red;
+            }
+            label{
+                margin-top: 8px;
+            }
+            input {
+                border-width:2px;
+                letter-spacing: 1.8px;
+                @media screen and (max-width: 576px) {
+                    text-align: center;
+                }
+            }
+            .checkboxArea {
+                @media screen and (max-width: 768px) {
+                    justify-content: space-between;
+                }
+            }
+            .collapse_btn {
+                margin-top: 10px;
+                width: 20px;
+                height: 20px;
+                border: solid 2px #82cbc6;
+                border-radius: 50%;
+                color: black;
+                transition: 0.5s;
+                cursor: pointer;
+
+                i{
+                    width: 100%;
+                    height: 16px;
+                    text-align: center;
+                    position: relative;
+                    right: -1px;
+
+                    @media(max-width:400px){
+                        top:2px;
+                    }
+                }
+            }
+            .icon_rotate {
+                transform: scaleY(-1);
+            }
+            hr {
+                height: 2px;
+                border-color: $pink;
+            }
+        }
+    }
+    .proveApplyList {
+        .title {
+            color: $pink;
+            font-size: 25px;
+        }
+        .applyList {
+            padding: 20px 5px;
+            margin: 0 0 20px 0;
+            border-radius: 18px;
+            table {
+                text-align: center;
+                border-collapse: separate;
+                border-radius: 8px;
+                border-spacing: 0;
+                th,
+                td {
+                    padding: 8px 0;
+                    vertical-align: inherit;
+                    border-bottom: solid 1.5px $pink;
+                    border-right: solid 1.5px $pink;
+                    &:first-child {
+                        border-left: solid 1.5px $pink;
+                    }
+                    .fa-edit {
+                        color: $pink;
+                    }
+                }
+                th {
+                    background-color: $pink;
+                    color: #fff;
+                    padding: 10px 0;
+                }
+                tr:nth-child(even) {
+                    background-color: $lightpink;
+                    select {
+                        background-color: $lightpink;
+                    }
+                }
+                tr:last-child {
+                    td:first-child {
+                        border-bottom-left-radius: 8px;
+                    }
+                    td:last-child {
+                        border-bottom-right-radius: 8px;
+                    }
+                }
+                thead {
+                    tr {
+                        th {
+                            &:first-child {
+                                border-top-left-radius: 8px;
+                            }
+                            &:last-child {
+                                border-top-right-radius: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            border-radius: 8px;
+            @include btn-shadow;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+        }
+        .applyList-mb {
+            .card {
+                font-weight: 600;
+                border: solid 1px #ec6968;
+                border-radius: 8px;
+                overflow: hidden;
+                &:nth-child(even) {
+                    .th {
+                        background-color: #f7e1dc;
+                        color: #ec6968;
+                        &.btnArea {
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .btnArea {
+                    background-color: #fff;
+                    .btn {
+                        padding: 0 40px;
+                        @include btn-shadow;
+                        color: $pink;
+                        background: #fff;
+                        display: inline-block;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                }
+                select {
+                    -webkit-appearance: menulist;
+                    -moz-appearance: menulist;
+                    appearance: menulist;
+                    border: none;
+                    outline: none;
+                }
+            }
+            .label,
+            .data {
+                flex: 1;
+                text-align: center;
+                padding: 5px;
+            }
+            .data:first-child {
+                border-right: 1px solid #ec6968;
+            }
+            .th {
+                color: #fff;
+                background-color: #ec6968;
+                padding: 5px 0;
+                border-bottom: 1px solid #ec6968;
+            }
+            .td {
+                background-color: #fff;
+                padding: 5px 0;
+                border-bottom: 1px solid #ec6968;
+                &.last-td {
+                    border-bottom: none;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

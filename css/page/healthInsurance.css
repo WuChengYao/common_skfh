@@ -1,0 +1,917 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/groupMember/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 2px #eb6868;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+.selectgroup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selectgroup:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
+  right: 0;
+  pointer-events: none;
+}
+
+.dropdown-menu {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 25px !important;
+  }
+}
+
+.datepicker {
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.dateInput {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dateInput input {
+  border: 0;
+}
+
+.dateInput .date-icon {
+  border: 1.5px solid #ced4da;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  padding: 3px 5.5px;
+}
+
+.dateInput .date-icon img {
+  width: 13px;
+}
+
+.blue {
+  color: #0077e2;
+}
+
+.red {
+  color: #ef0000;
+}
+
+#healthInsurance {
+  font-weight: 900;
+}
+
+#healthInsurance hr {
+  height: 1px;
+  border-color: #eb6868;
+  margin: 30px 0;
+  background-color: #eb6868;
+}
+
+#healthInsurance .title {
+  color: #eb6868;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#healthInsurance .searchForm {
+  padding: 0 20px 20px 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .searchForm .ggroup {
+  position: relative;
+}
+
+#healthInsurance .searchForm .ggroup .personInfo {
+  width: 100%;
+  height: 30px;
+  padding: .3rem .5rem;
+  letter-spacing: 1.8px;
+  border-radius: .25rem;
+  border: 2px solid #ced4da;
+  color: #808080;
+  margin-top: 20px;
+}
+
+#healthInsurance .searchForm .ggroup .info-icon {
+  position: absolute;
+  border: 1.5px solid #c4c3c3;
+  border-radius: .25rem;
+  height: 30px;
+  width: 30px;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#healthInsurance .searchForm .ggroup .info-icon:after {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
+  pointer-events: none;
+}
+
+#healthInsurance .searchForm .dropdown-icon {
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border: solid 2px #56bdb7;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#healthInsurance .searchForm .dropdown-icon .fas {
+  position: relative;
+  right: -1px;
+  padding: 0;
+  margin: 0;
+}
+
+#healthInsurance .searchForm .form-control {
+  padding: .3rem .5rem;
+  height: unset;
+  letter-spacing: 1.8px;
+  border-width: 2px;
+  font-weight: bold;
+}
+
+#healthInsurance .searchForm .required {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  #healthInsurance .searchForm input {
+    text-align: center;
+  }
+}
+
+#healthInsurance .searchForm label {
+  margin: 20px 0 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #healthInsurance .searchForm label {
+    margin: 10px 0 5px 0;
+  }
+}
+
+#healthInsurance .searchForm label.checkbox-label {
+  color: #eb6868;
+}
+
+#healthInsurance .dataDetail .border-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#healthInsurance .dataDetail .controlArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  #healthInsurance .dataDetail .controlArea {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#healthInsurance .dataDetail .controlArea .btnArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#healthInsurance .dataDetail .controlArea .btnArea .control-btn {
+  color: #ec6968;
+  margin: 0 10px 20px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .dataDetail .controlArea .btnArea .control-btn:first-child {
+  margin-left: 0;
+}
+
+#healthInsurance .dataDetail .controlArea .btnArea .control-btn .fas {
+  margin-right: 5px;
+}
+
+#healthInsurance .dataDetail .hintArea {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#healthInsurance .dataDetail .hintArea .hint {
+  margin-left: 15px;
+  color: #ec6968;
+}
+
+#healthInsurance .dataDetail table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+  letter-spacing: 0;
+}
+
+#healthInsurance .dataDetail table th,
+#healthInsurance .dataDetail table td {
+  padding: 5px 3px;
+  vertical-align: inherit;
+  border: solid 1px #eb6868;
+}
+
+#healthInsurance .dataDetail table th:first-child,
+#healthInsurance .dataDetail table td:first-child {
+  border-left: solid 2px #eb6868;
+}
+
+#healthInsurance .dataDetail table th:last-child,
+#healthInsurance .dataDetail table td:last-child {
+  border-right: solid 2px #eb6868;
+}
+
+#healthInsurance .dataDetail table th .fa-edit,
+#healthInsurance .dataDetail table td .fa-edit {
+  color: #eb6868;
+}
+
+#healthInsurance .dataDetail table th .table-btn,
+#healthInsurance .dataDetail table td .table-btn {
+  padding: 0 5px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .dataDetail table th .table-btn .fas,
+#healthInsurance .dataDetail table td .table-btn .fas {
+  color: #eb6868;
+  width: 15px;
+}
+
+#healthInsurance .dataDetail table th .table-btn.description-btn,
+#healthInsurance .dataDetail table td .table-btn.description-btn {
+  width: 98%;
+  border-radius: 5px;
+  padding: 2px;
+  color: #000;
+  font-size: 12px;
+}
+
+#healthInsurance .dataDetail table th {
+  background-color: #eb6868;
+  color: #fff;
+  padding: 8px 0;
+}
+
+#healthInsurance .dataDetail table th:nth-child(6) {
+  width: 120px;
+}
+
+#healthInsurance .dataDetail table th:nth-child(9) {
+  width: 115px;
+}
+
+#healthInsurance .dataDetail table select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: bold;
+}
+
+#healthInsurance .dataDetail table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+#healthInsurance .dataDetail table tr:nth-child(even) .dateInput input {
+  background-color: #f7e1dc;
+}
+
+#healthInsurance .dataDetail table tr:nth-child(even) .dateInput .date-icon {
+  background-color: #fff;
+}
+
+#healthInsurance .dataDetail table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+#healthInsurance .dataDetail table tr:last-child td {
+  border-bottom: solid 2px #eb6868;
+}
+
+#healthInsurance .dataDetail table tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+#healthInsurance .dataDetail table tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+#healthInsurance .dataDetail table thead tr th {
+  text-align: center;
+}
+
+#healthInsurance .dataDetail table thead tr th:first-child {
+  border-top-left-radius: 5px;
+}
+
+#healthInsurance .dataDetail table thead tr th:last-child {
+  border-top-right-radius: 5px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb {
+  font-size: 16px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card {
+  font-weight: 600;
+  border: solid 2px #ec6968;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card:first-of-type, #healthInsurance .dataDetail .dataDetail-mb .card:last-of-type, #healthInsurance .dataDetail .dataDetail-mb .card:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 2px solid #ec6968;
+  border-radius: 8px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card:nth-child(even) .th {
+  background-color: #f7e1dc;
+  color: #ec6968;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card:nth-child(even) .th.btnArea {
+  background-color: #fff;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .th,
+#healthInsurance .dataDetail .dataDetail-mb .card .td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .th {
+  color: #fff;
+  background-color: #ec6968;
+  padding: 5px 0;
+  border-bottom: 2px solid #ec6968;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .td {
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 2px solid #ec6968;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .td.border-td {
+  padding: 0;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .td > span {
+  width: 100%;
+  border: solid #eb6868 2px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .last-td {
+  border-bottom: none;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .unHide-th {
+  border-top: 2px solid #ec6968;
+  padding: 0;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .label,
+#healthInsurance .dataDetail .dataDetail-mb .card .data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .label-mid {
+  border-right: solid 2px #eb6868;
+  border-left: solid 2px #eb6868;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .data:nth-child(2) {
+  border-right: 2px solid #ec6968;
+  border-left: 2px solid #ec6968;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card select {
+  width: 100%;
+  border: none;
+  text-align-last: center;
+  outline: none;
+  font-weight: 900;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .dateInput {
+  position: relative;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .dateInput input {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .dateInput .date-icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .calendar_bottom + .calendar_modle {
+  bottom: 0;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card input {
+  text-align: center;
+  font-weight: 900;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .description {
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #healthInsurance .dataDetail .dataDetail-mb .card .collapse_btn i {
+    top: 2px;
+  }
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .data .bdred {
+  border: solid #eb6868 2px;
+  padding: 6.5px;
+  border-radius: 5px;
+}
+
+#healthInsurance .dataDetail .dataDetail-mb .card .border-none {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+#healthInsurance .uploadFile .uploadForm input[type="file"] {
+  display: none;
+}
+
+#healthInsurance .uploadFile .uploadForm .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 30px 10px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#healthInsurance .uploadFile .uploadForm .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#healthInsurance .uploadFile .uploadForm .btn-outline .fas {
+  color: #56bdb7;
+}
+
+#healthInsurance .uploadFile .uploadForm table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+}
+
+#healthInsurance .uploadFile .uploadForm table .table-btn {
+  padding: 0 5px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .uploadFile .uploadForm table .table-btn .fas {
+  color: #eb6868;
+  width: 15px;
+}
+
+#healthInsurance .uploadFile .uploadForm table .table-btn.description-btn {
+  width: 98%;
+  border-radius: 5px;
+  padding: 2px;
+  color: #000;
+  font-size: 12px;
+}
+
+#healthInsurance .uploadFile .uploadForm table th,
+#healthInsurance .uploadFile .uploadForm table td {
+  padding: 3px 0;
+  vertical-align: inherit;
+  border: solid 1px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm table th:first-child,
+#healthInsurance .uploadFile .uploadForm table td:first-child {
+  border-left: solid 2px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm table th:last-child,
+#healthInsurance .uploadFile .uploadForm table td:last-child {
+  border-right: solid 2px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm table th {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+#healthInsurance .uploadFile .uploadForm table select {
+  border: none;
+  outline: none;
+  width: 90%;
+  text-align-last: center;
+}
+
+#healthInsurance .uploadFile .uploadForm table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+#healthInsurance .uploadFile .uploadForm table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+#healthInsurance .uploadFile .uploadForm table tr:last-child td {
+  border-bottom: solid 2px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm table thead tr th:first-child {
+  border-top-left-radius: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm table thead tr th:last-child {
+  border-top-right-radius: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm table thead.table-head-1 tr th {
+  padding: 10px;
+}
+
+#healthInsurance .uploadFile .uploadForm table thead.table-head-2 tr th:first-child {
+  border-top-left-radius: 0px;
+}
+
+#healthInsurance .uploadFile .uploadForm table thead.table-head-2 tr th:last-child {
+  border-top-right-radius: 0px;
+}
+
+#healthInsurance .uploadFile .uploadForm table tbody.table-body-1 tr:last-child td {
+  border-bottom: #eb6868 solid 1px;
+}
+
+#healthInsurance .uploadFile .uploadForm table tbody.table-body-2 tr td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm table tbody.table-body-2 tr td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm table .new {
+  background-color: #fff;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb {
+  font-size: 16px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .card {
+  border: solid 2px #eb6868;
+  border-radius: 8px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .card + .card {
+  margin-top: 20px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .card:nth-child(even) .tr {
+  background-color: #f7e1dc;
+  color: #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .card:nth-child(even) .tr:nth-child(even) {
+  background-color: #fff;
+  color: #000;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .card:nth-child(even) .tr.head .th:first-child {
+  border-color: #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 2px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .td,
+#healthInsurance .uploadFile .uploadForm-mb .tr .th {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr.head .td:first-child,
+#healthInsurance .uploadFile .uploadForm-mb .tr.head .th:first-child {
+  -webkit-box-flex: 65px;
+      -ms-flex: 65px;
+          flex: 65px;
+  border-right: solid 2px #eb6868;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr.head .th:first-child {
+  border-color: #fff;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr.head .td:last-child,
+#healthInsurance .uploadFile .uploadForm-mb .tr.head .th:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr:nth-child(odd) {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr:last-child {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .uploadFileArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 2px #eb6868;
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0 5px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .uploadFileArea .select-btn {
+  padding: 3px;
+  margin: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .uploadFileArea .show-name-mb {
+  margin-left: 10px;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .uploadFileArea .upload-btn {
+  padding: 6.5px 10px;
+  border: solid 1.5px #eb6868;
+  border-radius: 7px;
+  color: #eb6868;
+  margin: -2.5px -1.5px;
+  margin-left: auto;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #healthInsurance .uploadFile .uploadForm-mb .tr .collapse_btn i {
+    top: 2px;
+  }
+}
+
+#healthInsurance .uploadFile .uploadForm-mb .tr .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#healthInsurance .uploadFile .confirmArea {
+  color: #ec6968;
+  margin-top: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popbox {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.popbox .modal-dialog {
+  height: 100vh;
+}
+
+.popbox .modal-dialog .modal-content {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.popbox .modal-dialog .modal-content .close {
+  background-color: red;
+  text-shadow: none;
+  color: white;
+  padding: 0;
+  -webkit-transform: translate(-10px, 10px);
+          transform: translate(-10px, 10px);
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.popbox .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+.popbox .modal-dialog .modal-content .reason {
+  background-color: #ec6968;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 0;
+}
+
+.popbox .modal-dialog .modal-content textarea {
+  margin-top: 10px;
+  border: solid 3px #ec6968;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#birth-day-start,
+#transfer-day-start {
+  z-index: 3;
+}
+
+#transfer-day-start {
+  right: 0;
+}
+/*# sourceMappingURL=healthInsurance.css.map */

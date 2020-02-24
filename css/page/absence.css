@@ -1,0 +1,983 @@
+@charset "UTF-8";
+.body {
+  min-height: 0;
+}
+
+.padInfo {
+  margin: 0  21px 14px 21px;
+  border-bottom: #e71f19 solid 1px;
+  border-top: #e71f19 solid 1px;
+  padding: 3px;
+}
+
+.padInfo__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.padInfo__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #bc2221;
+}
+
+.padInfo__content {
+  font-size: 12px;
+}
+
+.body-content {
+  padding: 9px 0 28px 0;
+}
+
+@media (min-width: 768px) {
+  .body-content {
+    padding: 0 21px;
+  }
+}
+
+@media (min-width: 992px) {
+  .body, .padList {
+    max-width: 760px;
+    margin-right: calc((100vw - 992px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .body, .padList {
+    max-width: 940px;
+    margin-right: calc((100vw - 1172px) / 2);
+  }
+}
+
+.body__infoBox, .padList__infoBox {
+  border: 2px solid transparent;
+  background: #fff;
+  padding: 17px 14px 10px 14px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+  .body__infoBox, .padList__infoBox {
+    width: 50.5%;
+    padding: 10px 12px 14px 12px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+}
+
+.body__infoBox::after, .padList__infoBox::after {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91272C), color-stop(27%, #D92E2D), color-stop(51%, #E07F2F), color-stop(76%, #E1682B), to(#E23027));
+  background: linear-gradient(to top, #91272C 0%, #D92E2D 27%, #E07F2F 51%, #E1682B 76%, #E23027 100%);
+  content: '';
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.body__infoBox__id, .padList__infoBox__id {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.body__infoBox__id span, .padList__infoBox__id span {
+  font-size: 16.60628px;
+  letter-spacing: 0.41667px;
+}
+
+.body__infoBox__id span:first-child, .padList__infoBox__id span:first-child {
+  width: 75px;
+  font-size: 16.5px;
+  font-weight: bold;
+  letter-spacing: 8.25px;
+}
+
+.body__infoBox__id .job, .padList__infoBox__id .job {
+  font-size: 16.5px;
+  font-weight: bold;
+  letter-spacing: 8.25px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.body__infoBox__id-select, .padList__infoBox__id-select {
+  width: 138px;
+  height: 31px;
+}
+
+.body__infoBox__id-select select, .padList__infoBox__id-select select {
+  border: none;
+  background-color: #EAEAEA;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 0.55px;
+  padding: 0 6px 0 30px;
+  height: 34px;
+}
+
+.body__infoBox__id-select span, .padList__infoBox__id-select span {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: 'FontAwesome', Microsoft JhengHei;
+}
+
+.body__infoBox__id-btnBox, .padList__infoBox__id-btnBox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  right: 7px;
+  top: 7px;
+  pointer-events: none;
+}
+
+.body__infoBox__id-btn, .padList__infoBox__id-btn {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.body__infoBox__name, .padList__infoBox__name {
+  background-color: rgba(241, 154, 155, 0.3);
+  border-radius: 5px;
+  height: 36px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .body__infoBox__name, .padList__infoBox__name {
+    margin-bottom: 5px;
+  }
+}
+
+.body__infoBox__name.bg-none, .padList__infoBox__name.bg-none {
+  background-color: transparent;
+}
+
+.body__infoBox__name span, .padList__infoBox__name span {
+  font-size: 19.6256px;
+  letter-spacing: 9.8128px;
+  font-weight: bold;
+}
+
+.body__infoBox__name span span, .padList__infoBox__name span span {
+  font-size: 16.60628px;
+  letter-spacing: 0.41667px;
+}
+
+.body__infoBox__name .selfActive, .padList__infoBox__name .selfActive {
+  width: 148.85266px;
+  height: 33.21256px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../img/absence/資產4.svg);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.body__infoBox__name .other, .padList__infoBox__name .other {
+  width: 148.85266px;
+  height: 33.21256px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../img/absence/資產5.svg);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.body__infoBox__record, .padList__infoBox__record {
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .body__infoBox__record, .padList__infoBox__record {
+    margin-bottom: 0;
+  }
+}
+
+.body__infoBox__record div, .padList__infoBox__record div {
+  white-space: nowrap;
+}
+
+.body__infoBox__record div:nth-child(odd), .padList__infoBox__record div:nth-child(odd) {
+  width: 48px;
+}
+
+.body__infoBox__record div span:first-child, .padList__infoBox__record div span:first-child {
+  font-size: 16.00242px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.body__infoBox__record div span:nth-child(2), .padList__infoBox__record div span:nth-child(2) {
+  font-size: 24.15459px;
+  font-weight: 700;
+}
+
+.body__infoBox__record small, .padList__infoBox__record small {
+  font-size: 10.86957px;
+  right: -7px;
+  bottom: 1px;
+}
+
+.body__infoBox__record-absence span:nth-child(2), .padList__infoBox__record-absence span:nth-child(2) {
+  color: #AE2A2C;
+}
+
+.body__infoBox__percent-already, .padList__infoBox__percent-already {
+  color: #55BEB7;
+  font-weight: 700;
+  font-size: 18.11594px;
+  margin-top: 36.23188px;
+}
+
+.body__infoBox__percent-notyet, .padList__infoBox__percent-notyet {
+  color: #EC6968;
+  font-weight: 700;
+  font-size: 18.11594px;
+  margin-top: 36.23188px;
+}
+
+.body__infoBox__percent-chart, .padList__infoBox__percent-chart {
+  min-width: 150px;
+  height: 83.4843px;
+  font-weight: 700;
+  background-color: rgba(139, 206, 201, 0.3);
+  border-radius: 166.9686px 166.9686px 0 0;
+}
+
+.body__infoBox__percent-chart__already, .padList__infoBox__percent-chart__already {
+  width: 140px;
+  height: 70px;
+  background-color: #EB6665;
+  border-radius: 140px 140px 0 0;
+  letter-spacing: 0.4529px;
+}
+
+.body__infoBox__percent-chart__wrap, .padList__infoBox__percent-chart__wrap {
+  width: 110px;
+  height: 55px;
+  background-color: #D5ECEC;
+  border-radius: 110px 110px 0 0;
+}
+
+.body__infoBox__percent-chart__notyet, .padList__infoBox__percent-chart__notyet {
+  width: 150px;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #83CBC6), color-stop(50%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, #83CBC6 50%, rgba(0, 0, 0, 0) 50%);
+  border-radius: 150px;
+  -webkit-transform: rotate(calc(1.8deg * -77));
+          transform: rotate(calc(1.8deg * -77));
+}
+
+.body__infoBox__percent-chart__notyet-wraper, .padList__infoBox__percent-chart__notyet-wraper {
+  width: 150px;
+  height: 75px;
+  top: -20px;
+  left: -20px;
+}
+
+.body__infoBox__percent-chart__center, .padList__infoBox__percent-chart__center {
+  width: 20px;
+  height: 20px;
+  background-color: #EB6665;
+  border-radius: 20px;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+}
+
+.body__infoBox__percent-chart__text, .padList__infoBox__percent-chart__text {
+  font-size: 16.60628px;
+  top: 43.17633px;
+  letter-spacing: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.body__infoBox__summary, .padList__infoBox__summary {
+  margin-top: 5px;
+}
+
+.body__infoBox__summary span:first-child, .padList__infoBox__summary span:first-child {
+  margin-right: calc(50% - 124.46px);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .body__infoBox__summary span:first-child, .padList__infoBox__summary span:first-child {
+    font-size: 16px;
+  }
+}
+
+.body__infoBox__summary span:last-child, .padList__infoBox__summary span:last-child {
+  font-size: 11.47343px;
+  margin-left: auto;
+}
+
+.body__btn .imgWrap:active, .padList__btn .imgWrap:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.body__btn__top-btn:active, .padList__btn__top-btn:active {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .body__btn__top-btn, .padList__btn__top-btn {
+    margin-top: 4px;
+  }
+}
+
+.body__btn__top-btn .imgWrap, .padList__btn__top-btn .imgWrap {
+  width: 77.89855px;
+  height: 77.89855px;
+  border-radius: 100%;
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(4, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px 1px rgba(4, 0, 0, 0.5);
+  margin-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+  .body__btn__top-btn .imgWrap, .padList__btn__top-btn .imgWrap {
+    margin-bottom: 9px;
+  }
+}
+
+.body__btn__top-btn .imgWrap__iconBox, .padList__btn__top-btn .imgWrap__iconBox {
+  width: 67.93478px;
+  height: 67.93478px;
+  border-radius: 100%;
+}
+
+.body__btn__top-btn .imgWrap__iconBox.O, .padList__btn__top-btn .imgWrap__iconBox.O {
+  border: #ED9027 2px solid;
+}
+
+.body__btn__top-btn .imgWrap__iconBox.R, .padList__btn__top-btn .imgWrap__iconBox.R {
+  border: #CB271C 2px solid;
+}
+
+.body__btn__top-btn .imgWrap__iconBox.B, .padList__btn__top-btn .imgWrap__iconBox.B {
+  border: #32A2D3 2px solid;
+}
+
+.body__btn__top-btn .imgWrap__iconBox.G, .padList__btn__top-btn .imgWrap__iconBox.G {
+  border: #88bd43 2px solid;
+}
+
+.body__btn__top-btn .imgWrap__iconBox.D, .padList__btn__top-btn .imgWrap__iconBox.D {
+  border: #1d4a9e 2px solid;
+}
+
+.body__btn__top-btn .imgWrap__notice, .padList__btn__top-btn .imgWrap__notice {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #CB271C;
+  font-weight: 700;
+  font-size: 15px;
+  top: 0;
+  right: 0;
+}
+
+.body__btn__top-btn .imgWrap__notice span, .padList__btn__top-btn .imgWrap__notice span {
+  color: #fff;
+}
+
+.body__btn__top-btn span, .padList__btn__top-btn span {
+  font-size: 18px;
+  color: #595857;
+  font-weight: 700;
+}
+
+.body__btn__function.btn__line-t, .padList__btn__function.btn__line-t {
+  margin-top: 15px;
+}
+
+.body__btn__function.btn__line-b, .padList__btn__function.btn__line-b {
+  margin-top: 10px;
+}
+
+.body__btn__function-btn, .padList__btn__function-btn {
+  width: 85.74879px;
+  height: 67.02899px;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(4, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px 1px rgba(4, 0, 0, 0.5);
+}
+
+.body__btn__function-btn:active, .padList__btn__function-btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.body__btn__function-btn span, .padList__btn__function-btn span {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.body__btn__function-btn.P, .padList__btn__function-btn.P {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(236, 105, 104, 0.7)), to(rgba(248, 200, 189, 0.7)));
+  background: linear-gradient(to top, rgba(236, 105, 104, 0.7), rgba(248, 200, 189, 0.7));
+}
+
+.body__btn__function-btn.B, .padList__btn__function-btn.B {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(111, 167, 219, 0.7)), to(rgba(194, 229, 236, 0.7)));
+  background: linear-gradient(to top, rgba(111, 167, 219, 0.7), rgba(194, 229, 236, 0.7));
+}
+
+.form-control:focus {
+  background-color: #EAEAEA;
+  outline: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#todolist {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#todolist hr {
+  border-top: 2px solid #eb6868;
+  margin: 30px 0;
+}
+
+#todolist .title {
+  color: #eb6868;
+  font-size: 25px;
+  letter-spacing: .5px;
+  margin-bottom: 20px;
+}
+
+#todolist .control-area {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+@media screen and (max-width: 576px) {
+  #todolist .control-area {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#todolist .control-area .control-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #eb6868;
+  margin: 0 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  line-height: 1;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .control-area .control-btn:last-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 576px) {
+  #todolist .control-area .control-btn:last-child {
+    margin-left: 10px;
+  }
+}
+
+#todolist .todolist {
+  padding: 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 576px) {
+  #todolist .todolist {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 20px 0;
+  }
+}
+
+#todolist .todolist input[type="checkbox"] {
+  opacity: 0;
+}
+
+#todolist .todolist input[type="checkbox"]:checked + div {
+  background-image: url(../../img/groupMember/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+#todolist .todolist .checkBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 2px #eb6868;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+#todolist .todolist table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+#todolist .todolist table th,
+#todolist .todolist table td {
+  font-weight: bold;
+  padding: 5px 0;
+  vertical-align: inherit;
+  border: solid 1px #eb6868;
+}
+
+#todolist .todolist table th:first-child,
+#todolist .todolist table td:first-child {
+  border-left: solid 2px #eb6868;
+}
+
+#todolist .todolist table th:last-child,
+#todolist .todolist table td:last-child {
+  border-right: solid 2px #eb6868;
+}
+
+#todolist .todolist table th a,
+#todolist .todolist table td a {
+  text-decoration: none;
+  color: unset;
+  white-space: nowrap;
+}
+
+#todolist .todolist table th {
+  background-color: #eb6868;
+  color: #fff;
+  white-space: nowrap;
+}
+
+#todolist .todolist table thead tr th:first-child {
+  border-top-left-radius: 5px;
+}
+
+#todolist .todolist table thead tr th:last-child {
+  border-top-right-radius: 5px;
+}
+
+#todolist .todolist table tbody:nth-child(odd) {
+  background-color: #f7e1dc;
+}
+
+#todolist .todolist table tbody:last-child tr td {
+  border-bottom: solid 2px #eb6868;
+}
+
+#todolist .todolist table tbody:last-child tr td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+#todolist .todolist table tbody:last-child tr td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+#todolist .todolist table .btn {
+  padding: 3px 10px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 0;
+  font-size: 14px;
+  white-space: nowrap;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .todolist .sort {
+  display: inline-block;
+  color: #fff;
+  background-color: #999;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  text-align: center;
+}
+
+#todolist .todolist .sort.replace {
+  background-color: #f6993f;
+}
+
+#todolist .todolist .sort.sign {
+  background-color: #56bdb7;
+}
+
+#todolist .job-list-mb {
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+#todolist .job-list-mb .card {
+  border: solid 2px #eb6868;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .job-list-mb .card + .card {
+  margin-top: 20px;
+}
+
+#todolist .job-list-mb .card:nth-child(even) .tr {
+  background-color: #f7e1dc;
+  color: #eb6868;
+}
+
+#todolist .job-list-mb .card:nth-child(even) .tr:nth-child(even) {
+  background-color: #fff;
+  color: #000;
+}
+
+#todolist .job-list-mb .card:nth-child(even) .tr.btn-area {
+  background-color: #fff;
+}
+
+#todolist .job-list-mb .tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 2px #eb6868;
+}
+
+#todolist .job-list-mb .tr .td,
+#todolist .job-list-mb .tr .th {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+#todolist .job-list-mb .tr:nth-child(odd) {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+#todolist .job-list-mb .tr:nth-child(odd).middle-content {
+  background-color: #fff;
+  color: black;
+  border-bottom: none;
+}
+
+#todolist .job-list-mb .tr .td:nth-child(2) {
+  border-left: 2px solid #eb6868;
+}
+
+#todolist .job-list-mb .empty {
+  border: none;
+}
+
+#todolist .job-list-mb .middle-content .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 0 2px 0 0;
+  border-color: #eb6868;
+}
+
+#todolist .job-list-mb .middle-content .left .sort {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 26px;
+}
+
+#todolist .job-list-mb .middle-content .right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#todolist .job-list-mb .middle-content .right .tr:last-child {
+  border-bottom: none;
+}
+
+#todolist .job-list-mb .collapse-content .btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+#todolist .job-list-mb .collapse-content .btn-area .btn {
+  padding: 2px 7px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .job-list-mb .collapse-btn-area {
+  border-bottom: none;
+}
+
+#todolist .job-list-mb .collapse-btn-area .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#todolist .job-list-mb .collapse-btn-area .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #todolist .job-list-mb .collapse-btn-area .collapse_btn i {
+    top: 2px;
+  }
+}
+
+#todolist .job-30-list-mb {
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+#todolist .job-30-list-mb .card {
+  border: solid 2px #eb6868;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .job-30-list-mb .card + .card {
+  margin-top: 20px;
+}
+
+#todolist .job-30-list-mb .card:nth-child(even) .tr {
+  background-color: #f7e1dc;
+  color: #eb6868;
+}
+
+#todolist .job-30-list-mb .card:nth-child(even) .tr:nth-child(even) {
+  background-color: #fff;
+  color: #000;
+}
+
+#todolist .job-30-list-mb .card:nth-child(even) .tr.btn-area {
+  background-color: #fff;
+}
+
+#todolist .job-30-list-mb .tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 2px #eb6868;
+}
+
+#todolist .job-30-list-mb .tr .td,
+#todolist .job-30-list-mb .tr .th {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+#todolist .job-30-list-mb .tr:nth-child(odd) {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+#todolist .job-30-list-mb .tr:nth-child(odd).middle-content {
+  background-color: #fff;
+  color: black;
+  border-bottom: none;
+}
+
+#todolist .job-30-list-mb .tr .td:nth-child(2) {
+  border-left: 2px solid #eb6868;
+}
+
+#todolist .job-30-list-mb .middle-content .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 0 2px 0 0;
+  border-color: #eb6868;
+}
+
+#todolist .job-30-list-mb .middle-content .left .sort {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 26px;
+}
+
+#todolist .job-30-list-mb .middle-content .right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#todolist .job-30-list-mb .middle-content .right .tr:last-child {
+  border-bottom: none;
+}
+
+#todolist .job-30-list-mb .collapse-content .btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+#todolist .job-30-list-mb .collapse-content .btn-area .btn {
+  padding: 2px 25px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#todolist .job-30-list-mb .collapse-btn-area {
+  border-bottom: none;
+}
+
+#todolist .job-30-list-mb .collapse-btn-area .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#todolist .job-30-list-mb .collapse-btn-area .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #todolist .job-30-list-mb .collapse-btn-area .collapse_btn i {
+    top: 2px;
+  }
+}
+
+.checkBox {
+  width: 15px;
+  height: 16px;
+  border-radius: 3px;
+  border: solid 1px #c5c4c4;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FFF), to(#FFF));
+  background-image: linear-gradient(to right, #FFF, #FFF);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100%;
+}
+
+@media (min-width: 768px) {
+  .checkBox {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/absence/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#FFF), to(#FFF));
+  background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #FFF, #FFF);
+}
+/*# sourceMappingURL=absence.css.map */

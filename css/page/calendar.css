@@ -1,0 +1,311 @@
+.calendar {
+  width: unset;
+}
+
+.calendar .calendar__title {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.calendar .calendar__title #index-month-pre {
+  border-width: 7.5px 12px 7.5px 0;
+}
+
+.calendar .calendar__title #index-month-next {
+  border-width: 7.5px 0 7.5px 12px;
+}
+
+.calendar .calendar__content {
+  padding: 0px 20px 25px 20px;
+}
+
+.calendar .calendar__content .calendar__content__week {
+  padding-bottom: 0;
+}
+
+.calendar .calendar__content hr {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.calendar-left .calendar__title {
+  background-color: #eb6868;
+  font-size: 22px;
+  padding: 25px;
+  color: white;
+}
+
+.calendar-left .calendar__title #index-month-pre {
+  border-color: transparent #F7E1DC transparent;
+}
+
+.calendar-left .calendar__title #index-month-next {
+  border-color: transparent transparent transparent #F7E1DC;
+}
+
+.calendar-right .calendar__title {
+  background-color: #F7E1DC;
+  font-size: 22px;
+  padding: 25px;
+}
+
+.arrow .arrow-down-l {
+  padding: 30px;
+  font-size: 35px;
+  color: #eb6868;
+}
+
+.arrow .arrow-down-r {
+  padding: 30px;
+  font-size: 35px;
+  color: #F7E1DC;
+}
+
+.all-vacation {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 576px) {
+  .all-vacation {
+    font-size: 16px;
+  }
+}
+
+.all-vacation .vacation_date .timing .date {
+  font-size: 16px;
+}
+
+.all-vacation .vacation_date .plus-sign {
+  font-size: 35px;
+  color: #eb6868;
+}
+
+.all-vacation .vacation-detail {
+  border-top: 2px solid #B7B7B7;
+  padding: 10px 0;
+  min-height: 70px;
+}
+
+.all-vacation .vacation-detail:last-child {
+  border-bottom: none;
+}
+
+.all-vacation .vacation-detail .day-time .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 4px 0 4px;
+  border-color: #007bff transparent transparent transparent;
+  margin: 5px auto;
+}
+
+.all-vacation .vacation-detail .vacation-type {
+  line-height: 19px;
+  min-width: 84px;
+}
+
+.all-vacation .vacation-detail .vacation-type .red-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #eb6868;
+  border-radius: 50%;
+  -webkit-transform: translate(0, 2px);
+          transform: translate(0, 2px);
+}
+
+.all-vacation .vacation-detail .vacation-type .pink-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #F7E1DC;
+  border-radius: 50%;
+  -webkit-transform: translate(0, 2px);
+          transform: translate(0, 2px);
+}
+
+.all-vacation .vacation-detail .approval {
+  text-align: center;
+  padding-right: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.all-vacation .vacation-detail .approval .status {
+  color: #eb6868;
+}
+
+.all-vacation .vacation-detail .vacation-view {
+  border: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+  color: #eb6868;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.all-vacation .vacation-detail .modal {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-right: 0 !important;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog {
+  max-width: 720px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content {
+  padding-bottom: 60px;
+}
+
+@media (min-width: 576px) {
+  .all-vacation .vacation-detail .modal .modal-dialog .modal-content {
+    padding: 15px;
+  }
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-header .close {
+  background-color: #eb6868;
+  color: white;
+  opacity: 1;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-header .close {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 13.25px);
+  }
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table th,
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table td {
+  padding: 5px 0;
+  vertical-align: inherit;
+  border-bottom: solid 2px #eb6868 !important;
+  border-right: solid 2px #eb6868;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table th:first-child,
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table td:first-child {
+  border-left: solid 2px #eb6868;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table th .fa-edit,
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table td .fa-edit {
+  color: #eb6868;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table th {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table tr:nth-child(even) {
+  background-color: #F7E1DC;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body thead tr th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body thead tr th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .card {
+  font-size: 16px;
+  margin: 30px 0;
+  font-weight: 600;
+  border: solid 1px #eb6868;
+  border-bottom: none !important;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .card:first-of-type, .all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .card:last-of-type, .all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .card:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 1px solid #eb6868;
+  border-radius: 8px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .card:nth-child(even) .th {
+  background-color: #eb6868;
+  color: #fff;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .sort, .all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .th {
+  color: #eb6868;
+  background-color: #F7E1DC;
+  padding: 5px 0;
+  border-bottom: 1px solid #eb6868;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .td {
+  background-color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #eb6868;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .btn-link {
+  text-decoration: none !important;
+  color: unset;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .btn-link:hover {
+  text-decoration: none !important;
+  color: unset;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+}
+
+.all-vacation .vacation-detail .modal .modal-dialog .modal-content .modal-body .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+/*# sourceMappingURL=calendar.css.map */

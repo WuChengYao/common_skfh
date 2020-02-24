@@ -1,0 +1,311 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #F7E1DC;
+@mixin btn-shadow{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.calendar{
+    width:unset;
+
+    .calendar__title{
+        box-shadow: unset;
+
+        #index-month-pre{
+            border-width: 7.5px 12px 7.5px 0;            
+        }
+
+        #index-month-next{
+            border-width: 7.5px 0 7.5px 12px; 
+        }
+
+    }
+
+    .calendar__content{
+        padding: 0px 20px 25px 20px;
+        .calendar__content__week{
+            padding-bottom:0;
+
+        }
+        
+        hr{
+            width:100%;
+            border-top: 1px solid rgba(0,0,0,1);
+        }
+    }
+}
+
+.calendar-left{
+    .calendar__title{
+        background-color:$pink;
+        font-size:22px;
+        padding:25px;
+        color: white;
+
+        #index-month-pre{
+            border-color: transparent $lightpink transparent;
+        }
+
+        #index-month-next{
+            border-color: transparent transparent transparent $lightpink;
+        }
+    }
+
+}
+
+.calendar-right{
+    .calendar__title{
+        background-color:$lightpink;
+        font-size:22px;
+        padding:25px;
+    }
+}
+
+.arrow{
+    .arrow-down-l{
+        padding:30px;
+        font-size:35px;
+        color:$pink;
+    }
+    .arrow-down-r{
+        padding:30px;
+        font-size:35px;
+        color:$lightpink;
+    }
+}
+
+.all-vacation {
+    padding:15px;
+    font-weight:bold;
+    font-size:14px;
+
+    @include btn-shadow;
+
+
+    @media (max-width: 576px){
+        font-size:16px;
+    }
+
+    .vacation_date {
+
+        .timing {
+            .date {
+                font-size:16px;
+            }
+        }
+
+        .plus-sign {
+            font-size:35px;
+            color:$pink;
+        }
+    }
+
+    .vacation-detail {
+        border-top: 2px solid #B7B7B7;
+        padding: 10px 0;
+        min-height: 70px;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+
+        .day-time {
+
+            .triangle {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 4px 0 4px;
+                border-color: #007bff transparent transparent transparent;
+                margin:5px auto;
+            }
+        }
+        .vacation-type {
+            line-height: 19px;
+            min-width:84px;
+
+            .red-circle {
+                display:inline-block;
+                width:15px;
+                height:15px;
+                background-color:$pink;
+                border-radius: 50%;
+                transform: translate(0,2px);
+            }
+
+            .pink-circle {
+                display:inline-block;
+                width:15px;
+                height:15px;
+                background-color:$lightpink;
+                border-radius: 50%;
+                transform: translate(0,2px);
+            }
+        }
+
+        .approval {
+            text-align: center;
+            padding-right:5px;
+            flex-grow:1;
+
+            .status {
+                color:$pink;
+            }
+        }
+
+        .vacation-view {
+            border:none;
+            background-color:white;
+            padding:5px;
+            border-radius: 3px;
+            color:$pink;
+
+            @include btn-shadow;
+        }
+
+        .modal{
+            background-color: rgba(255, 255, 255, 0.5);
+            padding-right: 0 !important;
+
+            .modal-dialog{
+                max-width: 720px;
+
+                @include btn-shadow;
+
+                .modal-content{
+                    padding-bottom:60px;
+                    @media(min-width: 576px){
+                        padding:15px;
+                    }
+
+                    .modal-header{
+                        border-bottom: none;
+                        .close{
+                            background-color:$pink;
+                            color:white;
+                            opacity: 1;
+                            padding: 0px 5px;
+                            border-radius: 5px;
+
+                            
+                            @media (max-width:576px){
+                                position: absolute;
+                                bottom: 50px;
+                                left: calc(50% - 13.25px);
+                            }
+                        }
+                    }
+                    .modal-body{
+                        padding:0;
+                          
+                          table {
+                            text-align: center;
+                            border-collapse: separate;
+                            border-radius: 8px;
+                            border-spacing: 0;
+                          }
+                          
+                          table th,
+                          table td {
+                            padding: 5px 0;
+                            vertical-align: inherit;
+                            border-bottom: solid 2px $pink !important;
+                            border-right: solid 2px $pink;
+                          }
+                          
+                          table th:first-child,
+                          table td:first-child {
+                            border-left: solid 2px $pink;
+                          }
+                          
+                          table th .fa-edit,
+                          table td .fa-edit {
+                            color: $pink;
+                          }
+                          
+                          table th {
+                            background-color: $pink;
+                            color: #fff;
+                          }
+                          
+                          table tr:nth-child(even) {
+                            background-color: $lightpink;
+                          }
+                          
+                          table tr:last-child td:first-child {
+                            border-bottom-left-radius: 8px;
+                          }
+                          
+                          table tr:last-child td:last-child {
+                            border-bottom-right-radius: 8px;
+                          }
+                          
+                          thead tr th:first-child {
+                            border-top-left-radius: 8px;
+                          }
+                          
+                          thead tr th:last-child {
+                            border-top-right-radius: 8px;
+                          }
+
+                          .card{
+                            font-size:16px;
+                            margin:30px 0;
+                            font-weight: 600;
+                            border: solid 1px $pink;
+                            border-bottom:none !important;
+                            &:first-of-type,&:last-of-type,&:not(:first-of-type):not(:last-of-type){
+                                border-bottom: 1px solid $pink;
+                                border-radius: 8px;
+                            }
+                            &:nth-child(even){
+                                .th{
+                                    background-color: $pink;
+                                    color: #fff;
+                                }
+                            }
+
+                            @include btn-shadow;
+                        }
+                        
+                        .sort,.name{
+                            flex: 1;
+                            text-align: center;
+                            padding: 5px;
+                        }
+                    
+                        .th{
+                            color: $pink;
+                            background-color: $lightpink;
+                            padding: 5px 0;
+                            border-bottom: 1px solid $pink;
+                        }
+                        .td{
+                            background-color: #fff;
+                            padding: 5px 0;
+                            border-bottom: 1px solid $pink;
+                        }
+                        .btn-link{
+                            text-decoration: none !important;
+                            color:unset;
+                        }
+                    
+                        .btn-link:hover{
+                            text-decoration: none !important;
+                            color:unset;
+                        }
+                        .collapse_btn{
+                            width: 20px;
+                            height: 20px;
+                            border: solid 2px #82cbc6;
+                            border-radius: 50%;
+                            color: black;
+                        }
+                        .icon_rotate{
+                            transform: scaleY(-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

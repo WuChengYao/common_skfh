@@ -1,0 +1,275 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/0830/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/0830/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: solid 1px #ec6968;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+@media (min-width: 768px) {
+  .checkBox {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.dropdown-menu {
+  -webkit-transform: translateY(38px);
+          transform: translateY(38px);
+}
+
+.groupMember .groupMemberArea form {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.groupMember .groupMemberArea form input,
+.groupMember .groupMemberArea form label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.groupMember .groupMemberArea form label {
+  margin-bottom: 0;
+}
+
+.groupMember .groupMemberArea form .panel {
+  width: 45px;
+  height: 38px;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.groupMember .groupMemberArea form .panel .panel-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.groupMember .groupMemberArea form .dateInput {
+  width: 45%;
+  position: relative;
+}
+
+.groupMember .groupMemberArea form table {
+  text-align: center;
+}
+
+.groupMember .groupMemberArea form table th,
+.groupMember .groupMemberArea form table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.groupMember .groupMemberArea form table th .fa-edit,
+.groupMember .groupMemberArea form table td .fa-edit {
+  color: #ec6968;
+}
+
+.groupMember .groupMemberArea form table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.groupMember .groupMemberArea form table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.groupMember .groupMemberArea form table .search-btn {
+  padding: 1px 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  background-color: #fff;
+}
+
+.groupMember .groupMemberArea .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.groupMember .groupMemberArea .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.groupMember .resultList .selectResultList {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.groupMember .resultList h3 {
+  color: #ec6968;
+}
+
+.groupMember .resultList .btnArea .control-btn {
+  padding: 2px 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  margin: 20px 5px;
+}
+
+.groupMember .resultList .btnArea .control-btn:first-child {
+  margin-left: 0;
+}
+
+.groupMember .resultList table {
+  text-align: center;
+}
+
+.groupMember .resultList table th,
+.groupMember .resultList table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.groupMember .resultList table th .fa-edit,
+.groupMember .resultList table td .fa-edit {
+  color: #ec6968;
+}
+
+.groupMember .resultList table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.groupMember .resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.groupMember .resultList table .search-btn {
+  padding: 1px 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  background-color: #fff;
+}
+
+.groupMember .resultList .paginationArea .pagination {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.groupMember .resultList .paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+.groupMember .resultList .paginationArea .pagination .fas {
+  color: #ec6968;
+  font-size: 22px;
+}
+
+.groupMember .resultList .paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.groupMember .resultList .paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #ec6968;
+}
+
+.groupMember .resultList .paginationArea .pagination input {
+  width: 50px;
+}
+
+.groupMember .resultList .paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  color: #ec6968;
+}
+
+.groupMember .paginationArea .pagination {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.groupMember .paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+.groupMember .paginationArea .pagination .fas {
+  color: #ec6968;
+  font-size: 22px;
+}
+
+.groupMember .paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.groupMember .paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #ec6968;
+}
+
+.groupMember .paginationArea .pagination input {
+  width: 50px;
+}
+
+.groupMember .paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  background-color: white;
+  border-radius: 0px;
+  color: #ec6968;
+}
+
+.textBold {
+  font-weight: 700;
+}
+
+table {
+  font-weight: 700;
+}
+/*# sourceMappingURL=groupMember.css.map */

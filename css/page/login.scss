@@ -1,0 +1,193 @@
+.login {
+   .wrap {
+        background-image: url(../../img/login/bgi.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding: 63px 0 147px 0;
+        @media (min-width: 768px) {
+            padding: 50px 0 60px 0;
+            background-image: url(../../img/login/bgi-pad.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &__logo {
+            margin-bottom: 37px;
+            @media (min-width: 768px) {
+                width: 125px;
+                margin-bottom: 18px;
+            }
+        }
+
+        &__inputBox {
+            margin-bottom: 14px;
+            @media (min-width: 768px) {
+                margin-bottom: 16px;
+            }
+            &.last {
+                @media (min-width: 768px) {
+                    margin-bottom: 23px;
+                }
+            }
+
+            .icon {
+                top: calc(50% - 10px);
+                left: 23px;
+
+                &.PWD {
+                    left: 24px;
+                }
+
+                &.code {
+                    left: 21px;
+                }
+            }
+
+            input {
+                width: 243px;
+                height: 45px;
+                border-radius: 10px;
+                padding-left: 68px;
+                @media (min-width: 768px) {
+                    width: 260px;
+                }
+                
+                &::-webkit-input-placeholder {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.2);
+                    text-align: left;
+                }
+                &:-moz-placeholder {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.2);
+                    text-align: left;
+                }
+                &::-moz-placeholder {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.2);
+                    text-align: left;
+                }
+
+                &.failed {
+                    border: 2px solid #e71f19;
+                    box-shadow: 0 0 0 0  transparent;
+                }
+            }
+        }
+
+        &__readonlyCode {
+            width: 110px;
+            height: 34px;
+            min-height: 34px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 0 6px;
+            margin-bottom: 17px;
+
+            span {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            &-re {
+                margin-bottom: 17px;
+                margin-left: 14px;
+            }
+
+            .r {
+                color: red;
+            }
+
+            .g {
+                color: green;
+            }
+
+            .b {
+                color: blue;
+            }
+
+            .p {
+                color: purple;
+            }
+
+            .y {
+                color: yellowgreen;
+            }
+        }
+
+        &__checkBox {
+            padding-left: 35px;
+            margin-bottom: 58px;
+
+            input {
+                opacity: 0;
+                width: 24px;
+                height: 23px;
+                top: -4px;
+                left: 24px;
+                z-index: 10;
+            }
+
+            .checkStatus {
+                width: 24px;
+                height: 23px;
+                border-radius: 100%;
+                background-color: #fff;
+                left: 4px;
+
+                .checked {
+                    width: 10px;
+                    height: 10px; 
+                    border-radius: 100%;
+                    background-color: #fff;
+                }
+            }
+
+            input:checked + .checkStatus {
+                .checked {
+                    background-color: #e71f19;
+                }
+            }
+
+            label {
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 0.38px;
+            }
+        }
+
+        &__btnBox {
+            &-btn {
+                width: 83px;
+                height: 38px;
+                margin: 0;
+                font-size: 15.5px;
+                font-weight: bold;
+                border-radius: 10px;
+                box-shadow: 1px 1px 3px 1px rgba(67,67,67,0.6);
+                &:active {
+                    transform: translateY(2px);
+                }
+                
+                &:first-child {
+                    margin-right: 20px;
+                    border: 1.5px solid #e71f19;
+                    background-color: #fff;
+                }
+
+                &:last-child {
+                    color: #FFF;
+                    border: solid 1.5px #ffffff;
+                    background-image: linear-gradient(to top, #e71f19, #e83a19);
+                    text-decoration: none;
+                }
+            }
+        }
+    } 
+}

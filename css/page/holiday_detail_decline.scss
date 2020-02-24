@@ -1,0 +1,73 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApplyDecline {
+    font-weight: 900;
+
+    .col-12{
+        line-height:1.3;
+        @media (max-width: 576px){
+            padding:0;
+        }
+
+        .triangle{
+            position: relative;
+            margin-right: 5px;
+            padding-right: 10px;
+
+
+
+            &:after{
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 0 5px 7.5px;
+                border-color: transparent transparent transparent #000;
+                position: absolute;
+                right: 0;
+                top: 5px;
+            }
+        }
+    }
+
+    .ApplyDeclineArea {
+        .ApplyDeclineForm {
+            padding: 20px;
+            margin: 20px 0 30px 0;
+            border-radius: 16px;
+            @include shadow;
+            .required {
+                color: red;
+            }
+        }
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 8px;
+            margin: 10px;
+            @include btn-shadow;
+            cursor: pointer;
+            .fas {
+                color: white;
+                margin-right: 5px;
+            }
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+            .fas {
+                color: $green;
+            }
+        }
+    }
+}

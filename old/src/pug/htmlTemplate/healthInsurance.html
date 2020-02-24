@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健保轉入轉出申請</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <link rel="stylesheet" href="./css/healthInsurance.css">
+</head>
+
+<body>
+    <div class="healthInsurance">
+        <div class="container searchArea">
+            <form action="">
+                <div class="searchForm col-12">
+                    <div class="row">
+                        <div class="col-4 textBold"><label for="">區部</label></div>
+                        <div class="col-4 textBold"><label for="">單位</label></div>
+                        <div class="col-4 textBold"><label for=""><span class="required">*</span>姓名</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><input type="text" class="form-control"></div>
+                        <div class="col-4"><input type="text" class="form-control"></div>
+                        <div class="col-4"><input type="text" class="form-control"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 textBold"><label for=""><span class="required">*</span class="textBold">身分證字號</label></div>
+                        <div class="col-6 textBold"><label for=""><span class="required">*</span class="">電腦編修</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 textBold"><input type="text" class="form-control"></div>
+                        <div class="col-6 textBold"><input type="text" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="btn btn-outline m-2 textBold"><img class="mr-2 textBold" src="./img/0830/x.svg" width="12px" alt=""
+                            srcset="">清除</div>
+                    <div class="btn m-2 textBold"><img class="mr-2 textBold" src="./img/0830/查詢-fff.svg" width="19px" alt="" srcset="">查詢
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="hr"></div>
+        <div class="container resultList">
+            <h3 class="textBold">資料明細</h3>
+            <div class="controlArea d-flex justify-content-between align-items-center">
+                <div class="btnArea">
+                    <div class="btn control-btn"><i class="fas fa-plus"></i> <span class="textBold">新增</span></div>
+                    <div class="btn control-btn"><i class="fas fa-times"></i> <span class="textBold">刪除勾選項目</span></div>
+                </div>
+                <ul class="hintArea d-flex">
+                    <li class="hint textBold">S-在校就讀且無職業</li>
+                    <li class="hint textBold">G-應屆畢業生或退伍一年內</li>
+                    <li class="hint textBold">P-受監護宣告</li>
+                </ul>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                    id="checkAll">
+                                <div class="checkBox"></div>
+                            </div>
+                        </th>
+                        <th>申請投保</th>
+                        <th>投保者</th>
+                        <th>姓名</th>
+                        <th>身分證字號</th>
+                        <th>出生日期</th>
+                        <th>稱謂</th>
+                        <th>代號</th>
+                        <th>轉出/入日期</th>
+                        <th>原因</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">轉入</option>
+                                <option value="">轉出</option>
+                            </select>
+                        </td>
+                        <td><select name="" id="">
+                                <option value="">本人</option>
+                                <option value="">本人</option>
+                            </select></td>
+                        <td>曾李小新</td>
+                        <td>L122222222</td>
+                        <td>2019/06/06</td>
+                        <td><select name="" id="">
+                                <option value="">外曾祖父母</option>
+                                <option value="">ㄋ</option>
+                            </select></td>
+                        <td><select name="" id="">
+                                <option value="">s</option>
+                                <option value="">s</option>
+                            </select></td>
+                        <td>2019/06/06</td>
+                        <td><i class="fas fa-ellipsis-h reason-btn"></i></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">轉入</option>
+                                <option value="">轉出</option>
+                            </select>
+                        </td>
+                        <td><select name="" id="">
+                                <option value="">本人</option>
+                                <option value="">本人</option>
+                            </select></td>
+                        <td>李新光</td>
+                        <td>L122222222</td>
+                        <td>2019/06/06</td>
+                        <td><select name="" id="">
+                                <option value="">外曾祖父母</option>
+                                <option value="">s</option>
+                            </select></td>
+                        <td><select name="" id="">
+                                <option value="">s</option>
+                                <option value="">s</option>
+                            </select></td>
+                        <td>2019/06/06</td>
+                        <td><i class="fas fa-ellipsis-h reason-btn"></i></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="hr"></div>
+        <div class="container uploadFile pb-5">
+            <h3 class="textBold">上傳文件</h3>
+            <form action="" class="uploadForm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                必填
+                            </th>
+                            <th>附件說明</th>
+                            <th colspan="3">檔案上傳</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                必填
+                            </td>
+                            <td>
+                                原眷屬投保單位轉入(出)證明
+                            </td>
+                            <td>檔案名稱.pdf</td>
+                            <td>
+                                <div class="btn selectFile-btn"><span class="textBold">選擇檔案</span></div>
+                            </td>
+                            <td>
+                                <div class="btn upload-btn"><i class="fas fa-upload"></i><span class="textBold">上傳</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                必填
+                            </td>
+                            <td>
+                                關係說明                            </td>
+                            <td>檔案名稱.pdf</td>
+                            <td>
+                                <div class="btn selectFile-btn"><span class="textBold">選擇檔案</span></div>
+                            </td>
+                            <td>
+                                <div class="btn upload-btn"><i class="fas fa-upload"></i><span class="textBold">上傳</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                必填
+                            </td>
+                            <td>
+                                滿20歲以上相關證明文件
+                            </td>
+                            <td>檔案名稱.pdf</td>
+                            <td>
+                                <div class="btn selectFile-btn"><span class="textBold">選擇檔案</span></div>
+                            </td>
+                            <td>
+                                <div class="btn upload-btn"><i class="fas fa-upload"></i><span class="textBold">上傳</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                必填
+                            </td>
+                            <td>
+                                外籍人士請檢附居留證
+                            </td>
+                            <td>檔案名稱.pdf</td>
+                            <td>
+                                <div class="btn selectFile-btn"><span class="textBold">選擇檔案</span></div>
+                            </td>
+                            <td>
+                                <div class="btn upload-btn"><i class="fas fa-upload"></i><span class="textBold">上傳</span></div>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th class="new">
+                                <div class="btn new-btn">
+                                    <i class="fas fa-plus"></i> <span class="textBold">新增</span>
+                                </div>
+                            </th>
+                            <th>
+                                附件說明
+                            </th>
+                            <th colspan="3">
+                                檔案上傳
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="btn"><i class="fas fa-times"></i> <span class="textBold">刪除</span></div>
+                            </td>
+                            <td>
+                                <div class="btn description-btn" type="button" data-toggle="modal"
+                                    data-target="#reasonModal">請輸入附件說明</div>
+                            </td>
+                            <td>檔案名稱.pdf</td>
+                            <td>
+                                <div class="btn selectFile-btn"><span class="textBold">選擇檔案</span></div>
+                            </td>
+                            <td>
+                                <div class="btn upload-btn"><i class="fas fa-upload"></i><span class="textBold">上傳</span></div>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <div class="row justify-content-center confirmArea">
+                    <div class="position-relative d-flex justify-content-center align-items-center">
+                        <input class="position-absolute" type="checkbox" name="" value="y">
+                        <div class="checkBox mr-1"></div>
+                    </div>若文件檢附不齊全，將退回補辦
+                </div>
+                <div class="row justify-content-center">
+                    <div class="btn btn-outline m-2 "><img class="mr-2" src="./img/0830/x.svg" width="12px" alt=""
+                            srcset=""><span class="textBold">清除</span></div>
+                    <div class="btn m-2"><i class="far fa-share-square"></i> <span class="textBold">送出</span>
+                    </div>
+                </div>
+
+            </form>
+            <div class="modal fade popbox" id="reasonModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="btn w-100 reason">原因</div>
+                            <textarea class="w-100" name="" id="" cols="30" rows="4" placeholder="請輸入原因..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js"></script>
+    <script>
+        $("#checkAll").click(function () {
+            if ($("#checkAll").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });
+
+
+        $('.datepicker').datepicker({
+            autoclose: 'ture',
+        });
+    </script>
+</body>
+
+</html>

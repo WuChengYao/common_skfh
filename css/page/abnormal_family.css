@@ -1,0 +1,187 @@
+.familyattend {
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 25px 50px 30px 50px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 576px) {
+  .familyattend {
+    padding: 17px 21px 30px 21px;
+  }
+}
+
+.familyattend .familyattend_form .form_title h3 {
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: unset;
+  color: #eb6868;
+  font-weight: bold;
+}
+
+.familyattend .familyattend_form .form-control {
+  border: 2px solid #C4C3C3;
+  padding: 5px 10px;
+  letter-spacing: 1.8px;
+  font-size: 16px;
+  line-height: unset;
+  color: #4D4D4D;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .familyattend .familyattend_form .form-control {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form-control {
+    font-size: 16px;
+  }
+}
+
+.familyattend .familyattend_form .form-control[value] {
+  background-color: #EDEAEA;
+  color: #4D4D4D;
+}
+
+.familyattend .familyattend_form label {
+  font-size: 16px;
+  line-height: unset;
+  color: #000;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form label {
+    font-size: 16px;
+  }
+}
+
+.familyattend .familyattend_form textarea {
+  width: 100%;
+  min-height: 38px;
+  max-height: 38px;
+  border: 2px solid #C4C3C3;
+  padding: 5px 10px;
+  letter-spacing: 1.8px;
+  background-color: #EDEAEA;
+  border-radius: 8px;
+}
+
+.familyattend .familyattend_form hr {
+  border-top: 2px solid #eb6868;
+}
+
+.familyattend .familyattend_form .form_date .col-12 .form-control[value] {
+  color: #eb6868;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_date .col-12 .form-control[value] {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_date .col-12 .d-flex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0;
+  }
+  .familyattend .familyattend_form .form_date .col-12 .d-flex label {
+    white-space: nowrap;
+    margin: 0;
+  }
+  .familyattend .familyattend_form .form_date .col-12 .d-flex input {
+    margin-left: 20px;
+  }
+}
+
+.familyattend .familyattend_form .form_date .col-md-3:nth-child(2) label {
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_date .notic_none {
+    display: none;
+  }
+}
+
+.familyattend .familyattend_form .hr_block {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .hr_block {
+    display: block;
+  }
+}
+
+.familyattend .familyattend_form .form_main_1 .textarea_1 {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #eb6868;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_main_1 .textarea_1 {
+    min-height: 75px;
+    max-height: 75px;
+  }
+}
+
+.familyattend .familyattend_form .form_main_1 .col-md-2:nth-child(5) label {
+  letter-spacing: -0.5px;
+}
+
+.familyattend .familyattend_form .form_main_1 .notic_block {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_main_1 .notic_block {
+    display: block;
+  }
+  .familyattend .familyattend_form .form_main_1 .notic_block .form-control[value] {
+    text-align: center;
+  }
+}
+
+.familyattend .familyattend_form .form_main_2 :nth-child(1) input {
+  height: 62px;
+}
+
+@media (max-width: 576px) {
+  .familyattend .familyattend_form .form_main_2 :nth-child(1) input {
+    height: 53px;
+  }
+}
+
+.familyattend .familyattend_form .form_main_2 .textarea_2 {
+  min-height: 75px;
+  max-height: 75px;
+}
+
+.familyattend .familyattend_form .confirm_bnt .col-12 button {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #56bdb7;
+  letter-spacing: 1.8px;
+  font-size: 16px;
+  line-height: unset;
+  color: #fff;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=abnormal_family.css.map */

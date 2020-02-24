@@ -1,0 +1,148 @@
+#basicInformation {
+  font-weight: 900;
+}
+
+#basicInformation hr {
+  border-top: 2px solid #eb6868;
+  margin: 30px 0;
+}
+
+#basicInformation .title {
+  color: #eb6868;
+  font-size: 25px;
+  letter-spacing: .5px;
+  margin-bottom: 20px;
+}
+
+#basicInformation .loginInformation,
+#basicInformation .basicInformation {
+  padding: 0 20px 20px 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#basicInformation .loginInformation .form-control,
+#basicInformation .basicInformation .form-control {
+  border: 2px solid #C4C3C3;
+  color: #4D4D4D;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px 10px;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #basicInformation .loginInformation .form-control,
+  #basicInformation .basicInformation .form-control {
+    border-radius: 8px;
+  }
+}
+
+#basicInformation .loginInformation .data-text,
+#basicInformation .basicInformation .data-text {
+  height: unset;
+  background-color: #edeaea;
+  color: #999999;
+}
+
+@media (max-width: 768px) {
+  #basicInformation .loginInformation .data-text,
+  #basicInformation .basicInformation .data-text {
+    height: 58px;
+  }
+}
+
+#basicInformation .loginInformation .form-control[readonly],
+#basicInformation .basicInformation .form-control[readonly] {
+  background-color: #EDEAEA;
+  color: #999999;
+}
+
+#basicInformation .loginInformation label,
+#basicInformation .basicInformation label {
+  margin: 20px 0 10px 0;
+}
+
+#basicInformation .basicInformation .col-6 {
+  float: left;
+}
+
+#basicInformation .basicInformation .row {
+  clear: both;
+}
+
+#basicInformation .basicInformation .avatar-area {
+  float: right;
+  height: 252px;
+  padding-top: 20px;
+}
+
+#basicInformation .basicInformation .avatar-area .avatar {
+  width: 100%;
+  height: calc(100% - 37.6px);
+  background-size: cover;
+  background-position: center center;
+}
+
+#basicInformation .basicInformation .avatar-area .change-avatar {
+  width: 100%;
+  height: 37.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#basicInformation .basicInformation .avatar-area .change-avatar #change-btn {
+  display: none;
+}
+
+#basicInformation .basicInformation .avatar-area .change-avatar .change-btn {
+  padding: 7px 12px;
+  color: #eb6868;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#basicInformation .basicInformation .group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#basicInformation .btns .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 0 10px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#basicInformation .btns .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+#basicInformation .btns .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#basicInformation .btns .btn-outline .fas {
+  color: #56bdb7;
+}
+/*# sourceMappingURL=basic_information.css.map */

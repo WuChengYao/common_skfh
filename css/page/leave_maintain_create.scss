@@ -1,0 +1,255 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked+div {
+    background-image: url(../../img/groupMember/checkmark-000.svg),
+        -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 2px $pink;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: contain, 100%;
+}
+.selectgroup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectgroup:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    right: 10px;
+    pointer-events: none;
+}
+
+
+.navbar-brand{
+    @media (max-width: 576px){
+        font-size: 25px !important;
+    }
+}
+
+#leaveMaintainCreate {
+    font-weight: 900;
+
+    .leaveMaintainArea {
+        hr {
+            height: 1px;
+            border-color: $pink;
+            margin: 0 0 30px 0;
+            background-color: $pink;
+        }
+        .leaveMaintainForm {
+            padding: 0 20px 20px 20px;
+            margin: 20px 0 30px 0;
+            border-radius: 16px;
+            font-size: 16px;
+            @include shadow;
+            .required {
+                color: red;
+            }
+            label {
+                margin: 20px 0 10px 0;
+
+                &.checkbox-label {
+                    color: $pink;
+                }
+            }
+
+            .btn {
+                margin: 30px 10px 0 10px;
+            }
+
+            .form-control {
+                padding: .3rem .5rem;
+                height: unset;
+                letter-spacing: 1.8px;
+                border-width: 2px;
+                // border-radius: 10px;
+            }
+            
+            input,select{
+                color: #999999;
+            }
+
+            
+        }
+
+
+    }
+
+    .leaveSetting {
+        .title {
+            color: $pink;
+            font-size: 25px;
+            letter-spacing: .5px;
+        }
+
+        .leaveSettingForm {
+            padding: 20px 0px;
+            margin: 0 0 20px 0;
+            border-radius: 18px;
+            .btnArea {
+
+                .control-btn {
+                    padding: 0 8px;
+                    font-weight: bold;
+                    color: $pink;
+                    background-color: #fff;
+                    margin: 0 0 25px 0;
+                    display: inline-block;
+                    border-radius: 4px;
+                    margin-right: 15px;
+                    cursor: pointer;
+
+                    .fas {
+                        color: $pink;
+                    }
+
+                    @include btn-shadow;
+                }
+            }
+            table {
+                text-align: center;
+                border-collapse: separate;
+                border-radius: 8px;
+                border-spacing: 0;
+                th,
+                td {
+                    padding: 5px 0;
+                    vertical-align: inherit;
+                    border: solid 1px $pink;
+
+                    &:first-child {
+                        border-left: solid 2px $pink;
+                    }
+
+                    &:last-child {
+                        border-right: solid 2px $pink;
+                    }
+
+                    .fa-edit {
+                        color: $pink;
+                    }
+                }
+
+                th {
+                    background-color: $pink;
+                    color: #fff;
+                    padding: 5px 0;
+                }
+
+                select {
+                    border: none;
+                    outline: none;
+                    width: 90%;
+                    text-align-last: center;
+                    font-weight: bold;
+                }
+
+                tr:nth-child(even) {
+                    background-color: $lightpink;
+
+                    select {
+                        background-color: $lightpink;
+                    }
+                }
+
+                tr:last-child {
+
+                    td {
+                        border-bottom: solid 2px $pink;
+                    }
+
+                    td:first-child {
+                        border-bottom-left-radius: 8px;
+                    }
+
+                    td:last-child {
+                        border-bottom-right-radius: 8px;
+                    }
+                }
+
+                thead {
+                    tr {
+                        th {
+                            &:first-child {
+                                border-top-left-radius: 8px;
+                            }
+
+                            &:last-child {
+                                border-top-right-radius: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 8px;
+            margin: 30px 10px;
+            font-weight: bold;
+
+            @include btn-shadow;
+
+            cursor: pointer;
+
+            .fa-search {
+                transform: scaleX(-1);
+            }
+
+            .fas {
+                color: white;
+                margin-right: 5px;
+            }
+
+            &.add-btn {
+                margin: 0;
+            }
+
+            &.go-btn {
+                margin: 0;
+            }
+            img{
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+
+            .fas {
+                color: $green;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,228 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/0830/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/0830/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: solid 1px #ec6968;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+@media (min-width: 768px) {
+  .checkBox {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.searchArea .searchForm {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.searchArea .searchForm input,
+.searchArea .searchForm label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.searchArea .searchForm label {
+  margin-bottom: 0;
+}
+
+.searchArea .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.searchArea .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.hr {
+  margin: 30px 40px 30px 40px;
+  height: 2px;
+  background-color: #ec6968;
+}
+
+.resultList h3 {
+  color: #ec6968;
+}
+
+.resultList .btnArea .control-btn {
+  padding: 2px 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  margin: 20px 5px;
+}
+
+.resultList .btnArea .control-btn:first-child {
+  margin-left: 0;
+}
+
+.resultList table {
+  text-align: center;
+}
+
+.resultList table th,
+.resultList table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.resultList table th .fa-edit,
+.resultList table td .fa-edit {
+  color: #ec6968;
+}
+
+.resultList table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.paginationArea .pagination {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+.paginationArea .pagination .fas {
+  color: #ec6968;
+  font-size: 22px;
+}
+
+.paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #ec6968;
+}
+
+.paginationArea .pagination input {
+  width: 50px;
+}
+
+.paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  color: #ec6968;
+}
+
+.contentInfo-btn {
+  width: 90%;
+  border-radius: 5px;
+  color: #ec6968;
+  font-weight: 900;
+  background-color: white;
+}
+
+.modalStyle .modal-header {
+  padding: 10px;
+  border: none;
+}
+
+.modalStyle .modal-header .crossBlock {
+  width: 23px;
+  cursor: pointer;
+}
+
+.modalStyle .modal-header button {
+  background-color: #EB6868;
+}
+
+.modalStyle .modal-body {
+  padding-top: 0px;
+}
+
+.modalStyle .modal-body .row:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+.modalStyle .modal-body .textBlock {
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+  background-color: #EB6868;
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.modalStyle .modal-body .table {
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+}
+
+.modalStyle .modal-body .table thead {
+  background-color: #EB6868;
+  color: white;
+  font-weight: 700;
+}
+
+.modalStyle .modal-body .table thead td {
+  border-radius: 10px;
+}
+
+.modalStyle .modal-body .table tbody tr:nth-child(2n) {
+  background-color: #F7E1DC;
+}
+
+.modalStyle .modal-body .table td {
+  padding: 5px;
+  text-align: center;
+  width: 25%;
+  border: #EB6868 1px solid;
+  font-weight: 700;
+  border-radius: 10px;
+  border: #EB6868 solid 1px;
+}
+
+table {
+  font-weight: 700;
+}
+
+.textBold {
+  font-weight: 700;
+}
+/*# sourceMappingURL=leaveMaintain.css.map */

@@ -1,0 +1,12 @@
+extends nav
+//- 繼承自父層nav.pug
+
+block css
+  link(rel='stylesheet' href='css/style.css')
+
+block content
+  include htmlTemplate/index.html
+//- block = 挖洞 , nav.pug內原先有挖個content的洞,在這裡call 同名字的block可以將以下內容填入nav.pug的洞,然後用include放入HTML檔案結構
+
+block script
+  script(src='js/index.js')

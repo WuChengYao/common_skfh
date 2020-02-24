@@ -1,0 +1,49 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow{
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+@mixin btn-shadow{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.addGroup {
+        .addGroupForm {
+            font-weight: 900;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            @include shadow;
+            input,
+            label {
+                flex-grow: 1;
+                margin: 0;
+            }
+            label {
+                margin-bottom: 0;
+            }
+            .required {
+                color: red;
+            }
+        }
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 7px;
+            margin: 0 15px 0 15px;
+            @include btn-shadow;
+            cursor: pointer;
+            .fas {
+                margin-right: 5px;
+            }
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+        }
+    }

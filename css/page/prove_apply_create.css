@@ -1,0 +1,333 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/groupMember/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: solid 2px #eb6868;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+.fa-users-cog {
+  color: #eb6868;
+}
+
+span {
+  font-weight: bold;
+}
+
+#proveApplyCreate {
+  font-weight: 900;
+}
+
+#proveApplyCreate .title {
+  font-size: 20px;
+}
+
+#proveApplyCreate hr {
+  border-top-width: 2px;
+  border-color: #eb6868;
+}
+
+#proveApplyCreate .printProveArea .printProveForm {
+  padding: 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApplyCreate .printProveArea .printProveForm .required {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  #proveApplyCreate .printProveArea .printProveForm input {
+    text-align: center;
+  }
+}
+
+#proveApplyCreate .printProveArea .printProveForm label {
+  margin: 0px 0 10px 0;
+}
+
+#proveApplyCreate .printProveArea .printProveForm label.checkbox-label {
+  color: #eb6868;
+}
+
+#proveApplyCreate .printProveArea .printProveForm .btn-l {
+  margin: 30px 10px 0 10px;
+}
+
+#proveApplyCreate .printProveArea .printProveForm .btn-r {
+  margin: 30px 10px 0 10px;
+  padding: 5px;
+}
+
+#proveApplyCreate .printProveArea .printProveForm .form-control {
+  letter-spacing: 1.8px;
+  border-width: 2px;
+}
+
+#proveApplyCreate .printProveArea .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#proveApplyCreate .printProveArea .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#proveApplyCreate .proveApplyList .title {
+  color: #eb6868;
+  font-size: 25px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm {
+  padding: 20px 5px;
+  margin: 0 0 20px 0;
+  border-radius: 18px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table select {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+  border: none;
+  outline: none;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table th,
+#proveApplyCreate .proveApplyList .proveApplyForm table td {
+  padding: 5px 0;
+  vertical-align: inherit;
+  border-bottom: solid 1.5px #eb6868;
+  border-right: solid 1.5px #eb6868;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table th:first-child,
+#proveApplyCreate .proveApplyList .proveApplyForm table td:first-child {
+  border-left: solid 1.5px #eb6868;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table th .fa-edit,
+#proveApplyCreate .proveApplyList .proveApplyForm table td .fa-edit {
+  color: #eb6868;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table th {
+  background-color: #eb6868;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table thead tr th:first-child {
+  border-top-left-radius: 8px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table thead tr th:last-child {
+  border-top-right-radius: 8px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm table input {
+  width: 96%;
+  border: none;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 30px 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #proveApplyCreate .proveApplyList .proveApplyForm .btn {
+    margin: 0px 10px;
+  }
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .btn-outline .fas {
+  color: #56bdb7;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .card {
+  font-weight: 600;
+  border: solid 1px #ec6968;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .card:nth-child(even) .th {
+  background-color: #f7e1dc;
+  color: #ec6968;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .card:nth-child(even) .th.btnArea {
+  background-color: #fff;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .card select {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+  border: none;
+  outline: none;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .label,
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .data:first-child {
+  border-right: 1px solid #ec6968;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .th {
+  color: #fff;
+  background-color: #ec6968;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .td {
+  background-color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .td.last-td {
+  border-bottom: none;
+  margin: 0 10px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .collapse_btn {
+  padding: 10px 35px 10px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .fas {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb textarea {
+  text-align: center;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .tipText {
+  margin-bottom: 30px;
+  color: #999999;
+  font-size: 16px;
+}
+
+#proveApplyCreate .proveApplyList .proveApplyForm .proveApplyForm-mb .tipText.display {
+  display: none;
+}
+
+.btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 30px 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    margin: 0px 10px;
+  }
+}
+
+.btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+.btn-outline .fas {
+  color: #56bdb7;
+}
+/*# sourceMappingURL=prove_apply_create.css.map */

@@ -1,0 +1,264 @@
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/0830/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: url(../../img/0830/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: solid 1px #ec6968;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-size: contain, 100%;
+}
+
+@media (min-width: 768px) {
+  .checkBox {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.healthInsurance .searchArea .searchForm {
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.healthInsurance .searchArea .searchForm input,
+.healthInsurance .searchArea .searchForm label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.healthInsurance .searchArea .searchForm label {
+  margin-bottom: 0;
+}
+
+.healthInsurance .searchArea .searchForm .required {
+  color: red;
+}
+
+.healthInsurance .searchArea .searchForm .panel {
+  width: 45px;
+  height: 38px;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.healthInsurance .searchArea .searchForm .panel .panel-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.healthInsurance .searchArea .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.healthInsurance .searchArea .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.healthInsurance .hr {
+  margin: 30px 40px 30px 40px;
+  height: 2px;
+  background-color: #ec6968;
+}
+
+.healthInsurance .resultList h3 {
+  color: #ec6968;
+}
+
+.healthInsurance .resultList .btnArea .control-btn {
+  padding: 2px 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  margin: 20px 5px;
+}
+
+.healthInsurance .resultList .btnArea .control-btn:first-child {
+  margin-left: 0;
+}
+
+.healthInsurance .resultList .hintArea {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.healthInsurance .resultList .hintArea .hint {
+  margin-left: 15px;
+  color: #ec6968;
+}
+
+.healthInsurance .resultList table {
+  text-align: center;
+}
+
+.healthInsurance .resultList table select {
+  border: none;
+}
+
+.healthInsurance .resultList table th,
+.healthInsurance .resultList table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.healthInsurance .resultList table th .fa-edit,
+.healthInsurance .resultList table td .fa-edit {
+  color: #ec6968;
+}
+
+.healthInsurance .resultList table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.healthInsurance .resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.healthInsurance .resultList table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+.healthInsurance .resultList table .reason-btn {
+  cursor: pointer;
+}
+
+.healthInsurance .uploadFile h3 {
+  color: #ec6968;
+}
+
+.healthInsurance .uploadFile .uploadForm .confirmArea {
+  color: #ec6968;
+}
+
+.healthInsurance .uploadFile .uploadForm .btn {
+  background-color: #55beb7;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.healthInsurance .uploadFile .uploadForm .btn-outline {
+  background-color: #fff;
+  color: #55beb7;
+  border: solid 2px #55beb7;
+}
+
+.healthInsurance .uploadFile .uploadForm table {
+  text-align: center;
+}
+
+.healthInsurance .uploadFile .uploadForm table select {
+  border: none;
+}
+
+.healthInsurance .uploadFile .uploadForm table th,
+.healthInsurance .uploadFile .uploadForm table td {
+  padding: 5px 0;
+  border: solid 2px #ec6968;
+  vertical-align: inherit;
+}
+
+.healthInsurance .uploadFile .uploadForm table th .fa-edit,
+.healthInsurance .uploadFile .uploadForm table td .fa-edit {
+  color: #ec6968;
+}
+
+.healthInsurance .uploadFile .uploadForm table th {
+  background-color: #ec6968;
+  color: #fff;
+}
+
+.healthInsurance .uploadFile .uploadForm table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+.healthInsurance .uploadFile .uploadForm table tr:nth-child(even) select {
+  background-color: #f7e1dc;
+}
+
+.healthInsurance .uploadFile .uploadForm table .new {
+  background-color: #fff;
+}
+
+.healthInsurance .uploadFile .uploadForm table .btn {
+  width: 90px;
+  padding: 1px 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  color: #ec6968;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.healthInsurance .uploadFile .uploadForm table .description-btn {
+  background-color: #fff;
+  color: black;
+  width: 95%;
+}
+
+.healthInsurance .uploadFile .uploadForm table .upload-btn {
+  padding: 0 12px;
+}
+
+.popbox {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.popbox .close {
+  background-color: red;
+  text-shadow: none;
+  color: white;
+  padding: 0;
+  -webkit-transform: translate(-10px, 10px);
+          transform: translate(-10px, 10px);
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.popbox .modal-header {
+  border-bottom: none;
+}
+
+.popbox .reason {
+  background-color: #ec6968;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.popbox textarea {
+  margin-top: 20px;
+  border: solid 3px #ec6968;
+  border-radius: 10px;
+}
+
+.textBold {
+  font-weight: 800;
+}
+
+td {
+  font-weight: 800;
+}
+/*# sourceMappingURL=healthInsurance.css.map */

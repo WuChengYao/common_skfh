@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/0830/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <title>待簽核</title>
+</head>
+
+<body>
+    <div class="wrap__0830">
+        <div class="nl__navbar d-flex position-relative justify-content-between align-items-end">
+            <div class="nl__navbar__btn d-flex flex-column justify-content-between">
+                <span class="nl__navbar__btn-line"></span>
+                <span class="nl__navbar__btn-line"></span>
+                <span class="nl__navbar__btn-line"></span>
+            </div>
+            <span class="nl__navbar__title text-white d-flex align-items-end">
+                <img class="" src="./img/0830/待簽核.svg" width="33px" alt="">
+                <span>待簽核</span>
+            </span>
+            <div class="nl__navbar__icon">
+                <img src="./img/icon/emptyC.svg" width="24" alt="" srcset="">
+                <img src="./img/icon/猴子_工作區域 1.svg" width="34" alt="" srcset="">
+            </div>
+        </div>
+        <div class="nl__body">
+            <div class="nl__body__searchBar d-md-none ">
+                <div class="search">
+                    <div class="nl__body__searchBar__inner d-flex align-items-center">
+                        <img class="nl__body__searchBar__inner-icon" src="./img/0830/查詢.svg" width="17px" alt=""
+                            srcset="">
+                        <span class="nl__body__searchBar__inner-text">查詢</span>
+                        <div
+                            class="nl__body__searchBar__inner-btnWrap d-flex align-items-center justify-content-center ml-auto">
+                            <div class="nl__body__searchBar__inner-btn"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nl__body__searchBar__inputArea">
+                    <div class="nl__body__searchBar__inputArea-dateInput d-flex flex-column">
+                        <span>單位</span>
+                        <input class="form-control" type="text" name="">
+                        <span>姓名</span>
+                        <input class="form-control" type="text" name="name">
+                        <span>類別/假別</span>
+                        <div
+                            class="searchBar__inputArea-btn d-flex justify-content-between align-items-center position-relative">
+                            <select class="form-control form-control-pal position-absolute" style="color: black">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            <div class="searchBar__inputArea-select d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="select_icon d-flex justify-content-center align-items-center">
+                                <div class="searchBar__inputArea-selectIcon"></div>
+                            </div>
+
+                        </div>
+                        <span>假別</span>
+
+                        <div
+                            class="searchBar__inputArea-btn d-flex justify-content-between align-items-center position-relative">
+                            <select class="form-control form-control-pal position-absolute" style="color: black">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            <div class="searchBar__inputArea-select d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="select_icon d-flex justify-content-center align-items-center">
+                                <div class="searchBar__inputArea-selectIcon"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="nl__body__searchBar__inputArea-dataPicker">
+                        <div class="label d-flex">
+                            <span class="flex-grow-1">申請/請假起日</span><span class="flex-grow-1 pl-5">申請/請假起日</span>
+
+                        </div>
+                        <div class="datapickerBox d-flex justify-content-between align-items-center">
+                            <div class="datapickerBox__inputBox d-flex justify-content-between">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker1">
+                                        <input type="text" class="form-control" placeholder="工作年/月" />
+                                        <div id="iconBox1"
+                                            class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                            <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datapickerBox__arr"></div>
+                            <div class="datapickerBox__inputBox d-flex justify-content-between">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker2">
+                                        <input type="text" class="form-control" placeholder="工作年/月" />
+                                        <div id="iconBox2"
+                                            class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                            <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="datapickerBox d-flex justify-content-between align-items-center">
+                            <div class="datapickerBox__inputBox d-flex justify-content-between">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker3">
+                                        <input type="text" class="form-control" placeholder="工作年/月" />
+                                        <div id="iconBox3"
+                                            class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                            <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datapickerBox__arr"></div>
+                            <div class="datapickerBox__inputBox d-flex justify-content-between">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker4">
+                                        <input type="text" class="form-control" placeholder="工作年/月" />
+                                        <div id="iconBox4"
+                                            class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                            <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="search_btn_area mb container d-flex justify-content-center mt-4">
+                <div class="btn btn_outline "><img class="mr-2" src="./img/0830/x.svg" width="12px" alt="" srcset="">清除
+                </div>
+                <div class="btn"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt="" srcset="">查詢
+                </div>
+            </div>
+            <div class="nl__body__searchArea d-none d-md-flex mx-auto justify-content-center container">
+                <div class="nl__body__searchBar__inputArea-dateInput d-flex flex-column">
+                    <span>單位</span>
+                    <input class="form-control" type="text" name="">
+                    <span>姓名</span>
+                    <input class="form-control" type="text" name="name">
+
+
+                    <!-- <span>職務</span>
+                    <input type="text" name="duty">
+                    <span>類別</span>
+                    <input type="text" name="cate"> -->
+                </div>
+                <div class="nl__body__searchBar__inputArea-dataPicker">
+                    <!-- <span>工作年月起/迄</span>
+                    <div class="datapickerBox d-flex justify-content-between align-items-center">
+                        <div class="datapickerBox__inputBox d-flex justify-content-between">
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker5">
+                                    <input type="text" class="form-control" placeholder="工作年/月" />
+                                    <div id="iconBox5"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                        <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="datapickerBox__arr"></div>
+                        <div class="datapickerBox__inputBox d-flex justify-content-between">
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker6">
+                                    <input type="text" class="form-control" placeholder="工作年/月" />
+                                    <div id="iconBox6"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                        <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="form-group">
+                        <span>類別/假別</span>
+                        <div
+                            class="searchBar__inputArea-btn d-flex justify-content-between align-items-center position-relative">
+                            <select class="form-control form-control-pal position-absolute" style="color: black">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            <div class="searchBar__inputArea-select d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="select_icon d-flex justify-content-center align-items-center">
+                                <div class="searchBar__inputArea-selectIcon ml-1"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <span>假別</span>
+                        <div
+                            class="searchBar__inputArea-btn d-flex justify-content-between align-items-center position-relative">
+                            <select class="form-control form-control-pal position-absolute" style="color: black">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            <div class="searchBar__inputArea-select d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="select_icon d-flex justify-content-center align-items-center">
+                                <div class="searchBar__inputArea-selectIcon ml-1"></div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="label d-flex">
+                        <span class="flex-grow-1">申請/請假起日</span><span class="flex-grow-1 pl-4">申請/請假起日</span>
+
+                    </div>
+
+                    <div class="datapickerBox d-flex justify-content-between align-items-center">
+                        <div class="datapickerBox__inputBox d-flex justify-content-between">
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker7">
+                                    <input type="text" class="form-control" placeholder="工作年/月" />
+                                    <div id="iconBox7"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                        <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="datapickerBox__arr"></div>
+                        <div class="datapickerBox__inputBox d-flex justify-content-between">
+                            <div class="form-group">
+                                <div class="input-group date" id="datetimepicker8">
+                                    <input type="text" class="form-control" placeholder="工作年/月" />
+                                    <div id="iconBox8"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon">
+                                        <img src="./img/0830/更多服務.svg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search_btn_area pc container d-flex justify-content-center">
+                <div class="btn btn_outline "><img class="mr-2" src="./img/0830/x.svg" width="12px" alt="" srcset="">清除
+                </div>
+                <div class="btn"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt="" srcset="">查詢</div>
+            </div>
+            <div class="nl__body__divide-red d-none d-md-block"></div>
+            <div class="nl__body__list mt-5 mt-md-0 container">
+                <div class="nl__body__list__title d-flex align-items-center">
+                    <div class="nl__body__list__title-icon d-flex flex-column justify-content-between">
+                        <div class="iconLine d-flex justify-content-between">
+                            <span class="dot"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="iconLine d-flex justify-content-between">
+                            <span class="dot"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="iconLine d-flex justify-content-between">
+                            <span class="dot"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                    <div class="nl__body__list__title-text ">
+                        <span>查詢結果清單</span>
+                    </div>
+                </div>
+                <div class="nl__body__list__permission d-flex justify-content-between justify-content-md-start">
+                    <div
+                        class="nl__body__list__permission-btn d-flex justify-content-between align-items-center position-relative">
+                        <select class="form-control form-control-pal position-absolute">
+                            <option>本人</option>
+                            <option>單位</option>
+                        </select>
+                        <div class="nl__body__list__permission-select d-flex justify-content-center align-items-center">
+                        </div>
+                        <div class="nl__body__list__permission-selectIcon"></div>
+                    </div>
+                    <div
+                        class="nl__body__list__permission-btn  d-flex justify-content-center align-items-center d-md-none position-relative">
+                        <input type="checkbox" id="checkAll_mb" class="position-absolute w-100 h-100" type="checkbox"
+                            name="checkbox" value="y">
+                        <span class="nl__body__list__permission-check">全選</span>
+                    </div>
+                    <div class="nl__body__list__permission-btn d-flex justify-content-around align-items-center">
+                        <span class="nl__body__list__permission-check">群簽同意</span>
+                        <img class="nl__body__list__permission-checkIcon" src="./img/0830/checkmark.svg" width="13px"
+                            alt="">
+                    </div>
+                </div>
+                <div class="nl__body__list__table mx-md-auto">
+                    <div class="nl__body__list__table-head">
+                        <div class="nl__body__list__table-head__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                    id="checkAll">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>類別 / 假別</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>姓名</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>申請/請假日</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>主旨</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核狀態</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>表單到達日期</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>表單編號</span></div> -->
+                        </div>
+                    </div>
+                    <div class="nl__body__list__table-body">
+                        <div class="nl__body__list__table-body__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>特休假</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>吳新光</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/21</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>xxxxxxxxxxxxxxxx</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核中</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/01</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>LM20180601-001</span></div> -->
+                        </div>
+                        <div class="nl__body__list__table-body__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>特休假</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>吳新光</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/21</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>xxxxxxxxxxxxxxxx</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核中</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/01</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>LM20180601-001</span></div> -->
+                        </div>
+                        <div class="nl__body__list__table-body__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>特休假</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>吳新光</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/21</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>xxxxxxxxxxxxxxxx</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核中</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/01</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>LM20180601-001</span></div> -->
+                        </div>
+                        <div class="nl__body__list__table-body__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>特休假</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>吳新光</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/21</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>xxxxxxxxxxxxxxxx</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核中</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/01</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>LM20180601-001</span></div> -->
+                        </div>
+                        <div class="nl__body__list__table-body__tr tr d-flex justify-content-between">
+                            <div
+                                class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>特休假</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>吳新光</span></div>
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/21</span>
+                            </div>
+                            <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>xxxxxxxxxxxxxxxx</span></div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center"><span>簽核中</span></div> -->
+                            <div class="tr__td d-flex justify-content-center align-items-center"><span>108/06/01</span>
+                            </div>
+                            <!-- <div class="tr__td d-flex justify-content-center align-items-center">
+                                <span>LM20180601-001</span></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="accordion search_list_mb" id="accordionExample">
+                    <div class="card mb-4">
+                        <div
+                            class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">類別/價別</div>
+                            <div class="name">姓名</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">特休假</div>
+                            <div class="name name_data">吳新光</div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">申請/請假日</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">108/06/21</div>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="th d-flex justify-content-center">主旨</div>
+                            <div class="td d-flex justify-content-center">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</div>
+                            <div class="th d-flex justify-content-center">表單到達日期</div>
+                            <div class="td d-flex justify-content-center">108/06/21</div>
+                        </div>
+                        <button class="btn btn-link collapsed d-flex justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            <div class="collapse_btn d-flex align-items-center justify-content-center"><i
+                                    class="fas fa-caret-down"></i></div>
+                        </button>
+
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div
+                            class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">類別/價別</div>
+                            <div class="name">姓名</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">特休假</div>
+                            <div class="name name_data">吳新光</div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">申請/請假日</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">108/06/21</div>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="th d-flex justify-content-center">主旨</div>
+                            <div class="td d-flex justify-content-center">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</div>
+                            <div class="th d-flex justify-content-center">表單到達日期</div>
+                            <div class="td d-flex justify-content-center">108/06/21</div>
+                        </div>
+                        <button class="btn btn-link collapsed d-flex justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <div class="collapse_btn d-flex align-items-center justify-content-center"><i
+                                    class="fas fa-caret-down"></i></div>
+                        </button>
+
+                    </div>
+
+                    <div class="card mb-4">
+                        <div
+                            class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">類別/價別</div>
+                            <div class="name">姓名</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">特休假</div>
+                            <div class="name name_data">吳新光</div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">申請/請假日</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">108/06/21</div>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="th d-flex justify-content-center">主旨</div>
+                            <div class="td d-flex justify-content-center">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</div>
+                            <div class="th d-flex justify-content-center">表單到達日期</div>
+                            <div class="td d-flex justify-content-center">108/06/21</div>
+                        </div>
+
+                        <button class="btn btn-link collapsed d-flex justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            <div class="collapse_btn d-flex align-items-center justify-content-center"><i
+                                    class="fas fa-caret-down"></i></div>
+                        </button>
+
+                    </div>
+
+
+                    <div class="card mb-4">
+                        <div
+                            class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                            <input class="position-absolute" type="checkbox" name="checkbox" value="y" id="checkAll">
+                            <div class="checkBox"></div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">類別/價別</div>
+                            <div class="name">姓名</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">特休假</div>
+                            <div class="name name_data">吳新光</div>
+                        </div>
+                        <div class="th d-flex p-0">
+                            <div class="sort">申請/請假日</div>
+                        </div>
+                        <div class="td d-flex p-0">
+                            <div class="sort sort_data">108/06/21</div>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="th d-flex justify-content-center">主旨</div>
+                            <div class="td d-flex justify-content-center">申請的表單狀態已更新，請登入系統確認，謝謝您的配合!</div>
+                            <div class="th d-flex justify-content-center">表單到達日期</div>
+                            <div class="td d-flex justify-content-center">108/06/21</div>
+                        </div>
+                        <button class="btn btn-link collapsed d-flex justify-content-center" type="button"
+                            data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <div class="collapse_btn d-flex align-items-center justify-content-center"><i
+                                    class="fas fa-caret-down"></i></div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="nl__footer d-flex align-items-center justify-content-between">
+            <a href="./absence-L1.html" class="nl__footer__btn d-flex flex-column align-items-center position-relative">
+                <img src="./img/0830/invalid-home.svg" width="34px" alt="" srcset="">
+                <span>回首頁</span>
+                <div class="notice position-absolute d-flex justify-content-center align-items-center">
+                    <span>2</span>
+                </div>
+            </a>
+            <a href="./annualLeave.html"
+                class="nl__footer__btn d-flex flex-column align-items-center position-relative">
+                <img src="./img/0830/異常補辦-b5b5b6.svg" width="29px" alt="" srcset="">
+                <span>異常補辦</span>
+                <div class="notice position-absolute d-none justify-content-center align-items-center">
+                    <span>2</span>
+                </div>
+            </a>
+            <div class="nl__footer__btn d-flex flex-column align-items-center position-relative">
+                <img src="./img/0830/通知-b5b5b6.svg" width="46px" alt="" srcset="">
+                <span>通知</span>
+                <div class="notice position-absolute d-flex justify-content-center align-items-center">
+                    <span>2</span>
+                </div>
+            </div>
+            <a class="nl__footer__btn d-flex flex-column align-items-center position-relative" href="vacation.html">
+                <img src="./img/0830/請假申請-b5b5b6.svg" width="35px" alt="" srcset="">
+                <span>請假</span>
+                <div class="notice position-absolute d-none justify-content-center align-items-center">
+                    <span>2</span>
+                </div>
+            </a>
+            <div class="nl__footer__btn d-flex flex-column align-items-center position-relative">
+                <img src="./img/0830/待簽核-cb271c.svg" width="33px" alt="" srcset="">
+                <span>待簽核</span>
+                <div class="notice active position-absolute d-flex justify-content-center align-items-center">
+                    <span>2</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav__listWrap position-absolute" id="nav__listWrap">
+        <div class="nav__listWrap__list">
+            <div class="nav__listWrap__list__itemBox">
+                <a class="nav__listWrap__list__itemBox-item d-flex align-items-center" href="vacation.html">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_2.svg" width="20px" alt="" srcset="">
+                    </div>
+                    <span>請假申請</span>
+                </a>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11.svg" width="19" alt="" srcset="">
+                    </div>
+                    <span>差勤證明</span>
+                </div>
+                <a class="nav__listWrap__list__itemBox-item d-flex align-items-center" href="annualLeave.html">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_3.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>預排特休假</span>
+                </a>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_6.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>表單申請</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_11.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>查詢</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_10.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>更多服務</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_5.svg" width="17" alt="" srcset="">
+                    </div>
+                    <span>異常補辦</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_12.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>待簽核</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_3.svg" width="27" alt="" srcset="">
+                    </div>
+                    <span>通知</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_7.svg" width="18" alt="" srcset="">
+                    </div>
+                    <span>簽核完成</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/12345.svg" width="20px" alt="" srcset="">
+                    </div>
+                    <span>系統公告</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_13.svg" width="14" alt="" srcset="">
+                    </div>
+                    <span>代理人設定</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_4.svg" width="18" alt="" srcset="">
+                    </div>
+                    <span>行事曆</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_8.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>工作佇列</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_9.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>工作待辦</span>
+                </div>
+            </div>
+            <div class="nav__listWrap__list__actBox">
+                <div class="nav__listWrap__list__actBox-f12Btn">
+                    <img src="./img/navList/1.svg" width="61px" alt="" srcset="">
+                </div>
+                <div class="nav__listWrap__list__actBox-logOut d-flex">
+                    <img src="./img/navList/1_4.svg" width="25px" alt="" srcset="">
+                    <span>登出</span>
+                </div>
+            </div>
+            <div class="nav__listWrap__list__logo text-center">
+                <img src="./img/navList/logo-1.svg" width="108px" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js"></script>
+    <script>
+        $("#checkAll").click(function () {
+            if ($("#checkAll").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });
+
+        $('.nl__body__searchBar__inner').click(function () {
+            $(".nl__body__searchBar__inputArea").slideToggle("slow", function () {
+                // Animation complete.
+            });
+        })
+
+        $('.nl__navbar__btn').click(function () {
+            $('.nav__listWrap').toggleClass("active")
+        })
+        $('.nav__listWrap').click(function (e) {
+            e.stopPropagation()
+            if (e.target.id === 'nav__listWrap') {
+                $('.nav__listWrap').removeClass("active")
+            }
+            console.log(e.target.id)
+        })
+
+        $('#iconBox1').click(function () {
+            console.log('date')
+            $('#datetimepicker1').datepicker({
+                format: "yyyy/mm"
+            })
+        })
+        $('#iconBox2').click(function () {
+            console.log('date')
+            $('#datetimepicker2').datepicker({
+                format: "yyyy/mm"
+            })
+        })
+        $('#iconBox3').click(function () {
+            console.log('date')
+            $('#datetimepicker3').datepicker({
+                format: "mm/d"
+            })
+        })
+        $('#iconBox4').click(function () {
+            console.log('date')
+            $('#datetimepicker4').datepicker({
+                format: "mm/d"
+            })
+        })
+        $('#iconBox5').click(function () {
+            console.log('date')
+            $('#datetimepicker5').datepicker({
+                format: "yyyy/mm"
+            })
+        })
+        $('#iconBox6').click(function () {
+            console.log('date')
+            $('#datetimepicker6').datepicker({
+                format: "yyyy/mm"
+            })
+        })
+        $('#iconBox7').click(function () {
+            console.log('date')
+            $('#datetimepicker7').datepicker({
+                format: "mm/d"
+            })
+        })
+        $('#iconBox8').click(function () {
+            console.log('date')
+            $('#datetimepicker8').datepicker({
+                format: "mm/d"
+            })
+        })
+
+
+
+        // -------------------------------------
+        //全選按鈕
+        $("#checkAll_mb").click(function () {
+            if ($("#checkAll_mb").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });
+        
+        //收合按鈕狀態圖標旋轉
+        $('.btn-link').click(function(){
+            // console.log('wow')
+            var btn_index = $('.btn-link').index(this)
+            console.log(btn_index)
+            if($(`.card:nth-child(${btn_index + 1}) .fas`).hasClass('icon_rotate')){
+                $(`.card:nth-child(${btn_index + 1}) .fas`).removeClass('icon_rotate')
+            }
+            else{
+                $(`.card:nth-child(${btn_index + 1}) .fas`).addClass('icon_rotate')
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

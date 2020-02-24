@@ -1,0 +1,38 @@
+.addGroup {
+    .addGroupArea {
+        .addGroupForm {
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+
+            input,
+            label {
+                flex-grow: 1;
+                margin: 0;
+            }
+            label {
+                margin-bottom: 0;
+            }
+            .required {
+                color: red;
+            }
+        }
+        .btn {
+            background-color: #55beb7;
+            color: #fff;
+            border-radius: 8px;
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: #55beb7;
+            border: solid 2px #55beb7;
+        }
+    }
+
+    
+}
+
+.textBold{
+    font-weight: 700;
+}

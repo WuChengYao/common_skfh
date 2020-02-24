@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./css/punchInRecord.css">
+    <title>punchInRecord</title>
+</head>
+
+<body>
+    <div class="punchInRecordWrap">
+        <div class="nl__navbar d-flex position-relative justify-content-between">
+            <div class="nl__navbar__btn d-flex flex-column">
+                <span class="nl__navbar__btn-line"></span>
+                <span class="nl__navbar__btn-line"></span>
+                <span class="nl__navbar__btn-line"></span>
+            </div>
+            <span class="nl__navbar__title text-white position-absolute">
+                <img class="d-none d-md-inline position-absolute" src="./img/icon/新光人壽logo_工作區域Pad.svg" alt="">
+                差勤系統
+            </span>
+            <div class="nl__navbar__icon">
+                <img src="./img/icon/emptyC.svg" width="24" alt="" srcset="">
+                <img src="./img/icon/猴子_工作區域 1.svg" width="24" alt="" srcset="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="punchInRecordWrap__breadcrumb d-flex align-items-center">
+                <img src="./img/punchInRecord/bag.svg" width="38" alt="">
+                <div class="punchInRecordWrap__breadcrumb__nav">
+                    <span>外人承辦人管理</span> <i class="fas fa-angle-double-right"></i> <span>打卡記錄匯入及維護</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="punchInRecordWrap__inputbox punchInRecordWrap__inputbox-t d-flex">
+                <form class="d-flex justify-content-between align-items-end w-100">
+                    <div class="form-group form-group_1 position-relative">
+                        <label for="input1"><span class="star">*</span>業務線別</label>
+                        <select class="form-control" id="input1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <div class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                            <span class="btn-down btn-down_apmsel"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-group_2">
+                        <label for="input2"><span class="star">*</span>部室</label>
+                        <input type="text" class="form-control" id="input2" placeholder="關鍵字搜尋">
+                    </div>
+                    <div class="form-group form-group_3 position-relative">
+                        <select class="form-control" id="input3">
+                            <option>A0B000營業管理部</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <div class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                            <span class="btn-down btn-down_apmsel"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-group_4">
+                        <label for="input4"><span class="star">*</span>區部</label>
+                        <input type="text" class="form-control" id="input4" placeholder="關鍵字搜尋">
+                    </div>
+                    <div class="form-group form-group_5 position-relative">
+                        <select class="form-control" id="input5">
+                            <option>A0B000營業管理部</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <div class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                            <span class="btn-down btn-down_apmsel"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-group_6">
+                        <label for="input6"><span class="star">*</span>單位</label>
+                        <input type="text" class="form-control" id="input6" placeholder="關鍵字搜尋">
+                    </div>
+                    <div class="form-group form-group_7 position-relative">
+                        <select class="form-control" id="input7">
+                            <option>A0B000營業管理部</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <div class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                            <span class="btn-down btn-down_apmsel"></span>
+                        </div>
+                    </div>
+                </form>                
+            </div>
+            <div class="punchInRecordWrap__collapse">
+                <div class="punchInRecordWrap__collapse__bar d-flex justify-content-center align-items-center mb-3 position-relative">
+                    <a class="d-flex align-items-center justify-content-center w-100" data-toggle="collapse" href="#collapseContent" role="button">
+                        <span class="mr-2">A0B000營業管理部</span>
+                        <img class="open toggleIcon" src="./img/punchInRecord/-.svg" width="19" alt="">
+                        <img class="close toggleIcon show" src="./img/punchInRecord/+.svg" width="19" alt="">
+                    </a>
+                    <div class="bar__btnBox d-flex align-items-center position-absolute">
+                        <div class="bar__btnBox__btn click d-flex align-items-center justify-content-around px-1">
+                            <img src="./img/punchInRecord/search.svg" width="14" alt="" srcset="">
+                            <span>查詢</span>
+                        </div>
+                        <div class="bar__btnBox__btn click d-flex align-items-center justify-content-around px-1">
+                            <img src="./img/punchInRecord/delete.svg" width="12" alt="" srcset="">
+                            <span>清除</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseContent">
+                    <div class="punchInRecordWrap__inputbox punchInRecordWrap__inputbox-b">
+                        <form class="d-flex align-items-end w-100">
+                            <div class="form-group form-group_8">
+                                <label for="input8"><span class="star">*</span>部室</label>
+                                <input type="text" class="form-control" id="input8" placeholder="關鍵字搜尋">
+                            </div>
+                            <div class="form-group form-group_9">
+                                <label for="input9"><span class="star">*</span>區部</label>
+                                <input type="text" class="form-control" id="input9" placeholder="關鍵字搜尋">
+                            </div>
+                            <div class="form-group form-group_10 position-relative">
+                                <label for="input10"><span class="star">*</span>業務線別</label>
+                                <select class="form-control" id="input10">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <div
+                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                    <span class="btn-down btn-down_apmsel"></span>
+                                </div>
+                            </div>
+                            <div class="form-group form-group_11">
+                                <label for="input11"><span class="star">*</span>單位</label>
+                                <input type="text" class="form-control" id="input11" placeholder="關鍵字搜尋">
+                            </div>
+                            <div class="form-group form-group_12">
+                                <label for="input12"><span class="star">*</span>單位</label>
+                                <input type="text" class="form-control" id="input12" placeholder="關鍵字搜尋">
+                            </div>
+                        </form>
+                        <form class="d-flex align-items-end w-100">
+                            <div class="form-group form-group_13">
+                                <label for="input13"><span class="star">*</span>日期起日</label>
+                                <div class="dateSearch d-flex position-relative">
+                                    <input type="text" class="form-control" id="input13">
+                                    <div id="iconBox1" class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                        <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group form-group_14">
+                                <label for="input14"><span class="star">*</span>日期訖日</label>
+                                <div class="dateSearch d-flex position-relative">
+                                    <input type="text" class="form-control" id="input14">
+                                    <div id="iconBox2" class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                        <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="divider b"></div>
+            <div class="punchInRecordWrap__list">
+                <div class="punchInRecordWrap__list__title d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="punchInRecordWrap__list__title-icon d-flex flex-column justify-content-between">
+                            <div class="iconLine w-100 d-flex justify-content-between">
+                                <span class="dot"></span>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="iconLine w-100 d-flex justify-content-between">
+                                <span class="dot"></span>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="iconLine w-100 d-flex justify-content-between">
+                                <span class="dot"></span>
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                        <div class="punchInRecordWrap__list__title-text">
+                            <span>查詢結果清單</span>
+                        </div>
+                    </div>
+                    <div class="punchInRecordWrap__list__title-btnBox d-flex">
+                        <div class="d-flex click align-items-center justify-content-center">
+                            <img src="./img/punchInRecord/bag-W.svg" width="14" alt="" srcset="">
+                            <span>匯入</span>
+                        </div>
+                        <div class="d-flex click align-items-center justify-content-center"  type="button" data-toggle="modal" data-target=".add-modal">
+                            <img src="./img/punchInRecord/add-W.svg" width="12" alt="" srcset="">
+                            <span>新增</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="punchInRecordWrap__list__body">
+                    <div class="list-head">
+                        <div class="list__tr mb-2 d-flex align-items-center justify-content-between">
+                            <div class="list__tr__td text-center">
+                                <span>操作</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>工作年月</span>
+                            </div>
+                            <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                <span>日期</span>
+                                <div class="filterIcon d-flex flex-column align-items-center">
+                                    <i class="fas fa-angle-up"></i>
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>區部</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>單位</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>電腦編號</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>姓名</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>刷卡時間起</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>簽到狀態</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>簽到註記</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>刷卡時間訖</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>簽退狀態</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>簽退註記</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-body">
+                        <div class="list__tr mb-2 d-flex align-items-center justify-content-between">
+                            <div class="list__tr__td text-center d-flex align-items-center justify-content-center">
+                                <div class="table__btn click d-flex align-items-center justify-content-around">
+                                    <img src="./img/punchInRecord/pc.svg" width="12" alt="" srcset="">
+                                    <span>修改</span>
+                                </div>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>108/07</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>07/12</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>豐原區部</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>豐榮通-收</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>123456</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>吳新光</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>08:30</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>2正常到班</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span></span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>17:30</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>2正常下班</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="list__tr mb-2 d-flex align-items-center justify-content-between">
+                            <div class="list__tr__td text-center d-flex align-items-center justify-content-center">
+                                <div class="table__btn click d-flex align-items-center justify-content-around">
+                                    <img src="./img/punchInRecord/pc.svg" width="12" alt="" srcset="">
+                                    <span>修改</span>
+                                </div>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>108/07</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>07/12</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>豐原區部</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>豐榮通-收</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>123456</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>吳新光</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>08:30</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>2正常到班</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span></span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>17:30</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span>2正常下班</span>
+                            </div>
+                            <div class="list__tr__td text-center">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade add-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">新增</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="input11"><span class="star">*</span>姓名(電腦編號)</label>
+                                <div class="dateSearch d-flex position-relative">
+                                    <input type="text" class="form-control" id="input14">
+                                    <div id="iconBox3"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                        <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="input15"><span class="star">*</span>區部</label>
+                                <input type="text" class="form-control" id="input15" placeholder="">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="input16"><span class="star">*</span>單位</label>
+                                <input type="text" class="form-control" id="input16" placeholder="">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="input17"><span class="star">*</span>職務</label>
+                                <input type="text" class="form-control" id="input17" placeholder="">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="input18"><span class="star">*</span>日期</label>
+                                <div class="dateSearch d-flex position-relative">
+                                    <input type="text" class="form-control" id="input18">
+                                    <div id="iconBox4"
+                                        class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                        <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            
+                            <div class="form-group col-3 position-relative p-0">
+                                <label for="input19"><span class="star">*</span>刷卡時間起</label>
+                                <select class="form-control" id="input19">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <div
+                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                    <span class="btn-down btn-down_apmsel"></span>
+                                </div>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="input20"><span class="star">*</span>簽到註記</label>
+                                <input type="text" class="form-control" id="input20" placeholder="">
+                            </div>
+                            <div class="form-group col-3 position-relative p-0">
+                                <label for="input21"><span class="star">*</span>刷卡時間訖</label>
+                                <select class="form-control" id="input21">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <div
+                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                    <span class="btn-down btn-down_apmsel"></span>
+                                </div>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="input22"><span class="star">*</span>簽退註記</label>
+                                <input type="text" class="form-control" id="input22" placeholder="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-save">
+                        <img src="./img/punchInRecord/save.svg" width="16" alt="" srcset="">
+                        儲存
+                    </button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                        <img src="./img/punchInRecord/delete.svg" width=12""  alt="" srcset="">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav__listWrap position-absolute" id="nav__listWrap">
+        <div class="nav__listWrap__list">
+            <div class="nav__listWrap__list__itemBox">
+                <a class="nav__listWrap__list__itemBox-item d-flex align-items-center" href="vacation.html">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_2.svg" width="20px" alt="" srcset="">
+                    </div>
+                    <span>請假申請</span>
+                </a>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11.svg" width="19" alt="" srcset="">
+                    </div>
+                    <span>差勤證明</span>
+                </div>
+                <a class="nav__listWrap__list__itemBox-item d-flex align-items-center" href="annualLeave.html">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_3.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>預排特休假</span>
+                </a>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_6.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>表單申請</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_11.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>查詢</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_10.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>更多服務</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_5.svg" width="17" alt="" srcset="">
+                    </div>
+                    <span>異常補辦</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_12.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>待簽核</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_3.svg" width="27" alt="" srcset="">
+                    </div>
+                    <span>通知</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_7.svg" width="18" alt="" srcset="">
+                    </div>
+                    <span>簽核完成</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/12345.svg" width="20px" alt="" srcset="">
+                    </div>
+                    <span>系統公告</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_13.svg" width="14" alt="" srcset="">
+                    </div>
+                    <span>代理人設定</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/11_4.svg" width="18" alt="" srcset="">
+                    </div>
+                    <span>行事曆</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_8.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>工作佇列</span>
+                </div>
+                <div class="nav__listWrap__list__itemBox-item d-flex align-items-center">
+                    <div class="imgWrap d-flex justify-content-center">
+                        <img src="./img/navList/1_9.svg" width="16" alt="" srcset="">
+                    </div>
+                    <span>工作待辦</span>
+                </div>
+            </div>
+            <div class="nav__listWrap__list__actBox">
+                <div class="nav__listWrap__list__actBox-f12Btn">
+                    <img src="./img/navList/1.svg" width="61px" alt="" srcset="">
+                </div>
+                <div class="nav__listWrap__list__actBox-logOut d-flex">
+                    <img src="./img/navList/1_4.svg" width="25px" alt="" srcset="">
+                    <span>登出</span>
+                </div>
+            </div>
+            <div class="nav__listWrap__list__logo text-center">
+                <img src="./img/navList/logo-1.svg" width="108px" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js"></script>
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <script>
+        $('#collapseContent').on('show.bs.collapse', function () {
+                $('.close').toggleClass("show")
+                $('.open').toggleClass("show")
+        })
+        $('#collapseContent').on('hidden.bs.collapse', function () {
+                $('.close').toggleClass("show")
+                $('.open').toggleClass("show")
+        })
+
+        $('.nl__navbar__btn').click(function () {
+            $('.nav__listWrap').toggleClass("active")
+        })
+        $('.nav__listWrap').click(function (e) {
+            e.stopPropagation()
+            if (e.target.id === 'nav__listWrap') {
+                $('.nav__listWrap').removeClass("active")
+            }
+            console.log(e.target.id)
+        })
+    </script>
+</body>
+
+</html>

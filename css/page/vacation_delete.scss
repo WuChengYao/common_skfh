@@ -1,0 +1,75 @@
+$green: #56bdb7;
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin font_style($change_fontsize, $change_lineheight, $change_color, $change_weight) {
+    font-size: $change_fontsize;
+    line-height: $change_lineheight;
+    color: $change_color;
+    font-weight: $change_weight;
+}
+
+.dele_reason {
+    padding: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+    .dele_reason_title {
+        p {
+            @include font_style(16px, unset, #000, bold);
+        }
+    }
+
+    .dele_reason_contain {
+
+        textarea {
+            min-height: 100px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1.5px solid #C4C3C3;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.btns{
+    .btn {
+        background-color: $green;
+        color: #fff;
+        border-radius: 8px;
+        margin: 30px 10px 20px 10px;
+        min-width: 82px;
+        @include btn-shadow;
+        cursor: pointer;
+    
+        .fa-search {
+            transform: scaleX(-1);
+        }
+    
+        .fas {
+            color: white;
+            margin-right: 5px;
+        }
+    
+        &.add-btn {
+            margin: 0;
+        }
+    
+        &.go-btn {
+            margin: 0;
+        }
+    
+    }
+    .btn-outline {
+        background-color: #fff;
+        color: $green;
+        border: solid 2px $green;
+        font-weight:bold;
+
+        .fas {
+            color: $green;
+        }
+    }
+} 

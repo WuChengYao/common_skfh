@@ -1,0 +1,66 @@
+@media (max-width: 576px) {
+  .navbar .navbar-brand {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar_icon {
+    margin-left: auto;
+  }
+}
+
+#transferApplyDecline {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#transferApplyDecline .declineForm {
+  padding: 0 20px 20px 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#transferApplyDecline .declineForm label {
+  margin: 20px 0 10px 0;
+}
+
+#transferApplyDecline .declineForm label .require {
+  color: red;
+}
+
+#transferApplyDecline .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 15px 10px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  #transferApplyDecline .btn {
+    margin: 0px 10px;
+  }
+}
+
+#transferApplyDecline .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+#transferApplyDecline .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#transferApplyDecline .btn-outline .fas {
+  color: #56bdb7;
+}
+/*# sourceMappingURL=transfer_apply_decline.css.map */

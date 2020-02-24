@@ -1,0 +1,216 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #F7E1DC;
+@mixin btn-shadow{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.function_select{
+
+    .icon{
+        font-size:18px;
+        color:$pink;
+        font-weight: bold;
+    }
+
+    .function_title{
+        font-size:16px;
+    }
+
+    select{
+        color:#999999;
+    }
+
+    .selectIcon{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8.7px 5px 0 5px;
+        border-color: #000000 transparent transparent transparent;
+        z-index: 2;
+        pointer-events: none;
+        right: 10px;
+        top: calc(50% - 2.5px);
+    }
+    
+    .btn {
+        padding:.3rem .75rem;
+        font-weight: bold;
+        background-color: $green;
+        color: #fff;
+        border-radius: 8px;
+        margin: 20px 20px;
+        @include btn-shadow;
+        cursor: pointer;
+        .fa-search {
+            transform: scaleX(-1);
+        }
+        .fas {
+            color: white;
+            margin-right: 5px;
+        }
+        &.add-btn {
+            margin: 0;
+        }
+        &.go-btn {
+            margin: 0;
+        }
+    }
+}
+
+.card{
+    box-shadow:0 0 10px rgba(0,0,0,.3)!important;
+    padding:25px;
+    border-radius: 15px;
+    margin-top:25px;
+
+    .table_content{
+        text-align: center;
+        font-weight: bold;
+    
+        .table{
+            .table_title{
+                color:white;
+                background-color:$pink;
+
+                tr:nth-child(1){
+                    td:first-child{
+                        border-top:none;
+                        border-top-left-radius: 10px;
+                      }
+                      
+                      td:last-child{
+                        border-top:none;
+                        border-top-right-radius: 10px;
+                      }
+                }
+    
+                .input_title{
+                    td{
+                        border:2px solid $lightpink;
+                    }
+                }
+            }
+            thead{
+    
+                tr{
+                    td{
+                        vertical-align:inherit;
+                        padding:.5rem;
+    
+                        input[type="checkbox"] {
+                            opacity: 0;
+                        }
+    
+                        input[type="checkbox"]:checked + div {
+                            background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #eeeceb,  #eeeceb);
+                        }
+                        
+                        .checkBox {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 5px;
+                            background-image:  linear-gradient(to right, #ffffff,  #ffffff);
+                            background-repeat  : no-repeat, no-repeat;
+                            border: solid 1px #c6c6c5;
+                            background-size: contain, 100%;
+                            margin-right: 15px;
+                            margin-left: -15px;
+                            pointer-events: none;
+                        }
+                    }
+                    .input_label{
+                        margin-bottom:0;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    &:nth-child(even){
+                        background-color:$lightpink;
+                    }
+                    td{
+                        vertical-align: inherit;
+                        border:2px solid $pink;
+    
+                        input[type="checkbox"] {
+                            opacity: 0;
+                        }
+                
+                        input[type="checkbox"]:checked + div {
+                            background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #eeeceb,  #eeeceb);
+                        }
+                        
+                        .checkBox {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 5px;
+                            background-image:  linear-gradient(to right, #ffffff,  #ffffff);
+                            background-repeat  : no-repeat, no-repeat;
+                            border: solid 2px $pink;
+                            background-size: contain, 100%;
+                            position: absolute;
+                            left: calc(50% - 7px);
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .paginationArea {
+        .pagination {
+            padding: 0;
+            margin: 0;
+            li {
+                margin-left: 15px;
+            }
+            li .fa-backward {
+                margin:0 7px;
+            }
+            li .fa-forward {
+                margin:0 7px;
+            }
+            li:nth-child(2) .fas{
+                transform: scaleX(-1);
+                margin:0 7px;
+            }
+            .fas.fa-play{
+                font-size: 15px;
+                margin:0 7px;
+            }
+            .fas {
+                color: $pink;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .pageItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+                &.active {
+                    color: #fff;
+                    background-color: $pink;
+                }
+            }
+            input {
+                width: 50px;
+            }
+            .go-btn {
+                padding: 0 10px;
+                box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+                background-color: white;
+                border-radius: 0px;
+                color: $pink;
+                font-weight: bold;
+            }
+        }
+    }
+}
+

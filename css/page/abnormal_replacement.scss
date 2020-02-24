@@ -1,0 +1,310 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#abnormalReplacement {
+    font-weight: bold;
+    font-size: 14px;
+
+    .title {
+        color: $pink;
+        font-size: 25px;
+        letter-spacing: .5px;
+        margin-bottom: 20px;
+    }
+
+    .select-area {
+        display: flex;
+
+        @media screen and (max-width: 576px) {
+            justify-content: center;
+        }
+    }
+
+    .select-btn {
+        width: 100px;
+        border-radius: 3px;
+        @include btn-shadow();
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+
+        select {
+            font-weight: bold;
+            width: 100%;
+            text-align-last: center;
+            border: none;
+            height: 30px;
+            color: $pink;
+            outline: none;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 5px 0 5px;
+            border-color: $pink transparent transparent transparent;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+        }
+    }
+
+    table {
+        text-align: center;
+        border-collapse: separate;
+        border-radius: 8px;
+        border-spacing: 0;
+        line-height: 1.2;
+        letter-spacing: 0;
+
+        th,
+        td {
+            font-weight: bold;
+            padding: 5px 0;
+            vertical-align: inherit;
+            border: solid 1px $pink;
+
+            &:first-child {
+                border-left: solid 2px $pink;
+            }
+
+            &:last-child {
+                border-right: solid 2px $pink;
+            }
+
+            a {
+                text-decoration: none;
+                color: unset;
+                white-space: nowrap;
+            }
+        }
+
+        th {
+            background-color: $pink;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        thead {
+            tr {
+                th {
+                    &:first-child {
+                        border-top-left-radius: 5px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            &:nth-child(odd) {
+                background-color: $lightpink;
+            }
+
+            &:last-child {
+                tr {
+                    td {
+                        border-bottom: solid 2px $pink;
+
+                        &:first-child {
+                            border-bottom-left-radius: 5px;
+                        }
+
+                        &:last-child {
+                            border-bottom-right-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            padding: 5px;
+            font-weight: bold;
+            color: $pink;
+            background: #fff;
+            display: inline-block;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px 0;
+            font-size: 14px;
+
+            @include btn-shadow;
+        }
+    }
+
+    .sort {
+        display: inline-block;
+        color: #fff;
+        background-color: #999;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        line-height: 25px;
+        text-align: center;
+
+        &.diff {
+            background-color: $pink;
+        }
+
+        &.replace {
+            background-color: #f6993f;
+        }
+
+        &.transfer {
+            background-color: $green;
+        }
+
+        &.return {
+            background-color: #3490dc;
+        }
+    }
+
+    .resultList-mb {
+        font-size: 16px;
+
+        .card {
+            border: solid 2px $pink;
+            border-radius: 8px;
+            @include shadow();
+        }
+
+        .card+.card {
+            margin-top: 20px;
+        }
+
+        .card:nth-child(even) {
+            .tr {
+                background-color: $lightpink;
+                color: $pink;
+
+                &:nth-child(even) {
+                    background-color: #fff;
+                    color: #000;
+                }
+
+                &.btn-area {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .tr {
+            display: flex;
+            border-bottom: solid 2px $pink;
+
+            .td,
+            .th {
+                text-align: center;
+                width: 100%;
+                padding: 5px;
+            }
+
+            &:nth-child(odd) {
+                background-color: $pink;
+                color: #fff;
+
+                &.middle-content {
+                    background-color: #fff;
+                    color: black;
+                    border-bottom: none;
+                }
+
+            }
+
+            .td:nth-child(2) {
+                border-left: 2px solid $pink;
+            }
+
+        }
+
+        .middle-content {
+            .left {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: solid;
+                border-width: 0 2px 0 0;
+                border-color: $pink;
+
+                .sort {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 26px;
+                }
+            }
+
+            .right {
+                flex: 2;
+
+                .tr:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .collapse-content {
+            .btn-area {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+
+                .btn {
+                    padding: 2px 7px;
+                    font-weight: bold;
+                    color: $pink;
+                    background: #fff;
+                    display: inline-block;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin: 5px;
+
+                    @include btn-shadow;
+                }
+            }
+        }
+
+        .collapse-btn-area {
+            border-bottom: none;
+
+            .collapse_btn {
+                width: 20px;
+                height: 20px;
+                border: solid 2px #82cbc6;
+                border-radius: 50%;
+                color: black;
+                transition: 0.5s;
+
+                i {
+                    width: 100%;
+                    height: 16px;
+                    text-align: center;
+                    position: relative;
+                    right: -1px;
+
+                    @media(max-width:400px) {
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

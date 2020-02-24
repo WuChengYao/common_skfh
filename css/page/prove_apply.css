@@ -1,0 +1,341 @@
+#proveApply {
+  font-weight: 900;
+}
+
+#proveApply .proveApplyArea hr {
+  height: 2px;
+  border-color: #eb6868;
+}
+
+#proveApply .proveApplyArea .proveApplyForm {
+  padding: 20px;
+  margin: 20px 0 30px 0;
+  border-radius: 16px;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  #proveApply .proveApplyArea .proveApplyForm input {
+    text-align: center;
+  }
+}
+
+#proveApply .proveApplyArea .proveApplyForm label {
+  margin-right: 20px;
+}
+
+#proveApply .proveApplyArea .proveApplyForm label.checkbox-label {
+  color: #eb6868;
+}
+
+#proveApply .proveApplyArea .proveApplyForm .btn {
+  margin: 30px 10px 0 10px;
+}
+
+#proveApply .proveApplyArea .proveApplyForm .form-control {
+  padding: .3rem .5rem;
+  height: unset;
+  letter-spacing: 1.8px;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+#proveApply .proveApplyArea .btn {
+  background-color: #56bdb7;
+  color: #fff;
+  border-radius: 8px;
+  margin: 10px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#proveApply .proveApplyArea .btn .fa-search {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#proveApply .proveApplyArea .btn .fas {
+  color: white;
+  margin-right: 5px;
+}
+
+#proveApply .proveApplyArea .btn.add-btn {
+  margin: 0;
+}
+
+#proveApply .proveApplyArea .btn.go-btn {
+  margin: 0;
+}
+
+#proveApply .proveApplyArea .btn-outline {
+  background-color: #fff;
+  color: #56bdb7;
+  border: solid 2px #56bdb7;
+}
+
+#proveApply .proveApplyArea .btn-outline .fas {
+  color: #56bdb7;
+}
+
+#proveApply .resultList .title {
+  color: #eb6868;
+  font-size: 25px;
+}
+
+#proveApply .resultList .searchResultList {
+  padding: 20px 5px;
+  margin: 0 0 20px 0;
+  border-radius: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  #proveApply .resultList .btnArea {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#proveApply .resultList .btnArea .control-btn {
+  padding: 2px 25px;
+  font-weight: bold;
+  color: #eb6868;
+  margin: 0 0 20px 0;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApply .resultList table {
+  text-align: center;
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+}
+
+#proveApply .resultList table .btn {
+  padding: 2px 10px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApply .resultList table th,
+#proveApply .resultList table td {
+  padding: 5px 0;
+  vertical-align: inherit;
+  border: solid 1px #eb6868;
+}
+
+#proveApply .resultList table th:first-child,
+#proveApply .resultList table td:first-child {
+  border-left: solid 2px #eb6868;
+}
+
+#proveApply .resultList table th:last-child,
+#proveApply .resultList table td:last-child {
+  border-right: solid 2px #eb6868;
+}
+
+#proveApply .resultList table th .fa-edit,
+#proveApply .resultList table td .fa-edit {
+  color: #eb6868;
+}
+
+#proveApply .resultList table th {
+  background-color: #eb6868;
+  color: #fff;
+  padding: 8px 0;
+}
+
+#proveApply .resultList table tr:nth-child(even) {
+  background-color: #f7e1dc;
+}
+
+#proveApply .resultList table tr:last-child td {
+  border-bottom: solid 2px #eb6868;
+}
+
+#proveApply .resultList table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+#proveApply .resultList table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+#proveApply .resultList thead tr th:first-child {
+  border-top-left-radius: 8px;
+}
+
+#proveApply .resultList thead tr th:last-child {
+  border-top-right-radius: 8px;
+}
+
+#proveApply .resultList .ResultList-mb {
+  font-size: 16px;
+}
+
+#proveApply .resultList .ResultList-mb .card {
+  font-weight: 600;
+  border: solid 1px #ec6968;
+}
+
+#proveApply .resultList .ResultList-mb .card:first-of-type, #proveApply .resultList .ResultList-mb .card:last-of-type, #proveApply .resultList .ResultList-mb .card:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 1px solid #ec6968;
+  border-radius: 8px;
+}
+
+#proveApply .resultList .ResultList-mb .card:nth-child(even) .th {
+  background-color: #f7e1dc;
+  color: #ec6968;
+}
+
+#proveApply .resultList .ResultList-mb .card:nth-child(even) .th.btnArea {
+  background-color: #fff;
+}
+
+#proveApply .resultList .ResultList-mb .card .btnArea {
+  background-color: #fff;
+}
+
+#proveApply .resultList .ResultList-mb .card .btnArea .btn {
+  font-size: 14px;
+  padding: 0 40px;
+  font-weight: bold;
+  color: #eb6868;
+  background: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#proveApply .resultList .ResultList-mb a .card:nth-child(odd) {
+  background-color: #eb6868;
+}
+
+#proveApply .resultList .ResultList-mb .label,
+#proveApply .resultList .ResultList-mb .data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+#proveApply .resultList .ResultList-mb .data:first-child {
+  border-right: 1px solid #ec6968;
+}
+
+#proveApply .resultList .ResultList-mb .th {
+  color: #fff;
+  background-color: #ec6968;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApply .resultList .ResultList-mb .td {
+  background-color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+#proveApply .resultList .ResultList-mb .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#proveApply .resultList .ResultList-mb .collapse_btn i {
+  width: 100%;
+  height: 16px;
+  text-align: center;
+  position: relative;
+  right: -1px;
+}
+
+@media (max-width: 400px) {
+  #proveApply .resultList .ResultList-mb .collapse_btn i {
+    top: 2px;
+  }
+}
+
+#proveApply .resultList .ResultList-mb .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#proveApply .paginationArea .pagination li {
+  margin-left: 15px;
+}
+
+#proveApply .paginationArea .pagination li:nth-child(2) .fas {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#proveApply .paginationArea .pagination .fas.fa-play {
+  font-size: 15px;
+}
+
+#proveApply .paginationArea .pagination .fas {
+  color: #eb6868;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#proveApply .paginationArea .pagination .pageItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#proveApply .paginationArea .pagination .pageItem.active {
+  color: #fff;
+  background-color: #eb6868;
+}
+
+#proveApply .paginationArea .pagination input {
+  width: 50px;
+  border-radius: 2px;
+  border: 2px solid #C4C3C3;
+}
+
+#proveApply .paginationArea .pagination .go-btn {
+  padding: 0 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+  background-color: white;
+  border-radius: 0px;
+  color: #eb6868;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=prove_apply.css.map */

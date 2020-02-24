@@ -1,0 +1,73 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+    background-image: url(../../img/groupMember/checkmark-000.svg),
+        -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: solid 2px $pink;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: contain, 100%;
+}
+
+table {
+    text-align: center;
+    border-collapse: separate;
+    border-radius: 8px;
+    border-spacing: 0;
+    th,
+    td {
+        padding: 5px 0;
+        vertical-align: inherit;
+        border-bottom: solid 2px $pink !important;
+        border-right: solid 2px $pink;
+        &:first-child {
+            border-left: solid 2px $pink;
+        }
+        .fa-edit {
+            color: $pink;
+        }
+    }
+    td:first-child {
+        width: 40px;
+    }
+    th {
+        background-color: $pink;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: $lightpink;
+    }
+
+    tr:last-child {
+        td:first-child {
+            border-bottom-left-radius: 8px;
+        }
+        td:last-child {
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+thead {
+    tr {
+        th {
+            &:first-child {
+                border-top-left-radius: 8px;
+            }
+            &:last-child {
+                border-top-right-radius: 8px;
+            }
+        }
+    }
+}

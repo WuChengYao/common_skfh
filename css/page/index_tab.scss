@@ -1,0 +1,61 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow{
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+@mixin btn-shadow{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+body{
+    font-size:16px;
+}
+
+.section-btns{
+    .btn{
+        color: #787878;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: .1rem .5rem;
+        cursor: pointer;
+
+        @include btn-shadow;
+    }
+
+    .btn.active{
+        color:white;
+        background-color: $pink;
+    }
+}
+
+.links{
+    margin-top:30px;
+
+    .link{
+        max-height: 70px;
+        margin:15px 0;
+        padding:10px 30px;
+        border-radius:10px;
+        text-align: center;
+        font-weight:bold;
+        background: linear-gradient(to top,rgba(#EC6968,0.7),rgba(#F8C8BD,0.7));
+        cursor: pointer;
+        
+        @include btn-shadow;
+
+        &:nth-child(even){
+            background: linear-gradient(to top,rgba(#6FA7DB,0.7),rgba(#C2E5EC,0.7));
+        }
+
+        .icon{
+            height:50px;
+            font-size: 45px;
+        }
+
+        .page-title{
+            margin:auto;
+        }
+    }
+}

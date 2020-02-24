@@ -1,0 +1,147 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+#basicInformation {
+    font-weight: 900;
+
+    hr {
+        border-top: 2px solid $pink;
+        margin: 30px 0;
+    }
+
+    .title {
+        color: $pink;
+        font-size: 25px;
+        letter-spacing: .5px;
+        margin-bottom: 20px;
+    }
+
+    .loginInformation,
+    .basicInformation {
+        padding: 0 20px 20px 20px;
+        margin: 20px 0 30px 0;
+        border-radius: 16px;
+        font-size: 16px;
+        @include shadow;
+
+        .form-control {
+            border: 2px solid #C4C3C3;
+            color: #4D4D4D;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 3px 10px;
+            letter-spacing: 0;
+
+            @media screen and (max-width: 768px) {
+                border-radius: 8px;
+            }
+        }
+
+        .data-text{
+            height:unset;
+            background-color:#edeaea;
+            color:#999999;
+            @media(max-width:768px){
+                height:58px;
+            }
+        }
+
+        .form-control[readonly] {
+            background-color: #EDEAEA;
+            color: #999999;
+        }
+
+        label {
+            margin: 20px 0 10px 0;
+        }
+    }
+
+    .basicInformation {
+        .col-6 {
+            float: left;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .avatar-area {
+            float: right;
+            height: 252px;
+            padding-top: 20px;
+
+            .avatar {
+                width: 100%;
+                height: calc(100% - 37.6px);
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .change-avatar {
+                width: 100%;
+                height: 37.5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                #change-btn {
+                    display: none;
+                }
+
+                .change-btn {
+                    padding: 7px 12px;
+                    color: $pink;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    margin: 0;
+                    @include btn-shadow();
+                }
+            }
+        }
+
+        .group {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+
+    }
+
+    .btns {
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 8px;
+            margin: 0 10px;
+            font-weight: bold;
+            @include btn-shadow;
+            cursor: pointer;
+
+            .fas {
+                color: white;
+                margin-right: 5px;
+            }
+        }
+
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+
+            .fas {
+                color: $green;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,479 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin font_style($change_fontsize, $change_lineheight, $change_color, $change_weight) {
+    font-size: $change_fontsize;
+    line-height: $change_lineheight;
+    color: $change_color;
+    font-weight: $change_weight;
+}
+
+// <!-- 查詢區 -->
+
+
+.form_input{
+    .title{
+        color:#000;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top:20px;
+        margin-bottom:10px;
+        
+        @media (max-width:576px){
+            font-size: 14px;
+        }
+    }
+    
+    input{
+        width:100%;
+        border: 2px solid #C4C3C3;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 3px 5px;
+        padding-right:0;
+        letter-spacing: 1.8px;
+        background-color: transparent;
+    
+        @media(max-width: 576px){
+            padding: 3px 10px;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+    }
+    
+    .type_select{
+        position: relative;
+        padding-left:0;
+    
+        &::after {
+            content:'';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 5px 0 5px;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+    
+        select{
+            width: 100%;
+            font-size: 16px;
+            position: relative;
+            padding: 5px;
+            border: 2px solid #C4C3C3;
+            letter-spacing: 0;
+    
+            @media (max-width:576px){
+                color:unset;
+                font-size: 14px;
+                padding: 5px;
+            }
+    
+        }
+    
+        .select-center{
+            text-align: center;
+            text-align-last: center;
+    
+            option {
+                text-align: left;
+              }
+        }
+    }
+    .search{
+        input{
+            width:100%;
+            border: 2px solid #C4C3C3;
+            color:#4D4D4D;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 3px 10px;
+            letter-spacing: 1.8px;
+
+            @media(max-width: 576px){
+                color:unset;
+                text-align: center;
+                letter-spacing: 0;
+                padding:3px 5px;
+            }
+        }
+
+        .dateInput{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #C4C3C3;
+            position:relative;
+
+            .icon{
+                border: 2px solid #C4C3C3;
+                margin-right: -1px;
+                padding:5px;
+                position: absolute;
+                right:0;
+                z-index: -1;
+            }
+        }
+
+        .right+.calendar_modle{
+            right:0 !important;
+            left:unset !important;
+        }
+
+        .calendar_modle{
+            width: 40vw;
+
+            @media(max-width:576px){
+                width: 100vw;
+            }
+        }
+        .month_start{
+            .dateInput{
+                position: relative;
+                &::after{
+                    content:'';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 5px 0 5px 7.5px;
+                    border-color: transparent transparent transparent #999999;
+                    position: absolute;
+                    right: -20px;
+                    top: 10px;
+                }
+            }
+        }
+    }
+    .btns{
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 8px;
+            margin: 30px 10px 20px 10px;
+            min-width: 82px;
+            @include btn-shadow;
+            cursor: pointer;
+        
+            .fa-search {
+                transform: scaleX(-1);
+            }
+        
+            .fas {
+                color: white;
+                margin-right: 5px;
+            }
+        
+            &.add-btn {
+                margin: 0;
+            }
+        
+            &.go-btn {
+                margin: 0;
+            }
+        
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+            font-weight:bold;
+
+            .fas {
+                color: $green;
+            }
+        }
+    } 
+}
+
+
+
+hr {
+    border-top: 2px solid $pink;
+    margin: 30px 0;
+}
+
+// <!-- 查詢內容區 -->
+.group_checklist {
+    margin-bottom: 31px;
+
+    .checklist_title {
+        margin-bottom: 21px;
+
+        .col {
+            .title_icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                padding-top: 3px;
+
+                .icon_line {
+                    .dot {
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 100%;
+                        background-color: $pink;
+                    }
+
+                    .bar {
+                        width: 14px;
+                        height: 4px;
+                        border-radius: 2px;
+                        background-color: $pink;
+                    }
+                }
+            }
+
+            h2 {
+                @include font_style(25px, unset, $pink, bold);
+                margin: 0;
+            }
+        }
+    }
+
+    .checklist_add {
+        margin-bottom: 26px;
+
+        span {
+            display: flex;
+            padding: 4px 7px;
+            border-radius: 4px;
+            margin-right: 13px;
+            @include font_style(16px, unset, $pink, bold);
+            @include btn-shadow();
+            cursor: pointer;
+
+            .icon {
+                margin-right: 5px;
+            }
+            a {
+                color:unset;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .group_main {
+
+        ul {
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            @include font_style(14px, 130%, #231815, bold);
+            text-align: center;
+            letter-spacing: 0px;
+
+            li {
+                border: 1px solid $pink;
+                letter-spacing: -1px;
+                padding: 4px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input[type="checkbox"] {
+                    opacity: 0;
+                }
+
+                input[type="checkbox"]:checked+div {
+                    background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #eeeceb, #eeeceb);
+                }
+
+                .checkBox {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right, #ffffff, #ffffff);
+                    background-repeat: no-repeat, no-repeat;
+                    border: solid 1px $pink;
+                    background-size: contain, 100%;
+                    pointer-events: none;
+                }
+
+                a{
+                    text-decoration: none;
+                    color:unset;
+                }
+            }
+
+            li:nth-child(1) {
+                width: 4%;
+            }
+
+            li:nth-child(2) {
+                width: 8%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .details {
+                    text-align: center;
+                    background-color: #fff;
+                    border-radius: 2px;
+                    letter-spacing: 1px;
+                    padding: 1px 3px;
+                    cursor: pointer;
+                    @include font_style(11px, 150%, $pink, unset);
+                    @include btn-shadow();
+
+                    i {
+                        transform: rotate3d(0, 0, 1, 90deg);
+                        margin-right: -3px;
+                    }
+                }
+            }
+
+            li:nth-child(3),
+            li:nth-child(4),
+            li:nth-child(5),
+            li:nth-child(7) {
+                width: 8%;
+            }
+
+            li:nth-child(6) {
+                width: 25%;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                i {
+                    margin-left: 5px;
+                }
+            }
+
+            li:nth-child(8) {
+                width: 13%;
+            }
+
+            li:nth-child(9) {
+                width: 8%;
+                text-align: center;
+            }
+
+            li:nth-child(10) {
+                width: 10%;
+            }
+        }
+
+        // 基數ul
+        ul:nth-child(2n+1) {
+            background-color: $lightpink;
+        }
+
+        // title的ul
+        ul:nth-child(1) {
+            background-color: $pink;
+            color: #fff;
+            letter-spacing: 0.5px;
+
+            li:nth-child(1) {
+
+                input[type="checkbox"] {
+                    opacity: 0;
+                }
+
+                input[type="checkbox"]:checked+div {
+                    background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #eeeceb, #eeeceb);
+                }
+
+                .checkBox {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right, #ffffff, #ffffff);
+                    background-repeat: no-repeat, no-repeat;
+                    border: solid 1px $pink;
+                    background-size: contain, 100%;
+                    pointer-events: none;
+                }
+            }
+
+            li:nth-child(6) {
+                justify-content: center;
+            }
+        }
+    }
+
+}
+
+// <!-- 頁面選項 -->
+.pagination_bnt {
+
+    .pagination_block {
+        @include font_style(12px, unset, #231815, 500);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin: 0 3px;
+            padding: 0 6px 0 7px;
+            @include font_style(13px, unset, #231815, bold);
+
+            i {
+                color: $pink;
+            }
+
+            &.active {
+                height: 22px;
+                padding-top: 4px;
+                border-radius: 50%;
+                background-color: $pink;
+                color: white;
+            }
+        }
+
+        // icon_size
+        li:nth-child(2),
+        li:nth-child(8) {
+            font-size: 20px;
+        }
+
+        // 數字間距
+        li:nth-child(3),
+        li:nth-child(4),
+        li:nth-child(5),
+        li:nth-child(6),
+        li:nth-child(7) {
+            margin: 0;
+        }
+
+        li:nth-child(10) {
+            margin: 0px;
+
+            .go_input {
+                width: 45px;
+                height: 22px;
+                border-radius: 2px;
+                margin-right: 7px;
+                padding: 2px;
+                border: 1px solid #C4C3C3;
+                text-align: center;
+            }
+
+            .go_btn {
+                color: $pink;
+                padding: 5px 8px;
+                border-radius: 4px;
+                margin-left: 7px;
+                font-weight: bold;
+                @include shadow();
+            }
+        }
+    }
+}

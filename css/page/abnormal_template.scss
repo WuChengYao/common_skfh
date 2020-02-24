@@ -1,0 +1,233 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+$gray:#DBDCDC;
+$orange:#EC8E26;
+$blue:#3490DC;
+
+@mixin shadow {
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-shadow {
+    box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+@mixin font_style($change_fontsize, $change_lineheight, $change_color, $change_weight) {
+    font-size: $change_fontsize;
+    line-height: $change_lineheight;
+    color: $change_color;
+    font-weight: $change_weight;
+}
+
+#notic_container {
+    // width: 710px;
+    height: 50vh;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 17px;
+    @include shadow();
+
+    @media (max-width:576px) {
+        width: 100%;
+        padding: 0;
+        letter-spacing: 0;
+        height: 80vh;
+    }
+
+    .all_notic {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+
+        .notic_btns {
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+            background-color: $gray;
+            display: flex;
+
+            .notic_btn {
+                height: 44px;
+                text-align: center;
+                flex: 1;
+                @include font_style(18px, 250%, #525353, bold);
+
+                &.active {
+                    @include font_style(18px, 250%, #000, bold);
+                    background-color: #fff;
+                    border-radius: 12px 12px 0 0;
+                    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+
+        .staff_number {
+            position: absolute;
+            top: 44px;
+            z-index: 1;
+            width: 100%;
+            height: 21px;
+            background-color: #EEEEEF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow:0 3px 5px 2px rgba(0, 0, 0, 0.2);
+
+            p {
+                margin: 0;
+                @include font_style(16px, 0, #000, bold);
+            }
+        }
+
+
+        .main_content {
+            width: 100%;
+            height: calc(100% - 44px);
+            padding-top: 21px;
+
+            .notic_content {
+
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            // 異常補辦
+            .exception_main {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 14px 0;
+                    display: flex;
+                    @include font_style(18px, 100%, #000, bold);
+                }
+
+                .exception_title {
+
+                    li:nth-child(1) {
+                        width: 10%;
+                    }
+
+                    li:nth-child(2) {
+                        width: 15%;
+                        text-align: center;
+                    }
+
+                    li:nth-child(4) {
+                        flex: 1;
+                        text-align: center;
+
+
+                        @media (max-width:500px) {
+                            flex: 2;
+                        }
+                    }
+
+                    li:nth-child(6) {
+                        flex: 2;
+                        padding: 0 0 0 20px;
+
+                        @media (max-width:500px) {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                .exception_content {
+                    padding-bottom: 5px;
+
+                    ul {
+                        width: 100%;
+                        padding: 5px 0;
+                        margin-bottom: 7px;
+                        position: relative;
+                        box-shadow: 5px 3px 5px 2px rgba(0, 0, 0, 0.2);
+                        @include font_style(16px, 150%, #4C4948, 400);
+
+                        @media (max-width:576px) {
+                            font-size: 15px;
+                        }
+
+                        &:hover {
+                            background-color: $gray;
+                            box-shadow: none;
+                        }
+
+                        li:nth-child(1) {
+                            width: 10%;
+                            display: flex;
+                            justify-content: center;
+
+                            span {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                text-align: center;
+                                @include font_style(14px, 180%, #fff, 900);
+
+                                // 異
+                                &.icon_abnormal {
+                                    background-color: $pink;
+                                }
+
+                                // 調
+                                &.icon_tune {
+                                    background-color: $green;
+                                }
+
+                                // 補
+                                &.icon_makeup {
+                                    background-color: $orange;
+                                }
+
+                                // 退
+                                &.icon_return {
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+
+                        li:nth-child(2) {
+                            width: 15%;
+                            font-weight: 600;
+                        }
+
+                        li:nth-child(3),
+                        li:nth-child(5) {
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+
+                        li:nth-child(4) {
+                            flex: 1;
+                            padding-left:20px;
+                            margin-right:-20px;
+                            @media (max-width:500px) {
+                                padding-left: 10px;
+                                margin-right:-10px;
+                            }
+
+                            @media (max-width:500px) {
+                                flex: 2;
+                            }
+                        }
+
+                        li:nth-child(6) {
+                            flex: 2;
+                            padding-left:20px;
+
+                            @media (max-width:500px) {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

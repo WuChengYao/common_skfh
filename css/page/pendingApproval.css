@@ -1,0 +1,923 @@
+.pendingApproval .body {
+  margin-top: 25px;
+  min-height: calc(100vh - 200px);
+}
+
+.pendingApproval .body__searchBar {
+  margin: 0 15.5px;
+  padding: 10px 11px;
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+}
+
+.pendingApproval .body__searchBar__inner {
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  height: 32px;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.pendingApproval .body__searchBar__inner-text {
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.pendingApproval .body__searchBar__inner-btnWrap {
+  width: 37px;
+  height: 32px;
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  border-right: transparent;
+}
+
+.pendingApproval .body__searchBar__inner-btn {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.pendingApproval .body__searchBar__inputArea {
+  margin-top: 20px;
+  display: none;
+}
+
+.pendingApproval .body__searchBar__inputArea-dateInput {
+  border-radius: 15px;
+  background-color: #fdfefe;
+  padding: 13px 13px 17px 13px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+  margin-bottom: 11px;
+}
+
+@media (max-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dateInput {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dateInput span {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dateInput span {
+    font-size: 14px;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dateInput span a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #eb6666;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dateInput span a {
+    font-size: 14px;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dateInput input, .pendingApproval .body__searchBar__inputArea-dateInput select {
+  margin-bottom: 7px;
+  border-radius: 7px;
+  padding: 0 10px;
+  height: 30px;
+  border: solid 1px #c4c4c4;
+  background-color: #fdfefe;
+}
+
+@media (max-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dateInput input, .pendingApproval .body__searchBar__inputArea-dateInput select {
+    margin-bottom: 15px;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dateInput input:focus, .pendingApproval .body__searchBar__inputArea-dateInput select:focus {
+  outline: none;
+  border: 1px solid #28b8ec;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker {
+  border-radius: 15px;
+  background-color: #fdfefe;
+  padding: 13px 13px 17px 13px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 0 1px 3px 1px rgba(67, 67, 67, 0.6);
+  margin-bottom: 20px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker span {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .mt13 {
+  margin-top: 13px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .mt27 {
+  margin-top: 27px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox {
+  margin-top: 4px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox {
+  width: 35vw;
+  height: 31px;
+  border-radius: 7px;
+  border: solid 1px #c4c4c4;
+  border-right: transparent;
+  padding-left: 5px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox input {
+  border: transparent;
+  width: 24vw;
+  height: 29px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox input {
+    height: 26px;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox input:focus {
+  outline: none;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox .iconBox {
+  border-radius: 7px;
+  border: solid 1px #c4c4c4;
+  width: 35px;
+  height: 29px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox .iconBox {
+    height: 27px;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__inputBox img {
+  width: 18px;
+}
+
+.pendingApproval .body__searchBar__inputArea-dataPicker .datapickerBox__arr {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 15px;
+  border-color: transparent transparent transparent #adadad;
+}
+
+.pendingApproval .body__searchBar__inputArea-btn {
+  width: 77px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 9px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__searchBar__inputArea-btn {
+    width: 71px;
+    height: 36px;
+    font-size: 15.5px;
+    letter-spacing: 0.39px;
+    color: #ffffff;
+  }
+}
+
+.pendingApproval .body__searchBar__inputArea-btn.search {
+  background-color: #55beb7;
+  color: #ffffff;
+}
+
+.pendingApproval .body__searchBar__inputArea-btn.clean {
+  border: solid 1px #55beb7;
+  color: #55beb7;
+  background-color: #fff;
+}
+
+.pendingApproval .body__searchArea {
+  padding: 0 76px;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dateInput {
+  margin-right: 20px;
+  padding: 8px 9px 18px 8px;
+  border-radius: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dateInput span {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dateInput input {
+  width: 254px;
+  height: 24px;
+  border-radius: 5px;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dateInput input:last-child {
+  margin-bottom: 0;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dataPicker {
+  padding: 25px 10px 10px 15px;
+  width: 325px;
+  border-radius: 5px;
+}
+
+.pendingApproval .body__searchArea .body__searchBar__inputArea-dataPicker span {
+  font-size: 14px;
+}
+
+.pendingApproval .body__divide {
+  margin-top: 20px;
+  margin-bottom: 22px;
+  width: 75.696%;
+  height: 7px;
+  background-color: #e3e3e2;
+}
+
+.pendingApproval .body__divide-red {
+  margin: 22px 0 17px 0;
+  height: 2px;
+  background-color: #ec6968;
+}
+
+.pendingApproval .body__list__title {
+  margin-bottom: 25px;
+}
+
+.pendingApproval .body__list__title-icon {
+  width: 17px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__title-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.pendingApproval .body__list__title-icon .iconLine {
+  width: 17px;
+  height: 4px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__title-icon .iconLine {
+    width: 13px;
+    height: 3px;
+  }
+}
+
+.pendingApproval .body__list__title-icon .iconLine .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #ec6968;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__title-icon .iconLine .dot {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+.pendingApproval .body__list__title-icon .iconLine .bar {
+  width: 12px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ec6968;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__title-icon .iconLine .bar {
+    width: 9px;
+    height: 3px;
+  }
+}
+
+.pendingApproval .body__list__title-text {
+  font-size: 21.5px;
+  font-weight: bold;
+  color: #ec6968;
+  letter-spacing: 0.54px;
+  margin-left: 6px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__title-text {
+    font-size: 18px;
+  }
+}
+
+.pendingApproval .body__list__permission {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission {
+    margin: 0 0 20px 0;
+  }
+}
+
+.pendingApproval .body__list__permission-btn {
+  width: 120px;
+  height: 28px;
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+          box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.6);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission-btn {
+    width: 83px;
+    height: 24px;
+    border-radius: 5px;
+    border: solid 1px #c6c6c5;
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+
+.pendingApproval .body__list__permission-btn:nth-child(2) {
+  margin: 0 15px;
+}
+
+.pendingApproval .body__list__permission-btn:last-child {
+  width: 102px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission-btn:last-child {
+    width: 83px;
+    height: 24px;
+  }
+}
+
+.pendingApproval .body__list__permission-btn span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ec6968;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission-btn span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pendingApproval .body__list__permission-btn.checkAll {
+    display: none;
+  }
+}
+
+.pendingApproval .body__list__permission-select {
+  position: relative;
+  width: 68px;
+  height: 22px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 4px;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission-select {
+    width: 57px;
+    height: 16px;
+  }
+}
+
+.pendingApproval .body__list__permission-selectIcon {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 5.5px 0 5.5px;
+  border-color: #ec6868 transparent transparent transparent;
+  margin-right: 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__permission-selectIcon {
+    border-width: 8px 4.5px 0 4.5px;
+  }
+}
+
+.pendingApproval .body__list__permission #checkAll_mb {
+  cursor: pointer;
+}
+
+.pendingApproval .body__list__permission-check {
+  cursor: pointer;
+}
+
+.pendingApproval .body__list__permission-checkIcon {
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.pendingApproval .body__list__table {
+  display: none;
+  border-radius: 5px;
+  overflow-x: scroll;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__table {
+    width: 100%;
+    overflow: auto;
+    display: block;
+  }
+}
+
+.pendingApproval .body__list__table .tr {
+  margin-bottom: 4px;
+  width: 876px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__table .tr {
+    width: 100%;
+  }
+}
+
+.pendingApproval .body__list__table .tr__td {
+  border-radius: 5px;
+  height: 23px;
+  width: 90px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__table .tr__td {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 5px;
+    height: 14px;
+    border-radius: 3px;
+    padding: 15px 0;
+  }
+  .pendingApproval .body__list__table .tr__td:first-child {
+    margin-left: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .pendingApproval .body__list__table .tr__td:last-child {
+    margin-right: 0;
+  }
+  .pendingApproval .body__list__table .tr__td:nth-of-type(1) {
+    width: 30px;
+  }
+  .pendingApproval .body__list__table .tr__td:nth-of-type(2) {
+    width: 120px;
+  }
+  .pendingApproval .body__list__table .tr__td:nth-of-type(4) {
+    width: 120px;
+  }
+  .pendingApproval .body__list__table .tr__td:nth-of-type(5) {
+    width: 300px;
+  }
+  .pendingApproval .body__list__table .tr__td:nth-of-type(6) {
+    width: 130px;
+  }
+}
+
+.pendingApproval .body__list__table .tr__td-check {
+  width: 36px;
+}
+
+@media (min-width: 768px) {
+  .pendingApproval .body__list__table .tr__td-check {
+    width: 0px;
+  }
+}
+
+.pendingApproval .body__list__table-head__tr .tr__td {
+  background-color: #ec6968;
+  color: #FFF;
+}
+
+.pendingApproval .body__list__table-body__tr .tr__td {
+  border: solid 1px #ec6968;
+}
+
+.pendingApproval .body__list__table-body__tr:nth-child(even) .tr__td {
+  background-color: #f7e1dc;
+}
+
+.form-control-pal {
+  background-color: transparent;
+  width: 98%;
+  height: 99%;
+  padding: 0;
+  padding-left: 30%;
+  font-size: 18px;
+  font-weight: bold;
+  font-weight: bold;
+  border: 0 solid transparent;
+  z-index: 1;
+  color: #ec6968;
+  letter-spacing: 0.45px;
+}
+
+@media (min-width: 768px) {
+  .form-control-pal {
+    font-size: 14px;
+  }
+}
+
+.form-control-pal:focus {
+  color: #ec6968;
+}
+
+.form-control-pal option {
+  color: #ec6968;
+}
+
+.datapickerBox__arr {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 15px;
+  border-color: transparent transparent transparent #adadad;
+  bottom: 7.5px;
+  left: calc(50% - 7.5px);
+}
+
+@media (min-width: 768px) {
+  .datapickerBox__arr {
+    border-width: 5.5px 0 5.5px 9px;
+    border-color: transparent transparent transparent #000;
+  }
+}
+
+.datapickerBox__inputBox {
+  width: 100%;
+  height: 28px;
+  margin: 0;
+}
+
+.datapickerBox__inputBox input {
+  width: 100px;
+  border-radius: 7px;
+}
+
+@media (min-width: 768px) {
+  .datapickerBox__inputBox input {
+    width: 97px;
+  }
+}
+
+.datapickerBox-L, .datapickerBox-R {
+  width: 45%;
+}
+
+.modal {
+  color: #ec6968;
+}
+
+.modal .title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.modal .list__title {
+  margin-bottom: 22px;
+}
+
+.modal .list__title .ruleIcon {
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  background-color: #ec6968;
+}
+
+.modal .list__title span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.modal .list__content {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.18px;
+  line-height: 1.67;
+}
+
+.btn-down {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 6.5px 0 6.5px;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.btn-down__wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 2px #bfbfbf;
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+}
+
+#date-start, #date-end {
+  width: 100%;
+}
+
+.iconBox {
+  border-radius: 7px;
+  border: solid 1px #c4c4c4;
+  width: 35px;
+  height: 30px;
+  background-color: #fff;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.btn-down_apmsel, .btn-down__wrap_apmsel {
+  pointer-events: none;
+}
+
+.apmsel {
+  width: 98%;
+  height: 99%;
+  padding: 0 0 0 20px;
+  font-size: 12.5px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+@media (min-width: 768px) {
+  .apmsel {
+    font-size: 20px;
+    line-height: 22px;
+    height: 141%;
+  }
+}
+
+.btn-down {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 6.5px 0 6.5px;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.btn-down__wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  background-color: #fdfefe;
+  right: 0;
+  top: 0;
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: solid 2px #ec6968;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FFF), to(#FFF));
+  background-image: linear-gradient(to right, #FFF, #FFF);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100%;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  background-image: url(../../img/absence/checkmark-000.svg), -webkit-gradient(linear, left top, right top, from(#FFF), to(#FFF));
+  background-image: url(../../img/absence/checkmark-000.svg), linear-gradient(to right, #FFF, #FFF);
+}
+
+.body__searchArea-pad .body__searchBar__inputArea-dateInput {
+  width: 48%;
+  border-radius: 5px;
+  border: solid 1px #c6c6c5;
+  background-color: #ffffff;
+  min-height: 200px;
+}
+
+.z-index-3 {
+  position: relative;
+  z-index: 3;
+  top: 55px;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.search_btn_area .btn {
+  background-color: #55beb7;
+  color: white;
+  margin: 10px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+.search_btn_area .btn.btn_outline {
+  color: #55beb7;
+  background-color: #fff;
+  border: solid 2px #55beb7;
+}
+
+@media screen and (min-width: 768px) {
+  .search_btn_area.mb {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search_btn_area.pc {
+    display: none !important;
+  }
+}
+
+.search {
+  padding: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .search_list_mb {
+    display: none;
+  }
+}
+
+.search_list_mb .tr__td-check {
+  padding: 5px;
+  border-bottom: 1px solid #ec6968;
+}
+
+.search_list_mb .card {
+  font-weight: 600;
+  border: solid 1px #ec6968;
+}
+
+.search_list_mb .card:first-of-type, .search_list_mb .card:last-of-type, .search_list_mb .card:not(:first-of-type):not(:last-of-type) {
+  border-bottom: 1px solid #ec6968;
+  border-radius: 8px;
+}
+
+.search_list_mb .card:nth-child(even) .th {
+  background-color: #f7e1dc;
+  color: #ec6968;
+}
+
+.search_list_mb .sort, .search_list_mb .name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.search_list_mb .th {
+  color: #fff;
+  background-color: #ec6968;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+.search_list_mb .td {
+  background-color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec6968;
+}
+
+.search_list_mb .btn-link {
+  text-decoration: none !important;
+  color: unset;
+}
+
+.search_list_mb .btn-link:hover {
+  text-decoration: none !important;
+  color: unset;
+}
+
+.search_list_mb .collapse_btn {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #82cbc6;
+  border-radius: 50%;
+  color: black;
+}
+
+.search_list_mb .icon_rotate {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.searchBar__inputArea-btn {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1px #c5c4c4;
+  margin-bottom: 10px;
+}
+
+.searchBar__inputArea-btn:last-child {
+  width: 100%;
+}
+
+.searchBar__inputArea-btn span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.searchBar__inputArea-select {
+  position: relative;
+  width: 68px;
+  height: 22px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 4px;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.searchBar__inputArea-selectIcon {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 5.5px 0 5.5px;
+  border-color: black transparent transparent transparent;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.select_icon {
+  height: 100%;
+  width: 37px;
+  border: solid 1px #c5c4c4;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.form-control-pal option {
+  color: black;
+}
+
+.calendar span {
+  margin-bottom: 0 !important;
+}
+/*# sourceMappingURL=pendingApproval.css.map */

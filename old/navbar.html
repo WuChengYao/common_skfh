@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/nav.css">
+  <!-- font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <title>差勤系統</title>
+</head>
+<header class="main-navbar-header">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+    <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#"><i class="fas fa-bars"></i></a>
+    </div><a class="navbar-brand" href="#"> <img class="d-none d-md-inline position-absolute"
+        src="./img/icon/新光人壽logo_工作區域Pad.svg" alt="">差勤系統</a>
+    <div class="navbar_icon">
+      <img src="./img/icon/emptyC.svg" width="24" alt="" srcset="">
+      <img src="./img/icon/猴子_工作區域 1.svg" width="24" alt="" srcset="">
+    </div>
+
+  </nav>
+</header>
+<div class="wrapper">
+  <!-- Sidebar Holder-->
+  <nav class="nav-sidebar" id="sidebar">
+    <ul class="list-unstyled components slimescroll-id" id="accordion">
+      <li class="active"><a class="accordion-toggle" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i
+            class="ti-home m-r-10"></i> Home</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#accordion">
+          <li><a href="#">Home 1</a></li>
+          <li><a href="#">Home 2</a></li>
+          <li><a href="#">Home 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About</a><a class="accordion-toggle" href="#pageSubmenu" data-toggle="collapse"
+          aria-expanded="false">Pages</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#accordion">
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+          <li><a class="accordion-toggle" href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false">More
+              pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu2" data-parent="#accordion2">
+              <li><a href="#">Page 4</a></li>
+              <li><a href="#">Page 5</a></li>
+              <li><a href="#">Page 6</a></li>
+            </ul>
+          </li>
+          <li><a class="accordion-toggle" href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false">Even
+              more</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu3" data-parent="#accordion2">
+              <li><a href="#">Page 7</a></li>
+              <li><a href="#">Page 8</a></li>
+              <li><a href="#">Page 9</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="login.html"><i class="ti-user m-r-10"></i>Login Page</a></li>
+    </ul>
+  </nav>
+  <div class="container content-area"><img src="[object Object]" alt=""></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+    });
+  });
+  $(function () {
+    $('.slimescroll-id').slimScroll({
+      height: '100vh'
+    });
+  });
+</script>
+<script type="text/javascript" src="dist/main.js"></script>

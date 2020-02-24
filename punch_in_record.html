@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!--  Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>差勤系統</title>
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/page/punchInRecord.css">
+    <!-- CSS -->
+
+</head>
+
+<body>
+    <header class="main-navbar-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+            <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#">
+                    <i class="fas fa-bars"></i></a></div>
+
+            <div class="d-flex">
+                <!-- 頁面標題 -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/absence/logo.svg" height="40" alt>
+                    打卡記錄匯入及維護
+                </a>
+                <!-- 頁面標題 -->
+                <div class="personalDetail align-items-end py-1">
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/department.svg" width="18px" alt="" srcset="">
+                        <span>單位：螢橋通-收</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/head.svg" width="13px" alt="" srcset="">
+                        <span>姓名：劉一明 </span>
+                        <span>(10001)</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/position.svg" width="18px" alt="" srcset="">
+                        <span>職稱：業務員</span>
+                    </div>
+                    <div class="detailItem">
+                        <span>承辦身份：本人</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar_icon align-items-center">
+                <a class="position-relative" href="./calendar.html">
+                        <div class="calendar-date"></div>
+                        <img src="./img/component/header/emptyC.svg" width="24" alt>
+                </a>
+                <a class="nav-link " href="./basic_information.html">
+                    <img src="./img/component/header/monkey.svg" width="24" alt>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <!--  Sidebar Holder -->
+        <nav class="nav-sidebar" id="sidebar">
+            <ul class="level-1-ul" id="sidemenu_collapse_parent">
+                <li>
+                    <a title="差勤申請" href="#sidemenu_collapse_1" class="nav_collapse" data-toggle="collapse"
+                        aria-expanded="false"><img src="./img/component/slideBar/11_2.svg" width="20px" alt> 差勤申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_1" data-parent="#sidemenu_collapse_parent">
+                        <li>
+                            <a href="./vacation.html">
+                                請假差勤單
+                            </a>
+                        </li>
+                        <li><a href="./Leave_cancel_Query.html">銷假申請單</a></li>
+                        <li><a href="#">加班報備單</a></li>
+                        <li><a href="#">加班申請單</a></li>
+                        <li><a href="./annual_leave.html">預排特休假</a></li>
+                        <li><a href="#">差勤異常通知單</a></li>
+                        <li><a href="./transfer_apply.html">休息/假日調移報備申請單</a></li>
+                        <li><a href="./vacation_detail.html">個人差勤明細</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_2" class="nav_collapse" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-2.svg" width="20" alt> 人事申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_2" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">人身保險業務員登錄申請</a></li>
+                        <li><a href="#">投資、外幣變更登錄申請書</a></li>
+                        <li><a href="#">基金銷售業務人員證照登記申請表</a></li>
+                        <li><a href="#">薪資轉存入銀行帳戶申請表</a></li>
+                        <li><a href="#">薪資所得受領人免稅額申請表</a></li>
+                        <li><a href="#">變更各項資料申請書</a></li>
+                        <li><a href="./prove_apply.html">各類證明申請書</a></li>
+                        <li><a href="./healthInsurance.html">健保轉入轉出申報表</a></li>
+                        <li><a href="#">通知/補辦單</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_3" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/footer/待簽核-cb271c.svg" width="20px" alt> 電子簽核
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_3" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="./abnormal_replacement.html">異常補辦匣</a></li>
+                        <li><a href="./pending_approval.html">待簽核匣</a></li>
+                        <li><a href="./abnormal.html">通知匣</a></li>
+                        <li><a href="./holiday_detail_list_manager.html">簽核完成匣</a></li>
+                        <li><a href="#">工作佇列</a></li>
+                        <li><a href="#">工作待辦匣</a></li>
+                        <li><a href="./agent_settnig.html">代理人設定</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_4" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-4.svg" width="20" alt>
+                        外人承辦人管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_4" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">案件分派</a></li>
+                        <li><a href="#">打卡記錄匯入及維護</a></li>
+                        <li><a href="#">天然災害假設定</a></li>
+                        <li><a href="#">加班單維護</a></li>
+                        <li><a href="#">差勤異常通知設定</a></li>
+                        <li><a href="#">參數設定</a></li>
+                        <li><a href="#">差勤管理文件上傳</a></li>
+                        <li><a href="#">假別規則文字設定維護</a></li>
+                        <li><a href="#">排程設定</a></li>
+                        <li><a href="./leave_maintain.html">假別簽核層級維護</a></li>
+                        <li><a href="#">流程檔維護</a></li>
+                        <li><a href="#">假日維護</a></li>
+                        <li><a href="#">班表維護</a></li>
+                        <li><a href="#">職等班表維護</a></li>
+                        <li><a href="#">異常通知Log查詢</a></li>
+                        <li><a href="#">特殊假匯入</a></li>
+                        <li><a href="#">假別額度維護</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_5" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-5.svg" width="20" alt>
+                        查詢下載與報表管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_5" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="./todo_duty.html">差勤/人事綜合查詢及報表</a></li>
+                        <li><a href="#">月差勤記錄</a></li>
+                        <li><a href="./todo_training.html">調訓查詢及報表</a></li>
+                        <li><a href="#">個人班表查詢</a></li>
+                        <li><a href="#">排休暨輪休查詢及報表</a></li>
+                        <li><a href="#">差勤管理文件查詢及下載</a></li>
+                        <li><a href="#">公傷假名單及統計</a></li>
+                        <li><a href="#">公傷假人員明細表</a></li>
+                        <li><a href="#">產假統計表</a></li>
+                        <li><a href="#">產假人員明細表</a></li>
+                        <li><a href="#">特休假單位統計表</a></li>
+                        <li><a href="#">特休假單位人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員統計表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">人事表單申請查詢</a></li>
+                        <li><a href="#">特殊差勤報表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">差假累計查詢及統計表</a></li>
+                        <li><a href="#">考核預告查詢及報表</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_6" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-cog greenIcon"></i>
+                        系統管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_6" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">員工資料維護</a></li>
+                        <li><a href="./grouppermissionsettings.html">群組權限維護</a></li>
+                        <li><a href="#">公告通知</a></li>
+                        <li><a href="#">通知功能</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-bottom">
+                <div class="d-flex">
+                    <div>
+                        <a class="d-flex" href="#" onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();" style="padding-left:0;padding-right:0 !important;">
+                            <img src="./img/component/slideBar/1_4.svg" width="25px" height="19px" alt="">
+                            <span>登出</span>
+                            <form id="logout-form" action="" method="POST" style="display: none;">
+                            </form>
+                        </a>
+                    </div>
+                    <div class="ml-5">
+                        <img src="./img/abnormal/i.svg" width="20" alt="">
+                    </div>
+                </div>
+                <div class="Slidebars__list__logo">
+                    <hr>
+                    <img src="./img/component/slideBar/logo-1.svg" width="108px" alt="" srcset="">
+                </div>
+            </div>
+        </nav>
+        <div class="cover d-none"></div>
+        <div class="container content-area">
+            <div class="row">
+                <div class="col-12">
+                    <!-- 內容放此 -->
+                    <div class="punchInRecordWrap">
+                            <div class="container">
+                                <div class="punchInRecordWrap__breadcrumb d-flex align-items-center">
+                                    <img src="./img/punchInRecord/bag.svg" width="38" alt="">
+                                    <div class="punchInRecordWrap__breadcrumb__nav">
+                                        <span>外人承辦人管理</span> <i class="fas fa-angle-double-right"></i> <span>打卡記錄匯入及維護</span>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="punchInRecordWrap__inputbox punchInRecordWrap__inputbox-t d-flex">
+                                    <form class="d-flex justify-content-between align-items-end w-100">
+                                        <div class="form-group form-group_1 position-relative">
+                                            <label for="input1"><span class="star">*</span>業務線別</label>
+                                            <select class="form-control" id="input1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <div
+                                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                <span class="btn-down btn-down_apmsel"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group_2">
+                                            <label for="input2"><span class="star">*</span>部室</label>
+                                            <input type="text" class="form-control" id="input2" placeholder="關鍵字搜尋">
+                                        </div>
+                                        <div class="form-group form-group_3 position-relative">
+                                            <select class="form-control" id="input3">
+                                                <option>A0B000營業管理部</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <div
+                                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                <span class="btn-down btn-down_apmsel"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group_4">
+                                            <label for="input4"><span class="star">*</span>區部</label>
+                                            <input type="text" class="form-control" id="input4" placeholder="關鍵字搜尋">
+                                        </div>
+                                        <div class="form-group form-group_5 position-relative">
+                                            <select class="form-control" id="input5">
+                                                <option>A0B000營業管理部</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <div
+                                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                <span class="btn-down btn-down_apmsel"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group_6">
+                                            <label for="input6"><span class="star">*</span>單位</label>
+                                            <input type="text" class="form-control" id="input6" placeholder="關鍵字搜尋">
+                                        </div>
+                                        <div class="form-group form-group_7 position-relative">
+                                            <select class="form-control" id="input7">
+                                                <option>A0B000營業管理部</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <div
+                                                    class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                <span class="btn-down btn-down_apmsel"></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="punchInRecordWrap__collapse">
+                                    <div
+                                            class="punchInRecordWrap__collapse__bar d-flex justify-content-center align-items-center mb-3 position-relative">
+                                        <a class="d-flex align-items-center justify-content-center w-100" data-toggle="collapse"
+                                           href="#collapseContent" role="button">
+                                            <span class="mr-2">A0B000營業管理部</span>
+                                            <img class="open toggleIcon" src="./img/punchInRecord/-.svg" width="19" alt="">
+                                            <img class="close toggleIcon show" src="./img/punchInRecord/+.svg" width="19" alt="">
+                                        </a>
+                                        <div class="bar__btnBox d-flex align-items-center position-absolute">
+                                            <div class="bar__btnBox__btn click d-flex align-items-center justify-content-around px-1">
+                                                <img src="./img/punchInRecord/search.svg" width="14" alt="" srcset="">
+                                                <span>查詢</span>
+                                            </div>
+                                            <div class="bar__btnBox__btn click d-flex align-items-center justify-content-around px-1">
+                                                <img src="./img/punchInRecord/delete.svg" width="12" alt="" srcset="">
+                                                <span>清除</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="collapseContent">
+                                        <div class="punchInRecordWrap__inputbox punchInRecordWrap__inputbox-b">
+                                            <form class="d-flex align-items-end w-100">
+                                                <div class="form-group form-group_8">
+                                                    <label for="input8"><span class="star">*</span>部室</label>
+                                                    <input type="text" class="form-control" id="input8" placeholder="關鍵字搜尋">
+                                                </div>
+                                                <div class="form-group form-group_9">
+                                                    <label for="input9"><span class="star">*</span>區部</label>
+                                                    <input type="text" class="form-control" id="input9" placeholder="關鍵字搜尋">
+                                                </div>
+                                                <div class="form-group form-group_10 position-relative">
+                                                    <label for="input10"><span class="star">*</span>業務線別</label>
+                                                    <select class="form-control" id="input10">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                    <div
+                                                            class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                        <span class="btn-down btn-down_apmsel"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group_11">
+                                                    <label for="input11"><span class="star">*</span>單位</label>
+                                                    <input type="text" class="form-control" id="input11" placeholder="關鍵字搜尋">
+                                                </div>
+                                                <div class="form-group form-group_12">
+                                                    <label for="input12"><span class="star">*</span>單位</label>
+                                                    <input type="text" class="form-control" id="input12" placeholder="關鍵字搜尋">
+                                                </div>
+                                            </form>
+                                            <form class="d-flex align-items-end w-100">
+                                                <div class="form-group form-group_13">
+                                                    <label for="input13"><span class="star">*</span>日期起日</label>
+                                                    <div class="dateSearch d-flex position-relative" data-toggle="modal" data-target="#calendarModal-start">
+                                                        <input type="text" class="form-control" id="input13">
+                                                        <div id="iconBox1"
+                                                             class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                                            <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                                                <div class="form-group form-group_14">
+                                                    <label for="input14"><span class="star">*</span>日期訖日</label>
+                                                    <div class="dateSearch d-flex position-relative" data-toggle="modal" data-target="#calendarModal-end">
+                                                        <input type="text" class="form-control" id="input14">
+                                                        <div id="iconBox2"
+                                                             class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                                            <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider b"></div>
+                                <div class="punchInRecordWrap__list">
+                                    <div class="punchInRecordWrap__list__title d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <div class="punchInRecordWrap__list__title-icon d-flex flex-column justify-content-between">
+                                                <div class="iconLine w-100 d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                                <div class="iconLine w-100 d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                                <div class="iconLine w-100 d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                            </div>
+                                            <div class="punchInRecordWrap__list__title-text">
+                                                <span>查詢結果清單</span>
+                                            </div>
+                                        </div>
+                                        <div class="punchInRecordWrap__list__title-btnBox d-flex">
+                                            <div class="d-flex click align-items-center justify-content-center">
+                                                <img src="./img/punchInRecord/bag-W.svg" width="14" alt="" srcset="">
+                                                <span>匯入</span>
+                                            </div>
+                                            <div class="d-flex click align-items-center justify-content-center" type="button"
+                                                 data-toggle="modal" data-target=".add-modal">
+                                                <img src="./img/punchInRecord/add-W.svg" width="12" alt="" srcset="">
+                                                <span>新增</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="punchInRecordWrap__list__body">
+                                        <div class="list-head">
+                                            <div class="list__tr mb-2 d-flex align-items-stretch justify-content-between">
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>操作</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>工作年月</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>日期</span>
+                                                    <div class="filterIcon d-flex flex-column align-items-center">
+                                                        <i class="fas fa-angle-up"></i>
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>區部</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>單位</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>電腦編號</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>姓名</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>刷卡時間起</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>簽到狀態</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>簽到註記</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>刷卡時間訖</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>簽退狀態</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>簽退註記</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-body">
+                                            <div class="list__tr mb-2 d-flex align-items-stretch justify-content-between">
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center">
+                                                    <div class="table__btn click d-flex align-items-center justify-content-around">
+                                                        <img src="./img/punchInRecord/pc.svg" width="12" alt="" srcset="">
+                                                        <span>修改</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>108/07</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>07/12</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>豐原區部</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>豐榮通-收</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>123456</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>吳新光</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>08:30</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>2正常到班</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span></span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>17:30</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>2正常下班</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="list__tr mb-2 d-flex align-items-stretch justify-content-between">
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center">
+                                                    <div class="table__btn click d-flex align-items-center justify-content-around">
+                                                        <img src="./img/punchInRecord/pc.svg" width="12" alt="" srcset="">
+                                                        <span>修改</span>
+                                                    </div>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>108/07</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>07/12</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>豐原區部</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>豐榮通-收</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>123456</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>吳新光</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>08:30</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>2正常到班</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span></span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>17:30</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span>2正常下班</span>
+                                                </div>
+                                                <div class="list__tr__td d-flex align-items-center justify-content-center">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade add-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">新增</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="form-group col-3">
+                                                    <label for="input11"><span class="star">*</span>姓名(電腦編號)</label>
+                                                    <div class="dateSearch d-flex position-relative">
+                                                        <input type="text" class="form-control" id="input14">
+                                                        <div id="iconBox3"
+                                                             class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                                            <img src="./img/punchInRecord/search-red.svg" width="19" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2">
+                                                    <label for="input15"><span class="star">*</span>區部</label>
+                                                    <input type="text" class="form-control" id="input15" placeholder="">
+                                                </div>
+                                                <div class="form-group col-sm-2">
+                                                    <label for="input16"><span class="star">*</span>單位</label>
+                                                    <input type="text" class="form-control" id="input16" placeholder="">
+                                                </div>
+                                                <div class="form-group col-2">
+                                                    <label for="input17"><span class="star">*</span>職務</label>
+                                                    <input type="text" class="form-control" id="input17" placeholder="">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="input18"><span class="star">*</span>日期</label>
+                                                    <div class="dateSearch d-flex position-relative">
+                                                        <input type="text" class="form-control" id="input18">
+                                                        <div id="iconBox4"
+                                                             class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute" data-toggle="modal" data-target="#calendarModal-add">
+                                                            <img src="./img/punchInRecord/更多服務.svg" width="19" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                    
+                                                <div class="form-group col-3 position-relative p-0">
+                                                    <label for="input19"><span class="star">*</span>刷卡時間起</label>
+                                                    <select class="form-control" id="input19">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                    <div
+                                                            class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                        <span class="btn-down btn-down_apmsel"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="input20"><span class="star">*</span>簽到註記</label>
+                                                    <input type="text" class="form-control" id="input20" placeholder="">
+                                                </div>
+                                                <div class="form-group col-3 position-relative p-0">
+                                                    <label for="input21"><span class="star">*</span>刷卡時間訖</label>
+                                                    <select class="form-control" id="input21">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                    <div
+                                                            class="btn-down__wrap btn-down__wrap_apmsel d-flex justify-content-center align-items-center position-absolute">
+                                                        <span class="btn-down btn-down_apmsel"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="input22"><span class="star">*</span>簽退註記</label>
+                                                    <input type="text" class="form-control" id="input22" placeholder="">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-save">
+                                            <img src="./img/punchInRecord/save.svg" width="16" alt="" srcset="">
+                                            儲存
+                                        </button>
+                                        <button type="button" class="btn btn-cancel" data-dismiss="modal">
+                                            <img src="./img/punchInRecord/delete.svg" width=12"" alt="" srcset="">
+                                            取消
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="modal fade" id="calendarModal-start" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content calendarModal mx-auto">
+                                    <div class="modal-body">
+                                        <div id="day-start"
+                                        class="calendar position-absolute bg-light z-index-3 position-location-start w-100 h-100">
+                                        <div class="calendar__title d-flex align-items-center justify-content-center">
+                                            <span id="start-month-pre" onclick="start_prev_btn()"></span>
+                                            <span class="mx-2"><span id="start-year">108</span><span
+                                                    id="start-month">11</span>工</span>
+                                            <span id="start-month-next" onclick="start_next_btn()"></span>
+                                        </div>
+                                        <div class="calendar__content d-flex flex-column">
+                                            <div class="calendar__content__week flex-fill d-flex justify-content-around align-items-end mb-3">
+                                                    <span class="text-center">三</span>
+                                                    <span class="text-center">四</span>
+                                                    <span class="text-center">五</span>
+                                                    <span class="text-center">六</span>
+                                                    <span class="text-center">日</span>
+                                                    <span class="text-center">一</span>
+                                                    <span class="text-center">二</span>
+                                            </div>
+                                            <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                <span class="text-center" data-date="02">02</span>
+                                                <span class="text-center" data-date="03">03</span>
+                                                <span class="text-center" data-date="04">04</span>
+                                                <span class="R text-center">05</span>
+                                                <span class="R text-center">06</span>
+                                                <span class="text-center" data-date="07">07</span>
+                                                <span class="text-center" data-date="08">08</span>
+                                            </div>
+    
+                                            <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                <span class="text-center" data-date="09">09</span>
+                                                <span class="text-center" data-date="10">10</span>
+                                                <span class="text-center" data-date="11">11</span>
+                                                <span class="R text-center">12</span>
+                                                <span class="R text-center">13</span>
+                                                <span class="text-center" data-date="14">14</span>
+                                                <span class="text-center" data-date="15">15</span>
+                                            </div>
+    
+                                            <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                <span class="text-center" data-date="16">16</span>
+                                                <span class="text-center" data-date="17">17</span>
+                                                <span class="text-center" data-date="18">18</span>
+                                                <span class="R text-center">19</span>
+                                                <span class="R text-center">20</span>
+                                                <span class="text-center" data-date="21">21</span>
+                                                <span class="text-center" data-date="22">22</span>
+                                            </div>
+    
+                                            <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                <span class="text-center" data-date="23">23</span>
+                                                <span class="text-center" data-date="24">24</span>
+                                                <span class="text-center" data-date="25">25</span>
+                                                <span class="R text-center">26</span>
+                                                <span class="R text-center">27</span>
+                                                <span class="text-center" data-date="28">28</span>
+                                                <span class="text-center" data-date="29">29</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="calendarModal-end" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content calendarModal mx-auto">
+                                    <div class="modal-body">
+                                            <div id="day-end"
+                                            class="calendar position-absolute bg-light z-index-3 position-location-end w-100 h-100">
+                                            <div class="calendar__title d-flex align-items-center justify-content-center">
+                                                <span id="end-month-pre" onclick="end_prev_btn()"></span>
+                                                <span class="mx-2"><span id="end-year">108</span><span
+                                                        id="end-month">11</span>工</span>
+                                                <span id="end-month-next" onclick="end_next_btn()"></span>
+                                            </div>
+                                            <div class="calendar__content d-flex flex-column">
+                                                <div class="calendar__content__week flex-fill d-flex justify-content-around align-items-end mb-3">
+                                                        <span class="text-center">三</span>
+                                                        <span class="text-center">四</span>
+                                                        <span class="text-center">五</span>
+                                                        <span class="text-center">六</span>
+                                                        <span class="text-center">日</span>
+                                                        <span class="text-center">一</span>
+                                                        <span class="text-center">二</span>
+                                                </div>
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="02">02</span>
+                                                    <span class="text-center" data-date="03">03</span>
+                                                    <span class="text-center" data-date="04">04</span>
+                                                    <span class="R text-center">05</span>
+                                                    <span class="R text-center">06</span>
+                                                    <span class="text-center" data-date="07">07</span>
+                                                    <span class="text-center" data-date="08">08</span>
+                                                </div>
+            
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="09">09</span>
+                                                    <span class="text-center" data-date="10">10</span>
+                                                    <span class="text-center" data-date="11">11</span>
+                                                    <span class="R text-center">12</span>
+                                                    <span class="R text-center">13</span>
+                                                    <span class="text-center" data-date="14">14</span>
+                                                    <span class="text-center" data-date="15">15</span>
+                                                </div>
+            
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="16">16</span>
+                                                    <span class="text-center" data-date="17">17</span>
+                                                    <span class="text-center" data-date="18">18</span>
+                                                    <span class="R text-center">19</span>
+                                                    <span class="R text-center">20</span>
+                                                    <span class="text-center" data-date="21">21</span>
+                                                    <span class="text-center" data-date="22">22</span>
+                                                </div>
+            
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="23">23</span>
+                                                    <span class="text-center"  data-date="24">24</span>
+                                                    <span class="text-center" data-date="25">25</span>
+                                                    <span class="R text-center">26</span>
+                                                    <span class="R text-center">27</span>
+                                                    <span class="text-center" data-date="28">28</span>
+                                                    <span class="text-center" data-date="29">29</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="calendarModal-add" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content calendarModal mx-auto">
+                                    <div class="modal-body">
+                                            <div id="birth-day-start"
+                                            class="calendar position-absolute bg-light z-index-3 birthday-position-location-start w-100 h-100">
+                                            <div class="calendar__title d-flex align-items-center justify-content-center">
+                                                <span id="birthday-month-pre" onclick="birthday_prev_btn()"></span>
+                                                <span class="mx-"><span id="birthday-year">108</span><span
+                                                        id="birthday-month">11</span>工</span>
+                                                <span id="birthday-month-next" onclick="birthday_next_btn()"></span>
+                                            </div>
+                                            <div class="calendar__content d-flex flex-column">
+                                                <div class="calendar__content__week flex-fill d-flex justify-content-around align-items-end mt-3">
+                                                    <span class="text-center">三</span>
+                                                    <span class="text-center">四</span>
+                                                    <span class="text-center">五</span>
+                                                    <span class="text-center">六</span>
+                                                    <span class="text-center">日</span>
+                                                    <span class="text-center">一</span>
+                                                    <span class="text-center">二</span>
+                                                </div>
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="02">02</span>
+                                                    <span class="text-center" data-date="03">03</span>
+                                                    <span class="text-center" data-date="04">04</span>
+                                                    <span class="R text-center">05</span>
+                                                    <span class="R text-center">06</span>
+                                                    <span class="text-center" data-date="07">07</span>
+                                                    <span class="text-center" data-date="08">08</span>
+                                                </div>
+    
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="09">09</span>
+                                                    <span class="text-center" data-date="10">10</span>
+                                                    <span class="text-center" data-date="11">11</span>
+                                                    <span class="R text-center">12</span>
+                                                    <span class="R text-center">13</span>
+                                                    <span class="text-center" data-date="14">14</span>
+                                                    <span class="text-center" data-date="15">15</span>
+                                                </div>
+    
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="16">16</span>
+                                                    <span class="text-center" data-date="17">17</span>
+                                                    <span class="text-center" data-date="18">18</span>
+                                                    <span class="R text-center">19</span>
+                                                    <span class="R text-center">20</span>
+                                                    <span class="text-center" data-date="21">21</span>
+                                                    <span class="text-center" data-date="22">22</span>
+                                                </div>
+    
+                                                <div class="calendar__content__week day flex-fill d-flex justify-content-around">
+                                                    <span class="text-center" data-date="23">23</span>
+                                                    <span class="text-center" data-date="24">24</span>
+                                                    <span class="text-center" data-date="25">25</span>
+                                                    <span class="R text-center">26</span>
+                                                    <span class="R text-center">27</span>
+                                                    <span class="text-center" data-date="28">28</span>
+                                                    <span class="text-center" data-date="29">29</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- 內容放此 -->
+                </div>
+            </div>
+            <div class="row" id="footer" style="position:fixed;">
+                <div class="col-12">
+                    <hr>
+                    <p class="text-black-50">version. 0.0.1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="app-links">
+        <div class="footer mx-lg-auto">
+            <a href="./index.html" class="footer__btn footer__btn-1">
+                <img src="./img/component/footer/home-b5b5b6.svg" width="34px" alt="" srcset="">
+                <span>回首頁</span>
+            </a>
+            <a class="footer__btn footer__btn-4" href="./vacation.html">
+                <img src="./img/component/footer/請假申請-b5b5b6.svg" width="35px" alt="" srcset="">
+                <img src="./img/component/footer/請假申請-cb271c.svg" width="33px" alt="" srcset="">
+                <span>請假</span>
+                <div class="notice">
+                    <span>1</span>
+                </div>
+            </a>
+            <a class="footer__btn footer__btn-3" href="./abnormal.html">
+                <img src="./img/component/footer/通知-b5b5b6.svg" width="46px" alt="" srcset="">
+                <img src="./img/component/footer/通知-cb271c.svg" width="46px" alt="" srcset="">
+                <span>通知</span>
+                <div class="notice">
+                    <span>2</span>
+                </div>
+            </a>
+            <a href="./abnormal_replacement.html" class="footer__btn footer__btn-2">
+                <img src="./img/component/footer/異常補辦-b5b5b6.svg" width="29px" alt="" srcset="">
+                <img src="./img/component/footer/異常補辦-cb271c.svg" width="33px" alt="" srcset="">
+                <span>異常補辦</span>
+            </a>
+            <a href="./pending_approval.html" class="footer__btn footer__btn-5">
+                <img src="./img/component/footer/待簽核-b5b5b6.svg" width="33px" alt="" srcset="">
+                <img src="./img/component/footer/待簽核-cb271c.svg" width="33px" alt="" srcset="">
+                <span>待簽核</span>
+                <div class="notice">
+                    <span>3</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="./js/nav.js"></script>
+
+    <!-- JS -->
+    <script src="./js/punch_in_record.js"></script>
+    <!-- JS -->
+</body>
+
+</html>

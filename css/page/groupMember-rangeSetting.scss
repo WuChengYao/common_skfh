@@ -1,0 +1,259 @@
+$green: #56bdb7;
+$pink: #eb6868;
+$lightpink: #f7e1dc;
+
+@mixin shadow{
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+@mixin btn-shadow{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + div {
+    background-image: url(../../img/groupMember/checkmark-000.svg),
+        -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: url(../../img/groupMember/checkmark-000.svg), linear-gradient(to right, #fff, #fff);
+}
+
+.checkBox {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: solid 2px $pink;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: contain, 100%;
+}
+.fa-users-cog{
+    color: $pink;
+}
+.groupMember {
+    font-weight: 900;
+    .title {
+        font-size: 20px;
+    }
+    .groupMemberArea {
+        form {
+            padding: 20px 5px;
+            margin: 20px 0 30px 0;
+            border-radius: 18px;
+            @include shadow;
+
+            input,
+            label {
+                flex-grow: 1;
+                margin: 0;
+            }
+            label {
+                margin-right: 20px;
+                &.checkbox-label {
+                    color: $pink;
+                }
+            }
+            table {
+                text-align: center;
+                th,
+                td {
+                    padding: 5px 0;
+                    vertical-align: inherit;
+                    .fa-edit {
+                        color: $pink;
+                    }
+                }
+                td:first-child{
+                    width: 40px;
+                }
+                th {
+                    background-color: $pink;
+                    color: #fff;
+                }
+                tr:nth-child(even) {
+                    background-color: $lightpink;
+                }
+            }
+
+            thead{
+                tr{
+                    th{
+                        border-bottom: solid 2px #eb6868;
+                        &:first-child{
+                            border-top-left-radius: 5px;
+                        }
+                        &:last-child{
+                            border-top-right-radius: 5px;
+                        }
+                    }
+                }
+
+            }
+
+            tbody{
+                tr,td{
+                    border: solid 2px $pink;
+                }
+            }
+        }
+        .btn {
+            background-color: $green;
+            color: #fff;
+            border-radius: 8px;
+            margin: 30px 10px 30px 10px;
+            @include btn-shadow;
+            cursor: pointer;
+            .fa-search {
+                transform: scaleX(-1);
+            }
+            .fas {
+                color: white;
+                margin-right: 5px;
+            }
+            &.add-btn {
+                margin: 0;
+            }
+            &.go-btn {
+                margin: 0;
+            }
+        }
+        .btn-outline {
+            background-color: #fff;
+            color: $green;
+            border: solid 2px $green;
+            .fas {
+                color: $green;
+            }
+        }
+    }
+
+    .resultList {
+        .selectResultList {
+            padding: 20px 5px;
+            margin: 20px 0;
+            border-radius: 18px;
+            @include shadow;
+        }
+        .btnArea {
+            .control-btn {
+                padding: 2px 10px;
+                @include btn-shadow;
+                color: $pink;
+                margin: 0 0 20px 0;
+                display: inline-block;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+        table {
+            text-align: center;
+            th,
+            td {
+                padding: 5px 0;
+                vertical-align: inherit;
+                .fa-edit {
+                    color: $pink;
+                }
+            }
+            th {
+                background-color: $pink;
+                color: #fff;
+            }
+            tr:nth-child(even) {
+                background-color: $lightpink;
+            }
+            
+            thead{
+                tr{
+                    th{
+                        border-bottom: solid 2px #eb6868;
+                        &:first-child{
+                            border-top-left-radius: 5px;
+                        }
+                        &:last-child{
+                            border-top-right-radius: 5px;
+                        }
+                    }
+                }
+
+            }
+
+            tbody{
+                tr,td{
+                    border: solid 2px $pink;
+                }
+            }
+        }
+        
+    }
+
+    .paginationArea {
+        .pagination {
+            padding: 0 15px;
+            margin: 0;
+            li {
+                margin-left: 15px;
+            }
+            li:nth-child(2) .fas{
+                transform: scaleX(-1);
+            }
+            .fas.fa-play{
+                font-size: 15px;
+            }
+            .fas {
+                color: $pink;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .pageItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+                &.active {
+                    color: #fff;
+                    background-color: $pink;
+                }
+            }
+            input {
+                width: 50px;
+            }
+            .go-btn {
+                padding: 0 10px;
+                box-shadow: 1px 1px 3px 1px rgba(67, 67, 67, 0.2);
+                background-color: white;
+                border-radius: 0px;
+                color: $pink;
+            }
+        }
+    }
+}
+.textBold {
+    font-weight: 700;
+}
+table {
+    font-weight: 700;
+}
+.select-group {
+    position: relative;
+    span {
+        height: 100%;
+        width: 40px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        .fas{
+            transform: rotate(90deg);
+            font-size: 8px;
+        }
+    }
+}

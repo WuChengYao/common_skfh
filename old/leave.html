@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>請假差勤單</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/f8d8606264.js"></script>
+    <link rel="stylesheet" href="./css/leave.css">
+</head>
+
+<body>
+    <div class="leave">
+        <div class="container searchArea">
+            <form action="">
+                <div class="searchForm col-12">
+                    <div class="row">
+                        <div class="col-6 textBold"><label for="">工作年月</label></div>
+                        <div class="col-6 textBold"><label for="">申請人職務</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><input class="form-control" type="text"></div>
+                        <div class="col-6 position-relative d-flex justify-content-between align-items-center">
+                            <div class="p-0 dateInput" ><input class="datepicker  form-control" type="text"
+                                    date-autoclose="true">
+                                <div class="panel position-absolute d-flex justify-content-center align-items-center">
+                                    <img class="panel-icon" src="./img/0830/更多服務.svg" alt="" srcset=""></div>
+                            </div>
+                            <i class="fas fa-caret-right"></i>
+                            <div class=" p-0 dateInput"><input class=" datepicker form-control" type="text">
+                                <div class="panel position-absolute d-flex justify-content-center align-items-center">
+                                    <img class="panel-icon" src="./img/0830/更多服務.svg" alt="" srcset=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 textBold"><label for="">申請狀態</label></div>
+                        <div class="col-6 textBold"><label for="">請假類別</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><select class="form-control" type="text">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select></div>
+                        <div class="col-6"><select class="form-control" type="text">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="btn btn-outline m-2"><img class="mr-2 " src="./img/0830/x.svg" width="12px" alt=""
+                            srcset=""><span class="textBold">清除</span></div>
+                    <div class="btn m-2"><img class="mr-2" src="./img/0830/查詢-fff.svg" width="19px" alt="" srcset=""><span class="textBold">查詢</span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="hr"></div>
+        <div class="container resultList">
+            <h3><i class="fas fa-list-ul "></i> <span class="textBold">查詢結果清單</span></h3>
+            <div class="btnArea">
+                <div class="btn control-btn"><i class="fas fa-plus"></i> <span class="textBold">新增</span></div>
+                <div class="btn control-btn"><i class="fas fa-times"></i> <span class="textBold">撤銷勾選項目</span></div>
+
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y"
+                                    id="checkAll">
+                                <div class="checkBox"></div>
+                            </div>
+                        </th>
+                        <th>檢視</th>
+                        <th>申請人</th>
+                        <th>工作月</th>
+                        <th>假別</th>
+                        <th>主旨</th>
+                        <th>流程</th>
+                        <th>送件日期</th>
+                        <th>狀態</th>
+                        <th>待簽核人員</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn search-btn"><i class="fas fa-search"></i><span class="textBold">檢視</span></div>
+                        </td>
+                        <td>王志明</td>
+                        <td>109/13</td>
+                        <td>特休假</td>
+                        <td>請假期間: 2019/13/012019/11/31 時/天數:1天</td>
+                        <td>區經理</td>
+                        <td>2019/10/04</td>
+                        <td>送簽中</td>
+                        <td>黃曉安</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+                                <input class="position-absolute" type="checkbox" name="checkbox" value="y">
+                                <div class="checkBox"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn search-btn"><i class="fas fa-search"></i><span class="textBold">檢視</span></div>
+                        </td>
+                        <td>王志明</td>
+                        <td>109/13</td>
+                        <td>特休假</td>
+                        <td>請假期間: 2019/13/012019/11/31 時/天數:1天</td>
+                        <td>區經理</td>
+                        <td>2019/10/04</td>
+                        <td>送簽中</td>
+                        <td>黃曉安</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container paginationArea">
+            <div class="row">
+                <div class="col-4">
+                    第1頁 / 共5頁(共3筆)
+                </div>
+                <ul class="pagination col-8 d-flex justify-content-end">
+                    <li><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></li>
+                    <li><i class="fas fa-caret-left"></i></li>
+                    <li class="pageItem active">1</li>
+                    <li class="pageItem">2</li>
+                    <li class="pageItem">3</li>
+                    <li class="pageItem">4</li>
+                    <li class="pageItem">5</li>
+                    <li><i class="fas fa-caret-right"></i></li>
+                    <li><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></li>
+                    <li class="d-flex align-items-center"><input type="text">&nbsp;頁&nbsp;<div class="btn go-btn">Go
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js"></script>
+    <script>
+        $("#checkAll").click(function () {
+            if ($("#checkAll").prop("checked")) {
+                $("input[name='checkbox']").prop("checked", true)
+            } else {
+                $("input[name='checkbox']").prop("checked", false)
+            }
+        });
+
+
+        $('.datepicker').datepicker({
+            autoclose: 'ture',
+        });
+    </script>
+</body>
+
+</html>

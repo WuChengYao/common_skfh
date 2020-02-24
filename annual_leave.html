@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!--  Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css">
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>差勤系統</title>
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/page/annualLeave.css">
+    <!-- CSS -->
+    <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
+</head>
+
+<body>
+    <header class="main-navbar-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top theme-color">
+            <div class="menu-toggle-button"><a class="nav-link" id="sidebarCollapse" href="#">
+                    <i class="fas fa-bars"></i></a></div>
+
+            <div class="d-flex">
+                <!-- 頁面標題 -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/component/slideBar/11_3_white.svg" width="40" alt="">
+                    預排特休假
+                </a>
+                <!-- 頁面標題 -->
+                <div class="personalDetail align-items-end py-1">
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/department.svg" width="18px" alt="" srcset="">
+                        <span>單位：螢橋通-收</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/head.svg" width="13px" alt="" srcset="">
+                        <span>姓名：劉一明 </span>
+                        <span>(10001)</span>
+                    </div>
+                    <div class="detailItem">
+                        <img src="./img/punchInRecord/position.svg" width="18px" alt="" srcset="">
+                        <span>職稱：業務員</span>
+                    </div>
+                    <div class="detailItem">
+                        <span>承辦身份：本人</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar_icon align-items-center">
+                <a class="position-relative" href="./calendar.html">
+                        <div class="calendar-date"></div>
+                        <img src="./img/component/header/emptyC.svg" width="24" alt>
+                </a>
+                <a class="nav-link " href="./basic_information.html">
+                    <img src="./img/component/header/monkey.svg" width="24" alt>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <!--  Sidebar Holder -->
+        <nav class="nav-sidebar" id="sidebar">
+            <ul class="level-1-ul" id="sidemenu_collapse_parent">
+                <li>
+                    <a title="差勤申請" href="#sidemenu_collapse_1" class="nav_collapse" data-toggle="collapse"
+                        aria-expanded="false"><img src="./img/component/slideBar/11_2.svg" width="20px" alt> 差勤申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_1" data-parent="#sidemenu_collapse_parent">
+                        <li>
+                            <a href="./vacation.html">
+                                請假差勤單
+                            </a>
+                        </li>
+                        <li><a href="./Leave_cancel_Query.html">銷假申請單</a></li>
+                        <li><a href="#">加班報備單</a></li>
+                        <li><a href="#">加班申請單</a></li>
+                        <li><a href="./annual_leave.html">預排特休假</a></li>
+                        <li><a href="#">差勤異常通知單</a></li>
+                        <li><a href="./transfer_apply.html">休息/假日調移報備申請單</a></li>
+                        <li><a href="./vacation_detail.html">個人差勤明細</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_2" class="nav_collapse" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-2.svg" width="20" alt> 人事申請</a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_2" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">人身保險業務員登錄申請</a></li>
+                        <li><a href="#">投資、外幣變更登錄申請書</a></li>
+                        <li><a href="#">基金銷售業務人員證照登記申請表</a></li>
+                        <li><a href="#">薪資轉存入銀行帳戶申請表</a></li>
+                        <li><a href="#">薪資所得受領人免稅額申請表</a></li>
+                        <li><a href="#">變更各項資料申請書</a></li>
+                        <li><a href="./prove_apply.html">各類證明申請書</a></li>
+                        <li><a href="./healthInsurance.html">健保轉入轉出申報表</a></li>
+                        <li><a href="#">通知/補辦單</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_3" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/footer/待簽核-cb271c.svg" width="20px" alt> 電子簽核
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_3" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="./abnormal_replacement.html">異常補辦匣</a></li>
+                        <li><a href="./pending_approval.html">待簽核匣</a></li>
+                        <li><a href="./abnormal.html">通知匣</a></li>
+                        <li><a href="./holiday_detail_list_manager.html">簽核完成匣</a></li>
+                        <li><a href="#">工作佇列</a></li>
+                        <li><a href="#">工作待辦匣</a></li>
+                        <li><a href="./agent_settnig.html">代理人設定</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_4" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-4.svg" width="20" alt>
+                        外人承辦人管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_4" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">案件分派</a></li>
+                        <li><a href="#">打卡記錄匯入及維護</a></li>
+                        <li><a href="#">天然災害假設定</a></li>
+                        <li><a href="#">加班單維護</a></li>
+                        <li><a href="#">差勤異常通知設定</a></li>
+                        <li><a href="#">參數設定</a></li>
+                        <li><a href="#">差勤管理文件上傳</a></li>
+                        <li><a href="#">假別規則文字設定維護</a></li>
+                        <li><a href="#">排程設定</a></li>
+                        <li><a href="./leave_maintain.html">假別簽核層級維護</a></li>
+                        <li><a href="#">流程檔維護</a></li>
+                        <li><a href="#">假日維護</a></li>
+                        <li><a href="#">班表維護</a></li>
+                        <li><a href="#">職等班表維護</a></li>
+                        <li><a href="#">異常通知Log查詢</a></li>
+                        <li><a href="#">特殊假匯入</a></li>
+                        <li><a href="#">假別額度維護</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_5" data-toggle="collapse" aria-expanded="false">
+                        <img src="./img/component/slideBar/nav-icon-5.svg" width="20" alt>
+                        查詢下載與報表管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_5" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="./todo_duty.html">差勤/人事綜合查詢及報表</a></li>
+                        <li><a href="#">月差勤記錄</a></li>
+                        <li><a href="./todo_training.html">調訓查詢及報表</a></li>
+                        <li><a href="#">個人班表查詢</a></li>
+                        <li><a href="#">排休暨輪休查詢及報表</a></li>
+                        <li><a href="#">差勤管理文件查詢及下載</a></li>
+                        <li><a href="#">公傷假名單及統計</a></li>
+                        <li><a href="#">公傷假人員明細表</a></li>
+                        <li><a href="#">產假統計表</a></li>
+                        <li><a href="#">產假人員明細表</a></li>
+                        <li><a href="#">特休假單位統計表</a></li>
+                        <li><a href="#">特休假單位人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員明細表</a></li>
+                        <li><a href="#">休息/假日調移人員統計表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">人事表單申請查詢</a></li>
+                        <li><a href="#">特殊差勤報表</a></li>
+                        <li><a href="#">補休逾期名單</a></li>
+                        <li><a href="#">差假累計查詢及統計表</a></li>
+                        <li><a href="#">考核預告查詢及報表</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sidemenu_collapse_6" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-cog greenIcon"></i>
+                        系統管理
+                    </a>
+                    <ul class="collapse list-unstyled" id="sidemenu_collapse_6" data-parent="#sidemenu_collapse_parent">
+                        <li><a href="#">員工資料維護</a></li>
+                        <li><a href="./grouppermissionsettings.html">群組權限維護</a></li>
+                        <li><a href="#">公告通知</a></li>
+                        <li><a href="#">通知功能</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-bottom">
+                <div class="d-flex">
+                    <div>
+                        <a class="d-flex" href="#" onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();" style="padding-left:0;padding-right:0 !important;">
+                            <img src="./img/component/slideBar/1_4.svg" width="25px" height="19px" alt="">
+                            <span>登出</span>
+                            <form id="logout-form" action="" method="POST" style="display: none;">
+                            </form>
+                        </a>
+                    </div>
+                    <div class="ml-5">
+                        <img src="./img/abnormal/i.svg" width="20" alt="">
+                    </div>
+                </div>
+                <div class="Slidebars__list__logo">
+                    <hr>
+                    <img src="./img/component/slideBar/logo-1.svg" width="108px" alt="" srcset="">
+                </div>
+            </div>
+        </nav>
+        <div class="cover d-none"></div>
+
+        <div class="container content-area">
+            <div class="row">
+                <div class="col-12 bread">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                            <li class="breadcrumb-item"><a href="#">項目連結</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">項目內頁</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <!-- 內容放此 -->
+                    <div id="app" v-cloak>
+                            <form action="/annual_leave" method="post" ref="form">
+                                <input id="annual_json" type="text" name="annual_json" hidden value="">
+                                <input id="first_annual_date" type="text" name="first_annual_date" hidden value="">
+                    
+                    
+                                <div class="body mx-auto">
+                                    <div class="padMode d-md-flex">
+                                        <div class="body__readOnlyComponent d-md-none">
+                                            <div class="d-none d-md-block readOnlyComponent">
+                                                <div class="label d-flex align-items-center">
+                                                    <span class="star">*</span>
+                                                    <span class="title ">申請人姓名</span>
+                                                </div>
+                                                <div class="content d-flex align-items-center">
+                                                    <span>劉一明</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block readOnlyComponent">
+                                                <div class="label d-flex align-items-center">
+                                                    <span class="star">*</span>
+                                                    <span class="title">應休假日數合計</span>
+                                                </div>
+                                                <div class="content d-flex align-items-center">
+                                                    <span>13</span>
+                                                </div>
+                                            </div>
+                                            <div class="body__statistics d-flex justify-content-around">
+                                                <div class="statisticsBox d-flex flex-column align-items-center">
+                                                    <span class="statisticsBox__title">
+                                                        目前已請
+                                                    </span>
+                                                    <span class="statisticsBox__content">
+                                                        3天
+                                                    </span>
+                                                </div>
+                                                <div class="statisticsBox d-flex flex-column align-items-center" >
+                                                    <span class="statisticsBox__title">
+                                                        申請中
+                                                    </span>
+                                                    <span class="statisticsBox__content r">
+                                                        0天
+                                                    </span>
+                                                </div>
+                                                <div class="statisticsBox d-flex flex-column align-items-center">
+                                                    <span class="statisticsBox__title">
+                                                        剩餘天數
+                                                    </span>
+                                                    <span class="statisticsBox__content">
+                                                        10天
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block toggleBox">
+                                                <div class="readOnlyComponent">
+                                                    <div class="label d-flex align-items-center">
+                                                        <span class="star">*</span>
+                                                        <span class="title">申請人職務</span>
+                                                    </div>
+                                                    <div class="content d-flex align-items-center">
+                                                        <span>業務員</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="readOnlyComponent-wrap flex84">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">年資</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>5年5月</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="readOnlyComponent-wrap flex1">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">本年度應休假日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>12</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="readOnlyComponent-wrap flex84">
+                                                        <div class="readOnlyComponent">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">調整休假日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>1</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="readOnlyComponent-wrap flex1">
+                                                        <div class="readOnlyComponent">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">前年遞延日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>0</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block toggleBtn mx-auto d-flex justify-content-center align-items-center">
+                                                <div class="toggleBtn-icon-t"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-md-flex mx-md-auto">
+                                            <div class="body__readOnlyComponent body__readOnlyComponent-pad d-none d-md-block shadow">
+                                                <div class="readOnlyComponent">
+                                                        <div class="body__statistics d-flex justify-content-around" style="margin: 0 0 25px 0">
+                                                                <div class="statisticsBox d-flex flex-column align-items-center">
+                                                                    <span class="statisticsBox__title" style="font-size:16px">
+                                                                        目前已請
+                                                                    </span>
+                                                                    <span class="statisticsBox__content">
+                                                                        3天
+                                                                    </span>
+                                                                </div>
+                                                                <div class="statisticsBox d-flex flex-column align-items-center" style="margin:0 10px">
+                                                                    <span class="statisticsBox__title" style="font-size:16px">
+                                                                        申請中
+                                                                    </span>
+                                                                    <span class="statisticsBox__content r">
+                                                                        0天
+                                                                    </span>
+                                                                </div>
+                                                                <div class="statisticsBox d-flex flex-column align-items-center">
+                                                                    <span class="statisticsBox__title" style="font-size:16px">
+                                                                        剩餘天數
+                                                                    </span>
+                                                                    <span class="statisticsBox__content">
+                                                                        10天
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                    <div class="label d-flex align-items-center">
+                                                        <div class="col-6">
+                                                            <span class="star">*</span>
+                                                            <span class="title">申請人姓名</span>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <span class="star">*</span>
+                                                            <span class="title">電腦編號</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="content d-flex align-items-center w-50 mr-1">
+                                                            <span>劉一明</span>
+                                                        </div>
+                                                        <div class="content d-flex align-items-center w-50 ml-1">
+                                                            <span>0123456789</span>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                                                <div class="readOnlyComponent">
+                                                    <div class="label d-flex align-items-center">
+                                                        <span class="star">*</span>
+                                                        <span class="title">申請人職務</span>
+                                                    </div>
+                                                    <div class="content d-flex align-items-center">
+                                                        <span>業務員</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="readOnlyComponent-wrap flex84">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">年資</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>5年5月</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="readOnlyComponent-wrap flex1">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">本年度應休假日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>12</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="readOnlyComponent-wrap flex84">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">調整休假日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>1</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="readOnlyComponent-wrap flex1">
+                                                        <div class="readOnlyComponent group">
+                                                            <div class="label d-flex align-items-center">
+                                                                <span class="star">*</span>
+                                                                <span class="title">前年遞延日數</span>
+                                                            </div>
+                                                            <div class="content d-flex align-items-center">
+                                                                <span>0</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="readOnlyComponent">
+                                                    <div class="label d-flex align-items-center">
+                                                        <span class="star">*</span>
+                                                        <span class="title">應休假日數合計</span>
+                                                    </div>
+                                                    <div class="content d-flex align-items-center">
+                                                        <span>13</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="body__date">
+                                                <span class="body__date__title">
+                                                    查詢工作月
+                                                </span>
+                                                <div class="body__date__search d-flex">
+                                                    <div class="datapickerBox__inputBox d-flex justify-content-between">
+                                                        <div class="form-group w-100">
+                                                            <div class="input-group date position-relative">
+                                                                <select id="year_month_select" name class="form-control apmsel w-100 monthSelect">
+                                                                    <option value="108-10">10811</option>
+                                                                    <option value="108-11">10812</option>
+                                                                    <option value="108-12">10813</option>
+                                                                </select>
+                                                                <div id="iconBox1"
+                                                                     class="iconBox d-flex align-items-center justify-content-center input-group-addon position-absolute">
+                                                                    <img class="unselectable" src="./img/annualLeave/更多服務.svg" alt="" srcset="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="searchBtn d-flex align-items-center justify-content-center demo-version">
+                                                        <img src="./img/annualLeave/seaarchBtn.svg" width="14" alt="" srcset="">
+                                                        <span class="searchBtn-text">查詢</span>
+                                                    </div>
+                                                </div>
+                                                <div class="body__date__calendar">
+                                                    <div class="body__date__calendar__head">
+                                                        <span>三</span>
+                                                        <span>四</span>
+                                                        <span>五</span>
+                                                        <span>六</span>
+                                                        <span>日</span>
+                                                        <span>一</span>
+                                                        <span>二</span>
+                                                    </div>
+                                                    <div class="body__date__calendar__body d-flex" style="height: 90%;flex-direction: column;">
+                                                        <div class="body__date__calendar__body__week day" v-for="calendar in calendars">
+                                                            <span v-for="calendarDate in calendar" :class="{R: checkIsHoliday(calendarDate), 'selected': calendarDate.isSelected}" @click="dateClick(calendarDate)">
+                                                                {{calendarDate.date}}
+                                                                <span v-if="calendarDate.dateInfo.length > 0" class="tag d-flex flex-column align-items-center">
+                                                                    <span v-for="(dateInfo,key) in calendarDate.dateInfo" :class="dateInfoKey(dateInfo)">
+                                                                        {{ dateInfoValue(dateInfo) }}
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="body__list mx-md-auto">
+                                        <div class="body__list__title d-flex align-items-center">
+                                            <div class="body__list__title-icon d-flex flex-column justify-content-between">
+                                                <div class="iconLine d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                                <div class="iconLine d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                                <div class="iconLine d-flex justify-content-between">
+                                                    <span class="dot"></span>
+                                                    <span class="bar"></span>
+                                                </div>
+                                            </div>
+                                            <div class="body__list__title-text">
+                                                <span>已預排清單</span>
+                                            </div>
+                                        </div>
+                                        <div class="body__list__table mx-auto">
+                                            <!-- 電腦版 "已預排清單" -->
+                                            <div class="body__list__table-head d-none d-sm-block">
+                                                <div class="body__list__table-head__tr tr d-flex justify-content-between">
+                                                    <div class="tr__td d-flex justify-content-center align-items-center"><span>日期</span></div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center"><span>排休時間</span></div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center"><span>狀態</span></div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center d375"><span>假單</span></div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center"><span>刪除</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="body__list__table-body d-none d-sm-block">
+                                                <div class="body__list__table-body__tr tr d-flex justify-content-between" v-for="(calendarDate,key) in selectedDate">
+                                                    <div class="tr__td d-flex justify-content-center align-items-center">
+                                                        <span>{{fullDate(calendarDate.date)}}</span>
+                                                    </div>
+                                                    <div class="tr__td d-flex justify-content-between align-items-center" style="border:0">
+                                                        <div class="daytime-label text-center" v-for='(item,index) in items' :class="{active:dateTimeActive(calendarDate,index)}" @click="dateTimeClick(calendarDate,index)">
+                                                            <input type="radio" :name="'dateTime'+key">
+                                                            <label class="checkBox-label" >{{ item.name }}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        
+                                                    </div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center"><span>新增</span></div>
+                                                    <div class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                                        <input class="position-absolute" type="checkbox" name="checkbox" value="y" v-model="calendarDate.absence_form">
+                                                        <div class="checkBox alCheck"></div>
+                                                    </div>
+                                                    <div class="tr__td d-flex justify-content-center align-items-center mw-68">
+                                                        <span class="delete-btn" @click="dateClick(calendarDate)">刪除</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 電腦版 "已預排清單" -->
+                    
+                                            <!-- 2019-10-10 手機版 "已預排清單" -->
+                                            <!-- 深色 -->
+                                            <div class="listBlock d-sm-none" v-for="(calendarDate,key) in selectedDate">
+                                                <div class="listDate">
+                                                    <div class="titleBlock">日期</div>
+                                                    <div class="valueBlock">{{fullDate(calendarDate.date)}}</div>
+                                                </div>
+                                                <div class="listTime">
+                                                    <div class="titleBlock">排休時間</div>
+                                                    <div class="valueBlock d-flex justify-content-between">
+                                                        <div class="daytime-label text-center" v-for='(item,index) in items' :class="{active:dateTimeActive(calendarDate,index)}" @click="dateTimeClick(calendarDate,index)">
+                                                            <input type="radio" :name="'dateTime'+key">
+                                                            <label class="checkBox-label" >{{ item.name }}</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="listOthers d-flex flex-wrap">
+                                                    <div class="titleBlock">狀態</div>
+                                                    <div class="titleBlock">假單</div>
+                                                    <div class="titleBlock">刪除</div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center">新增</div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center"><input type="checkbox" name="" id="" v-model="calendarDate.absence_form"></div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center"><span @click="dateClick(calendarDate)">刪除</span></div>
+                                                </div>
+                                            </div>
+                    
+                                            <!-- 淺色 -->
+                                            <!-- <div class="listBlock d-sm-none">
+                                                <div class="listDate">
+                                                    <div class="titleBlock">日期</div>
+                                                    <div class="valueBlock">108/07/02</div>
+                                                </div>
+                                                <div class="listTime">
+                                                    <div class="titleBlock topBorder">排休時間</div>
+                                                    <div class="valueBlock d-flex justify-content-between">
+                                                        <div class="timeSelect">全天</div>
+                                                        <div class="timeSelect">上午</div>
+                                                        <div class="timeSelect">下午</div>
+                                                    </div>
+                                                </div>
+                                                <div class="listOthers d-flex flex-wrap">
+                                                    <div class="titleBlock topBorder">狀態</div>
+                                                    <div class="titleBlock topBorder">假單</div>
+                                                    <div class="titleBlock topBorder">刪除</div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center">新增</div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center"><input type="checkbox" name="" id=""></div>
+                                                    <div class="valueBlock d-flex align-items-center justify-content-center"><button>刪除</button></div>
+                                                </div>
+                                            </div> -->
+                                            <!-- 2019-10-10 手機版 "已預排清單" -->
+                                        </div>
+                                    </div>
+                                    <div class="body__confirm mx-md-auto">
+                                        <div class="d-none d-sm-block">
+                                            <div class="body__confirm-check d-flex align-items-center">
+                                                <span class="star">*</span>
+                                                <div class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                                    <input id="info_checkbox" class="position-absolute" type="checkbox" name="checkbox" value="y" required="required">
+                                                    <div class="checkBox"></div>
+                                                </div>
+                                                <span>已確認注意事項</span>
+                                            </div>
+                                        </div>
+                                        <div class="body__confirm-text">
+                                            <span>因公司業務或個人需要，排休日期如有變動，同仁得與主管重新議定新排休日期，調整後同仁應立即將新排休日期至系統調整，且依新排休日期確實休假。
+                                                特別休假旨在提供同仁適足休息，以解除工作疲勞，進而提升同仁工作意願及效率。
+                                                特別休假日期，由同仁排定之。各差勤主管應主動協調所屬同仁，配合單位工作流程與同仁個人需要妥為排休，俾利規劃並落實單位業務順利與所屬同仁休假權益。
+                                                本表由各差勤主管簽核後控管，檔案紀錄保存一年備查。</span>
+                                        </div>
+                                    </div>
+                                    <div class="body__divide mx-auto "></div>
+                                    <div class="body__confirm mx-md-auto d-sm-none">
+                                        <div class=" d-sm-none body__confirm-check d-flex align-items-center justify-content-center">
+                                            <span class="star">*</span>
+                                            <div class="tr__td tr__td-check position-relative d-flex justify-content-center align-items-center">
+                                                <input id="info_checkbox_mb" class="position-absolute" type="checkbox" name="checkbox" value="y" required="required">
+                                                <div class="checkBox"></div>
+                                            </div>
+                                            <span>已確認注意事項</span>
+                                        </div>
+                                    </div>
+                                    <div class="body__btnBox d-flex justify-content-center align-items-center">
+                                        <a href="./" style="text-decoration: none;color:white;">
+                                            <button type="button" class="body__btnBox-btn cancel d-flex justify-content-center align-items-center bg-white mr-3">
+                                                <img src="./img/annualLeave/x.svg" width="12" alt="" srcset="">
+                                                <span style="white-space: nowrap">取消</span>
+                                            </button>
+                                        </a>
+                                        <button type="button" @click="submit" class="body__btnBox-btn send d-flex justify-content-center align-items-center ml-4">
+                                            <img src="./img/annualLeave/sent.svg" width="16" alt="" srcset="">
+                                            <span style="white-space: nowrap">送出</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <!-- 內容放此 -->
+                </div>
+            </div>
+            <div class="row" id="footer" style="position:fixed;">
+                <div class="col-12">
+                    <hr>
+                    <p class="text-black-50">version. 0.0.1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="app-links">
+        <div class="footer mx-lg-auto">
+            <a href="./index.html" class="footer__btn footer__btn-1">
+                <img src="./img/component/footer/home-b5b5b6.svg" width="34px" alt="" srcset="">
+                <span>回首頁</span>
+            </a>
+            <a class="footer__btn footer__btn-4" href="./vacation.html">
+                <img src="./img/component/footer/請假申請-b5b5b6.svg" width="35px" alt="" srcset="">
+                <img src="./img/component/footer/請假申請-cb271c.svg" width="33px" alt="" srcset="">
+                <span>請假</span>
+                <div class="notice">
+                    <span>1</span>
+                </div>
+            </a>
+            <a class="footer__btn footer__btn-3" href="./abnormal.html">
+                <img src="./img/component/footer/通知-b5b5b6.svg" width="46px" alt="" srcset="">
+                <img src="./img/component/footer/通知-cb271c.svg" width="46px" alt="" srcset="">
+                <span>通知</span>
+                <div class="notice">
+                    <span>2</span>
+                </div>
+            </a>
+            <a href="./abnormal_replacement.html" class="footer__btn footer__btn-2">
+                <img src="./img/component/footer/異常補辦-b5b5b6.svg" width="29px" alt="" srcset="">
+                <img src="./img/component/footer/異常補辦-cb271c.svg" width="33px" alt="" srcset="">
+                <span>異常補辦</span>
+            </a>
+            <a href="./pending_approval.html" class="footer__btn footer__btn-5">
+                <img src="./img/component/footer/待簽核-b5b5b6.svg" width="33px" alt="" srcset="">
+                <img src="./img/component/footer/待簽核-cb271c.svg" width="33px" alt="" srcset="">
+                <span>待簽核</span>
+                <div class="notice">
+                    <span>3</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="./js/nav.js"></script>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/annual_leave.js"></script>
+    <!-- JS -->
+</body>
+
+</html>
